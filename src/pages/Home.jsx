@@ -10,8 +10,8 @@ export default function Home() {
         <div>
             <Header />
         <UnderHeader />
-            <Menu1 />
             <Footer/>
+            <Menu1 />
         </div>
     )
 }

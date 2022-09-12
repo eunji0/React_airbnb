@@ -8,6 +8,11 @@ import Menu5 from "./component/Menu5";
 import MenuInfo from "./pages/MenuInfo";
 import Host from "./pages/Host"
 
+import Header from "./component/Header";
+import UnderHeader from "./component/UnderHeader";
+import Footer from "./component/Footer";
+import Menu1 from "./pages/Menu1";
+
 function App() {
   return (
     <div className="root-wrap">
