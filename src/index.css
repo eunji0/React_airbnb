@@ -3760,11 +3760,6 @@ section {
   background-repeat: no-repeat !important;
 }
 
-._9ofhsl {
-  height: 100% !important;
-  width: 100% !important;
-  position: static !important;
-}
 
 ._15p4g025 {
   display: none !important;
@@ -3922,4 +3917,116 @@ section {
   width: 40px !important;
   height: 40px !important;
   color: #fff;
+}
+
+
+
+
+/* Host main */
+.hm-main {
+  margin-top: 120px;
+}
+
+.hmmain {
+  margin-top: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column !important;
+  color: #222222 !important;
+  background-color: #FFFFFF !important;
+}
+
+._nudpw0 {
+  font-size: 56px !important;
+  line-height: 64px !important;
+  margin-top: 0;
+  margin-bottom: 40px !important;
+  align-self: center !important;
+  text-align: center !important;
+  font-weight: 600;
+  letter-spacing: -0.02em !important;
+}
+
+.hmmain-a {
+  margin-left: 24px !important;
+    margin-right: 24px !important;
+    margin-bottom: 64px;
+}
+
+.hmmain-b {
+  min-height: 300px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-bottom: 32px;
+}
+
+.hmmain-c {
+  margin-left: 24px !important;
+  margin-right: 24px !important;
+}
+
+.hmmain-ain {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hmmain-ain1 {
+  width: 324px;
+  padding: 20px 24px !important;
+  max-width: 30vw !important;
+  margin-bottom: 0px !important;
+  margin-right: 16px !important;
+  display: flex !important;
+  background-color: rgb(247, 247, 247) !important;
+  border-radius: 12px !important;
+}
+
+.hmmain-ain2 {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+._jmxiel {
+  font-size: 14px !important;
+  line-height: 18px !important;
+  color: rgb(113, 113, 113) !important;
+  margin-bottom: 8px !important;
+}
+
+._13260ndj {
+  font-weight: 600 !important;
+  flex-grow: 1 !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  color: rgb(255, 56, 92) !important;
+}
+
+._sdzt8pt {
+  margin-right: 8px !important;
+  font-size: 40px !important;
+  line-height: 36px !important;
+  display: inline-block;
+}
+
+._guws13p {
+  font-size: 22px !important;
+  line-height: 26px !important;
+  display: inline-block;
+}
+
+._m37l9b {
+  font-size: 22px !important;
+  line-height: 26px !important;
+  margin-top: 0;
+  display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 24px !important;
+    margin-left: 24px !important;
+    margin-right: 24px !important;
+    font-weight: 600;
 }

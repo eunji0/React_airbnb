@@ -7,7 +7,6 @@ import { ReactComponent as Play } from '../images/Play.svg';
 export default function HostMain() {
     return(
         <main>
-            <div>
             <div className="hostmain">
                 <div className="hostmain-logo">
                 <Link to="/" className="hostheader-logo">
@@ -57,7 +56,68 @@ export default function HostMain() {
                     </div>
                 </div>
             </div>
+            <div>
+                <div>
+                    <div className="hm-main">
+                        <div>
+                            <div className="hmmain">
+                            <h2 id="host-estimate-header" class="_nudpw0">호스팅으로 올릴 수 있는<br /> 수입을 확인하세요</h2>
+                            <div style={{width:"100%"}}>
+                                <div>
+                                    <div className="hmmain-a">
+                                        <div className="hmmain-aa" style={{display:"flex"}}>
+                                        <div className="hmmain-ain">
+                                            <div className="hmmain-ain1">
+                                                <div className="hmmain-ain2">
+                                                    <div className="_jmxiel">동일 지역 내 호스트의 평균 수입은 다음과 같습니다.*</div>
+                                                    <div className="_13260ndj">
+                                                        <span className="_sdzt8pt">₩2,257,219
+                                                        </span>
+                                                        <span className="_guws13p">/월</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style={{display:"flex", flexDirection:"row"}}>
+                                            <div className="hmmain-ain1">
+                                                <div className="hmmain-ain2">
+                                                    <div className="_jmxiel">호스팅 수입</div>
+                                                    <div className="_13260ndj">
+                                                        <span className="_sdzt8pt" style={{color:"#222222"}}>₩94,051
+                                                        </span>
+                                                        <span className="_guws13p" style={{color:"#222222"}}>/박</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="hmmain-ain1">
+                                                <div className="hmmain-ain2">
+                                                    <div className="_jmxiel">예약 일수:</div>
+                                                    <div className="_13260ndj">
+                                                        <span className="_sdzt8pt" style={{color:"#222222"}}>24 
+                                                        </span>
+                                                        <span className="_guws13p" style={{color:"#222222"}}>박/월</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div className="hmmain-b">
+                                        <h3 className="_m37l9b">숙소를 소개해주세요</h3>
+                                    </div>
+                                    <div className="hmmain-c"></div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </main>
     );
 }

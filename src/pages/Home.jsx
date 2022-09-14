@@ -1,17 +1,16 @@
 import React from "react";
-import Menu1 from "./Menu1";
-import Header from "../component/Header";
-import UnderHeader from "../component/UnderHeader";
-import Footer from "../component/Footer";
+import Menu1 from "../pages/Menu1"
 
 
 export default function Home() {
     return (
         <div>
-            <Header />
+            {/* <Header />
         <UnderHeader />
-            <Footer/>
+
+            <Footer/> */}
             <Menu1 />
+
         </div>
     )
 }
