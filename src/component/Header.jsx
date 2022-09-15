@@ -5,9 +5,15 @@ import { ReactComponent as Search } from '../images/Search.svg';
 import { ReactComponent as Earth } from '../images/Earth.svg';
 import { ReactComponent as Menu } from '../images/Menu.svg';
 import { ReactComponent as My } from '../images/My.svg';
+import ModalHome from "./ModalHome";
+import { useState} from "react";
 
 export default function Header() {
+    const [ModalHomeOn, setModalHomeOn]=useState(false);
+
     return (
+        <>
+        <ModalHome show={ModalHomeOn} onHide={()=>setModalHomeOn(false)}/>
         <header className="main_header">
             <div className="main_header_inner">
                 <div className="main_header_front">
@@ -50,17 +56,20 @@ export default function Header() {
                         </div>
                         <div className="main_header_last_scd">
                             <button className="main_header_last_last_box">
-                                <div className="main_header_last_mymenu">
-                                    <Menu />
-                                </div>
-                                <div className="main_header_last_mymy">
+                                <button type="button" className="main_header_last_mymenu" onClick={()=>setModalHomeOn(true) }>
+                                    <Menu className="menu"/>
+                                    
+                                </button>
+                                <div className="main_header_last_mymy" onClick={()=>setModalHomeOn(false) }>
                                     <My />
                                 </div>
                             </button>
+                            
                         </div>
                     </nav>
                 </div>
             </div>
         </header>
+        </>
     )
 }

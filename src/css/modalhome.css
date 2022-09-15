@@ -1,0 +1,90 @@
+.modal-dialog {
+    height: 243px;
+    width: 240px;
+    background-color: #fff;
+    z-index: 6;
+    position: relative;
+    margin-right: 75px;
+    border-radius: 12px;
+    float: right;
+    padding: 8px 0 8px 0;
+    box-shadow: 0 2px 4px #DDDDDD;
+    top: 70px;
+}
+
+/* .fade {
+    width: 100%;
+    height: 100%;
+} */
+
+.modalhome-btn {
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+
+.modalhome-btn2 {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #DDDDDD;
+    height: 90px;
+}
+
+.modalhome-btn3 {
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    padding-top: 10px;
+}
+
+.modalhome-signup {
+    height: 40%;
+    background-color: #fff;
+    border: none;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.modalhome-login {
+    height: 50%;
+    background-color: #fff;
+    border: none;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.modalhome-host {
+    height: 33.333%;
+    background-color: #fff;
+    border: none;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.modalhome-hosting {
+    height: 33.333%;
+    background-color: #fff;
+    border: none;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.modalhome-help {
+    height: 33.333%;
+    background-color: #fff;
+    border: none;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 18px;
+}
