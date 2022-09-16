@@ -24,9 +24,9 @@ const ModalHome = ({show, onHide})=>{
           </div>
           </div>
         </Modal.Body>
-        <Modal.Footer>
+        {/* <Modal.Footer>
             <Button onClick={onHide}>close</Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     );
 }
