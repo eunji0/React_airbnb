@@ -104,8 +104,14 @@ export default function HostMain() {
                                     </div>
                                     <div className="hmmain-b">
                                         <h3 className="_m37l9b">숙소를 소개해주세요</h3>
+                                        <div className="hm-map"></div>
                                     </div>
-                                    <div className="hmmain-c"></div>
+                                    <div className="hmmain-c">
+                                    <div class="_hbygyl">
+                                        *
+                                        <button type="button" class="_1s7ygi6z">에어비앤비가 예상 수입을 산정하는 방법</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             </div>
@@ -113,7 +119,16 @@ export default function HostMain() {
                     </div>
                 </div>
             </div>
-            <div></div>
+            <div>
+                <div className="hmmain2">
+                    <h2 className="hmmain2-inner">
+                        언제 어디서든 <br/>호스팅하실 수 있습니다
+                    </h2>
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
             <div></div>
             <div></div>
             <div></div>
