@@ -30,11 +30,11 @@ export default function UnderHeader() {
                         </div>
                         <div className="scd_hdr_in">
                             <div className="scd_hdr_in_grid">
-                                <Link to="/">
+                                <Link to="/" className="scdbtn">
                                 <button aria-hidden="false" className="scd_hdr_in_btn" role="radio" aria-checked="true" type="button">
                                     <div className="scd_hdr_in_div">
                                         <span className="scd_hdr_in_div_span">
-                                            <img class="scd_hdr_in_div_img" src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg" alt="" width="24" height="24"/>
+                                            <img class="scd_hdr_in_div_img2" src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg" alt="" width="24" height="24"/>
                                             <div className="scd_hdr_in_div_txt">
                                                 <span className="scd_hdr_in_txt">기상천외한 숙소</span>
                                             </div>
@@ -42,7 +42,7 @@ export default function UnderHeader() {
                                     </div>
                                 </button>
                                 </Link>
-                                <Link to="/menu2">
+                                <Link to="/menu2"  className="scdbtn">
                                 <button aria-hidden="false" className="scd_hdr_in_btn2" role="radio" aria-checked="true" type="button">
                                     <div className="scd_hdr_in_div2">
                                         <span className="scd_hdr_in_div_span2">
@@ -54,7 +54,7 @@ export default function UnderHeader() {
                                     </div>
                                 </button>
                                 </Link>
-                                <Link to="/menu3">
+                                <Link to="/menu3" className="scdbtn">
                                 <button className="scd_hdr_in_btn3"  aria-hidden="false" role="radio" aria-checked="true" type="button"
                                 style={{padding: "4px 0 14px 5px", margin: "12px 0 0 !important"}}>
                                     <div className="scd_hdr_in_div2">
@@ -67,7 +67,7 @@ export default function UnderHeader() {
                                     </div>
                                 </button>
                                 </Link>
-                                <Link to="/menu4">
+                                <Link to="/menu4" className="scdbtn">
                                 <button aria-hidden="false" className="scd_hdr_in_btn3" role="radio" aria-checked="true" type="button" style={{paddingLeft :"15px"}}>
                                     <div className="scd_hdr_in_div2" >
                                         <span className="scd_hdr_in_div_span2">
@@ -79,10 +79,10 @@ export default function UnderHeader() {
                                     </div>
                                 </button>
                                 </Link>
-                                <Link to="/menu5">
+                                <Link to="/menu5"  className="scdbtn">
                                 <button aria-hidden="false" className="scd_hdr_in_btn2" role="radio" aria-checked="true" type="button">
                                     <div className="scd_hdr_in_div2">
-                                        <span clasNames="scd_hdr_in_div_span2">
+                                        <span className="scd_hdr_in_div_span2">
                                             <img className="scd_hdr_in_div_img2" src="https://a0.muscache.com/pictures/10ce1091-c854-40f3-a2fb-defc2995bcaf.jpg" alt="" width="24" height="24"/>
                                             <div className="scd_hdr_in_div_txt2">
                                                 <span className="scd_hdr_in_txt2">해변 근처</span>
@@ -101,6 +101,7 @@ export default function UnderHeader() {
                                         </span>
                                     </div>
                                 </button>
+                                <Link to="/" className="scdbtn">
                                 <button aria-hidden="false" className="scd_hdr_in_btn3" style={{marginLeft: "5px"}}role="radio" aria-checked="true" type="button">
                                     <div className="scd_hdr_in_div2">
                                         <span className="scd_hdr_in_div_span2">
@@ -111,6 +112,8 @@ export default function UnderHeader() {
                                         </span>
                                     </div>
                                 </button>
+                                </Link>
+                                <Link to="/" className="scdbtn">
                                 <button aria-hidden="false" className="scd_hdr_in_btn3" role="radio" aria-checked="true" type="button">
                                     <div className="scd_hdr_in_div2">
                                         <span className="scd_hdr_in_div_span2">
@@ -121,6 +124,8 @@ export default function UnderHeader() {
                                         </span>
                                     </div>
                                 </button>
+                                </Link>
+                                <Link to="/" className="scdbtn">
                                 <button aria-hidden="false" className="scd_hdr_in_btn2" role="radio" aria-checked="true" type="button">
                                     <div className="scd_hdr_in_div2">
                                         <span className="scd_hdr_in_div_span2">
@@ -131,6 +136,8 @@ export default function UnderHeader() {
                                         </span>
                                     </div>
                                 </button>
+                                </Link>
+                                <Link to="/" className="scdbtn">
                                 <button aria-hidden="false" className="scd_hdr_in_btn3" style={{marginLeft: "10px"}} role="radio" aria-checked="true" type="button">
                                     <div className="scd_hdr_in_div2">
                                         <span className="scd_hdr_in_div_span2">
@@ -141,6 +148,8 @@ export default function UnderHeader() {
                                         </span>
                                     </div>
                                 </button>
+                                </Link>
+                                <Link to="/" className="scdbtn">
                                 <button aria-hidden="false" className="scd_hdr_in_btn3" style={{marginLeft: "5px"}} role="radio" aria-checked="true" type="button">
                                     <div className="scd_hdr_in_div2">
                                         <span className="scd_hdr_in_div_span2">
@@ -151,6 +160,8 @@ export default function UnderHeader() {
                                         </span>
                                     </div>
                                 </button>
+                                </Link>
+                                <Link to="/" className="scdbtn">
                                 <button aria-hidden="false" className="scd_hdr_in_btn2" role="radio" aria-checked="true" type="button">
                                     <div className="scd_hdr_in_div2">
                                         <span className="scd_hdr_in_div_span2">
@@ -161,6 +172,8 @@ export default function UnderHeader() {
                                         </span>
                                     </div>
                                 </button>
+                                </Link>
+                                <Link to="/" className="scdbtn">
                                 <button aria-hidden="false" className="scd_hdr_in_btn3" style={{marginLeft: "15px"}} role="radio" aria-checked="true" type="button">
                                     <div className="scd_hdr_in_div2">
                                         <span className="scd_hdr_in_div_span2">
@@ -171,6 +184,8 @@ export default function UnderHeader() {
                                         </span>
                                     </div>
                                 </button>
+                                </Link>
+                                <Link to="/" className="scdbtn">
                                 <button aria-hidden="false" className="scd_hdr_in_btn3" style={{marginLeft: "20px"}} role="radio" aria-checked="true" type="button">
                                     <div className="scd_hdr_in_div2">
                                         <span className="scd_hdr_in_div_span2">
@@ -181,6 +196,8 @@ export default function UnderHeader() {
                                         </span>
                                     </div>
                                 </button>
+                                </Link>
+                                <Link to="/" className="scdbtn">
                                 <button aria-hidden="false" className="scd_hdr_in_btn2" role="radio" aria-checked="true" type="button">
                                     <div className="scd_hdr_in_div2">
                                         <span className="scd_hdr_in_div_span2">
@@ -191,6 +208,7 @@ export default function UnderHeader() {
                                         </span>
                                     </div>
                                 </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -7,6 +7,7 @@ import { ReactComponent as My } from '../images/My.svg';
 import { Link } from "react-router-dom";
 
 export default function InfoHeader(){
+
     return(
         <header className="room_header">
             <div className="room_header_inner">
@@ -73,7 +74,7 @@ export default function InfoHeader(){
                         </nav>
                     </div>
                 </div>
-                
         </header>
+       
     );
 }

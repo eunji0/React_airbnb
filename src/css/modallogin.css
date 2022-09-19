@@ -1,0 +1,406 @@
+.momo {
+    height: 243px;
+    width: 240px;
+    background-color: #fff;
+    z-index: 6;
+    position: relative;
+    display: block;
+    right: 190px;
+    border-radius: 12px;
+    padding: 8px 0 8px 0;
+    box-shadow: 0 2px 4px #DDDDDD;
+    top: 30px;
+}
+
+.modalhome-btn {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+}
+
+
+.modalhome-btn2 {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #DDDDDD;
+    height: 90px;
+}
+
+.modalhome-btn3 {
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    padding-top: 20px;
+}
+
+.modalhome-signup {
+    height: 60%;
+    background-color: #fff;
+    border: none;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.modalhome-login {
+    height: 50%;
+    background-color: #fff;
+    border: none;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.modalhome-host {
+    height: 33.333%;
+    background-color: #fff;
+    border: none;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.modalhome-hosting {
+    height: 33.333%;
+    background-color: #fff;
+    border: none;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.modalhome-help {
+    height: 33.333%;
+    background-color: #fff;
+    border: none;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/* 로그인 모달 */
+
+.loginModal {
+    position: fixed !important;
+    inset: 0px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    width: 568px;
+    background-color: transparent;
+    padding-top : 40px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 100%;
+    z-index:10;
+
+}
+
+.login-modal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255) !important;
+    position: relative !important;
+    max-height: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px !important;
+    border-top-left-radius: 12px !important;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    vertical-align: middle;
+    align-self: center;
+}
+
+.loginHeader {
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    padding: 0px 24px !important;
+    height: 64px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.closelogin {
+   padding-top: 25px;
+}
+
+.loginheadertxt {
+   padding-top: 25px;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 16px;
+   font-weight: 800;
+   line-height: 20px;
+}
+
+.loginMain{
+    padding: 24px !important;
+    flex: 1 1 auto !important;
+    overflow-y: auto !important;
+    outline: none !important;
+}
+
+.lm1 {
+    margin-top: 8px !important;
+    margin-bottom: 24px !important;
+}
+
+.lm3 {
+    width: 100% !important;
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+}
+
+.lm4 {
+    display: block;
+}
+
+._u72b34 {
+    font-size: 22px !important;
+    line-height: 26px !important;
+    color: rgb(34, 34, 34) !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+    margin-top: 0;
+    text-align: left;
+}
+
+.lm2-form {
+    margin-top: 16px;
+}
+
+.dir.cx1v2qp[class][class] {
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+._jro6t0 {
+    display: flex !important;
+    width: 100%;
+}
+
+._e296pg {
+    position: relative !important;
+    width: 100%;
+}
+
+._sbmagf {
+    position: absolute !important;
+    pointer-events: none !important;
+}
+
+._ey3tib {
+    position: relative !important;
+    display: flex !important;
+    width: 100% !important;
+    margin: 0px !important;
+    border: none transparent !important;
+    color: rgb(34, 34, 34) !important;
+    background-color: transparent !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    font-weight: 400 !important;
+}
+
+._19nw8j1 {
+    position: relative !important;
+    flex: 1 1 auto !important;
+    padding: 0px !important;
+}
+
+._zhftk97 {
+    position: absolute !important;
+    top: 18px !important;
+    left: 12px !important;
+    right: 12px !important;
+    margin: 0px !important;
+    padding: 0px 24px 0px 0px !important;
+    color: rgb(113, 113, 113) !important;
+    pointer-events: none !important;
+    transform-origin: 0% 0% !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    transform: translateY(-8px) scale(0.75) !important;
+    font-weight: 400 !important;
+}
+
+._lmil0 {
+    -webkit-box-pack: center !important;
+    -webkit-box-align: center !important;
+    position: absolute !important;
+    right: 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100% !important;
+    max-width: 50% !important;
+    min-width: 36px !important;
+    padding-right: 12px !important;
+    pointer-events: none !important;
+    color: rgb(34, 34, 34) !important;
+}
+
+._11hx67x {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    text-align: left;
+    color: #717171;
+}
+._1iwku6d {
+    min-height: 56px !important;
+    width: 100% !important;
+    border: none !important;
+    outline: none !important;
+    margin: 0px !important;
+    padding: 26px 36px 10px 12px !important;
+    background-color: transparent !important;
+    color: inherit !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    appearance: none !important;
+}
+
+
+option {
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+
+._t26glb {
+    position: absolute !important;
+    pointer-events: none !important;
+    border-style: solid !important;
+}
+
+._3hmsj:focus-within {
+    border-radius: 8px;
+    border-left: 3px solid #222222 !important;
+    border-top: 3px solid #222222 !important;
+    border-right: 3px solid #222222 !important;
+    border-bottom: 2px solid #222222 !important;
+}
+
+._tddesd {
+    position: relative !important;
+    cursor: text !important;
+    display: flex !important;
+    min-height: 56px !important;
+    width: 100% !important;
+    margin: 0px !important;
+    border: none transparent !important;
+    color: rgb(34, 34, 34) !important;
+    background-color: transparent !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    font-weight: 400 !important;
+}
+
+._1yw7hpv {
+    position: relative !important;
+    flex: 1 1 0% !important;
+    padding: 0px !important;
+}
+
+._1jn0ze9 {
+    position: absolute !important;
+    top: 18px !important;
+    left: 12px !important;
+    right: 12px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    color: rgb(113, 113, 113) !important;
+    pointer-events: none !important;
+    transform-origin: 0% 0% !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    font-weight: 400 !important;
+
+}
+._js9i23 {
+    display: flex !important;
+    opacity: 0 !important;
+}
+._1dnryfrb {
+    padding-top: 26px !important;
+    padding-left: 12px !important;
+    margin-right: -6px !important;
+    color: rgb(113, 113, 113) !important;
+}
+
+._c5rhl5 {
+    width: 100% !important;
+    border: none !important;
+    outline: none !important;
+    padding: 0px !important;
+    margin: 26px 12px 6px !important;
+    min-height: 1px !important;
+    color: inherit !important;
+    background-color: transparent !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    appearance: none !important;
+}
+
+._1dnryfrb {
+    padding-top: 26px !important;
+    padding-left: 12px !important;
+    margin-right: -6px !important;
+    color: rgb(113, 113, 113) !important;
+}
+
+._c5rhl5::placeholder {
+    color: rgb(113, 113, 113) !important;
+    opacity: 1 !important;
+}
+
+._166d2jm {
+    margin-top: 8px !important;
+    color: rgb(34, 34, 34) !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+    font-weight: 400 !important;
+}
+
+._1sikdxcl {
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-style: inherit !important;
+    font-variant: inherit !important;
+    line-height: inherit !important;
+    color: rgb(34, 34, 34) !important;
+    text-decoration: underline !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    text-align: left;
+    float: left;
+    outline: none !important;
+}

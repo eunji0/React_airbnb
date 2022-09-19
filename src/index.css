@@ -1,8 +1,8 @@
 @import 'reset.css';
 @import './css/host.css';
-@import './css/modalhome.css';
+@import './css/modallogin.css';
 
-.root-wrap  {
+.root-wrap, body  {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -25,7 +25,7 @@
   left: 0;
   right: 0;
   background-color: #FFFFFF;
-  z-index: 5;
+  z-index: 4;
 }
 
 .main_header_inner{
@@ -273,6 +273,7 @@
   width: 16px;
   background-color: #fff;
   border: none;
+  height: 16px;
 }
 
 .menu {
@@ -303,14 +304,12 @@
   padding-top: 20px;
   top: 60px;
   height: 78px;
-  z-index: 5;
+  z-index: 3;
 }
 
 .main_scd_header_inner {
   max-height: 78px;
   display: grid;
-  /* grid-template-columns는 열(column)의 배치
-   */
    grid-template-columns:100%;
    margin-inline: auto;
    height: 78px;
@@ -333,6 +332,7 @@
 .scd_header_inner_menu{
   width: 1255.2px;
   height: 78px;
+
 }
 
 .scd_header_scroll {
@@ -438,6 +438,15 @@
   padding: 4px 0 14px;
   margin: 12px 0 0;
   background-color: #FFFFFF;
+  height: 62.8px;
+}
+
+.scdbtn:hover {
+  border-bottom: 3px solid #DDDDDD;
+}
+
+.scdbtn:focus-within {
+  border-bottom: 3px solid #222222;
 }
 
 .scd_hdr_in_div {
@@ -450,6 +459,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #717171;
 }
 
 .scd_hdr_in_div_img {
@@ -477,6 +487,7 @@
   padding: 4px 0 14px;
   margin: 12px 0 0 5px;
   background-color: #FFFFFF;
+  height: 62.8px;
 }
 
 .scd_hdr_in_div2 {
@@ -489,7 +500,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  color: #717171;
+}
+
+.scd_hdr_in_div_span2:hover {
+  color: #222222;
+}
+
+.scd_hdr_in_div_span2:focus {
+  color: #222222;
 }
 
 .scd_hdr_in_div_img2 {
@@ -498,16 +517,22 @@
   filter: contrast(calc(13 / 44));
 }
 
+
 .scd_hdr_in_div_txt2 {
   white-space: nowrap;
   position: relative;
 }
+
 
 .scd_hdr_in_txt2 {
   display: inline-block;
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
+}
+
+.scd_hdr_in_txt2:focus {
+  color: #222222;
 }
 
 .scd_hdr_in_btn3 {
@@ -517,6 +542,7 @@
   padding: 4px 0 14px 10px;
   margin: 12px 0 0;
   background-color: #FFFFFF;
+  height: 62.8px;
 }
 
 .scd_header_inner_filter{
@@ -771,7 +797,7 @@
   height: 80px;
   left: 0 !important;
   width: 100% !important;
-  z-index: 100 !important;
+  z-index: 3 !important;
   position: absolute !important;
   display: block;
   border-bottom: 1px solid #DDDDDD;
@@ -802,6 +828,7 @@
   flex: 0 1 auto !important;
   min-width: 348px !important;
   padding: 0 12px !important;
+  z-index: 3;
 }
 
 .room_header-end {
@@ -2671,11 +2698,13 @@ section {
   grid-area: center;
   justify-self: center;
   /* align-self: end; */
+  z-index: 10px;
 }
 
 .main_map_btn{
   white-space: nowrap !important;
   pointer-events: auto !important;
+  z-index: 10px;
 }
 
 .main_map_btnbtn{
