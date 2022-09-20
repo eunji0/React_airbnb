@@ -4,23 +4,33 @@ import { ReactComponent as Star } from '../images/Star.svg';
 import { ReactComponent as Share } from '../images/Share.svg';
 import { ReactComponent as Save } from '../images/Save.svg';
 import { ReactComponent as AllPicture } from '../images/AllPicture.svg';
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import ModalSign from './/ModalSign';
 import { ReactComponent as Closelogin } from '../images/Closelogin.svg';
 import { ReactComponent as Down } from '../images/Down.svg';
 
+
 export default function InfoContentTop() {
-
+    const outSection = useRef(null);
     const [loginOpen, setLoginOpen] = useState(false);
+    const [inputOn, setInputOn] = useState(false);
 
-    const openLogin = () => {
-        setLoginOpen(true);
-    };
-    const closeLogin = () => {
-        setLoginOpen(false);
-    };
+
+    useEffect(() => {
+        function handleClickOutside(e) {
+            if (outSection.current && !outSection.current.contains(e.target)) {
+                setLoginOpen(false);
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [outSection]);
+
 
     return(
+        
         <div>
             <main className="room-content">
             <div className="rmctt">
@@ -73,7 +83,7 @@ export default function InfoContentTop() {
                                                     <div className="rmhdr2-div2-i">
                                                         <div className="rmhdr2-div2-v1">
                                                             <button type="button" className="rmhdr2-div2-v1btn">
-                                                                <div className="rmhdr2-div2-div" onClick={closeLogin}>
+                                                                <div className="rmhdr2-div2-div" >
                                                                     <span className="rmhdr2-div2-span">
                                                                         <Share />
                                                                             
@@ -83,33 +93,34 @@ export default function InfoContentTop() {
                                                             </button>
                                                         </div>
                                                         <div>
-                                                            <button aria-label="목록에 숙소 추가하기" onClick={openLogin} data-testid="pdp-save-button-unsaved" type="button" className="_1e5q4qoz">
+                                                            <button aria-label="목록에 숙소 추가하기" ref={outSection} onClick={()=> setLoginOpen(true)} data-testid="pdp-save-button-unsaved" type="button" className="_1e5q4qoz">
                                                                 <div aria-hidden="true" className="_5kaapu">
                                                                     <span className="_14tkmhr">
-                                                                        <Save />
-                                                                        <ModalSign open={loginOpen} close={closeLogin} >
+                                                                            <Save />
+                                                                            <ModalSign open={loginOpen} close={()=> setLoginOpen(false)}>
                                                                                 <div className="loginModal">
                                                                                     <div className="login-modal">
                                                                                         <div className="loginHeader">
-                                                                                            <div type="button" className="closelogin" onClick={closeLogin}>
+                                                                                            
+                                                                                            <div type="button" className="closelogin" close={()=> setLoginOpen(false)}>
                                                                                                 <Closelogin />
                                                                                             </div>
                                                                                             <div className="loginheadertxt">로그인 또는 회원가입</div>
-                                                                                           
+
                                                                                         </div>
                                                                                         <div className="loginMain">
                                                                                             <div className="login-main">
                                                                                                 <div className="lm1">
-                                                                                                <h3 className="_u72b34" >에어비앤비에 오신 것을 환영합니다.</h3>
+                                                                                                    <h3 className="_u72b34" >에어비앤비에 오신 것을 환영합니다.</h3>
                                                                                                 </div>
                                                                                                 <form className="lm2">
                                                                                                     <div className="lm2-form">
 
                                                                                                     </div>
-                                                                                                    <div className="cx1v2qp dir dir-ltr" style={{borderRadius: "8px;"}}>
+                                                                                                    <div className="cx1v2qp dir dir-ltr" style={{ borderRadius: "8px;" }}>
                                                                                                         <div className="_jro6t0">
-                                                                                                            <div className="_e296pg" style={{flex: "1 1 0%;"}}>
-                                                                                                                <div role="presentation" className="_sbmagf" style={{background: "#fff;", borderRadius: "8px 8px 0px 0px", borderTopColor:"rgb(221,221,221)" ,inset: "0px 0px -1px;"}}>
+                                                                                                            <div className="_e296pg" style={{ flex: "1 1 0%;" }}>
+                                                                                                                <div role="presentation" className="_sbmagf" style={{ background: "#fff;", borderRadius: "8px 8px 0px 0px", borderTopColor: "rgb(221,221,221)", inset: "0px 0px -1px;" }}>
                                                                                                                 </div>
                                                                                                                 <div className="_ey3tib">
                                                                                                                     <label className="_19nw8j1" for="country">
@@ -163,16 +174,16 @@ export default function InfoContentTop() {
                                                                                                                         </div>
                                                                                                                     </label>
                                                                                                                     <div className="_lmil0">
-                                                                                                                    <Down />
+                                                                                                                        <Down />
                                                                                                                     </div>
                                                                                                                 </div>
-                                                                                                                <div className="_t26glb" style={{inset: "0px 0px -1px", borderRadius: "8px 8px 0px 0px",borderTopColor:"rgb(221,221,221)", borderLeftColor:"rgb(221,221,221)", borderRightColor:"rgb(221,221,221)",borderWidth: "1px", zIndex: "0"}}>
+                                                                                                                <div className="_t26glb" style={{ inset: "0px 0px -1px", borderRadius: "8px 8px 0px 0px", borderTopColor: "rgb(221,221,221)", borderLeftColor: "rgb(221,221,221)", borderRightColor: "rgb(221,221,221)", borderWidth: "1px", zIndex: "0" }}>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <div className="_jro6t0">
-                                                                                                            <div className="_e296pg" style={{flex: "2 1 0%"}}>
-                                                                                                                <div role="presentation" className="_sbmagf" style={{borderRadius: "0px 0px 8px 8px", inset: "0px 0px -1px;"}}>
+                                                                                                            <div className="_e296pg" onClick={() => setInputOn(!inputOn)} style={{ flex: "2 1 0%", zIndex: inputOn === false ? "" : "1" }}>
+                                                                                                                <div role="presentation" className="_sbmagf" style={{ borderRadius: "0px 0px 8px 8px", inset: "0px 0px -1px;" }}>
                                                                                                                 </div>
                                                                                                                 <div className="_tddesd">
                                                                                                                     <label className="_1yw7hpv" for="phoneInputphoneNumber" >
@@ -183,19 +194,32 @@ export default function InfoContentTop() {
                                                                                                                             <div className="_js9i23" >
                                                                                                                                 <div className="_1dnryfrb">+1</div>
                                                                                                                                 <input name="phoneInputphoneNumber" placeholder="(XXX) XXX-XXXX" aria-required="true" data-testid="login-signup-phonenumber" className="_c5rhl5" id="phoneInputphoneNumber" autocomplete="tel-national" inputmode="tel" type="tel" aria-describedby="phone-number-help-text-phoneNumber airlock-inline-container" value="" />
-                                                                                                                                </div>
-                                                                                                                            </div> 
-                                                                                                                            </label>
+                                                                                                                            </div>
                                                                                                                         </div>
-                                                                                                                        <div className="_t26glb" style={{inset: "0px 0px -1px", borderRadius: "0px 0px 8px 8px", borderTopColor: "#DDDDDD", borderRightColor: "#DDDDDD", borderBottomColor: "#DDDDDD", borderLeftColor: "#DDDDDD", borderWidth: "1px", zIndex: "0"}}></div></div></div>
-                                                                                                                        <div className="_166d2jm">
-                                                                                                                            <span id="phone-number-help-text-phoneNumber">전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다. 
-                                                                                                                            <a target="_blank" href="/terms/privacy_policy?source=signup" className="_1sikdxcl">개인정보 처리방침</a>
-                                                                                                                            </span>
-                                                                                                                        </div>
-                                                                                                                        </div>
+                                                                                                                    </label>
+                                                                                                                </div>
+                                                                                                                <div className="_t26glb" style={{ inset: "0px 0px -1px", borderRadius: "0px 0px 8px 8px", borderTopColor: "#DDDDDD", borderRightColor: "#DDDDDD", borderBottomColor: "#DDDDDD", borderLeftColor: "#DDDDDD", borderWidth: "1px", zIndex: "0" }}></div></div></div>
+                                                                                                        <div className="_166d2jm1">
+                                                                                                            <span id="phone-number-help-text-phoneNumber">
+                                                                                                                <div className="txtxxx">전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.</div>
+                                                                                                                <a target="_blank" href="/terms/privacy_policy?source=signup" className="_1sikdxcl">개인정보 처리방침</a>
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                        <div className="lm2-btn">
+                                                                                                            <button className="lm2btn">
+                                                                                                                <span className="lm2span">
+                                                                                                                    <span class="_kaq6tx" ></span>
+                                                                                                                </span>
+                                                                                                                <span className="lm2span22">
+                                                                                                                   계속
+                                                                                                                </span>
+                                                                                                            </button>
+                                                                                                        </div>
+                                                                                                    </div>
                                                                                                 </form>
-                                                                                                <div className="lm3"></div>
+                                                                                                <div className="lm3">
+                                                                                                <div class="_16fq9mb">또는</div>
+                                                                                                </div>
                                                                                                 <div className="lm4"></div>
                                                                                             </div>
                                                                                         </div>

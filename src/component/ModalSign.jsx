@@ -17,11 +17,6 @@ const ModalSign = (props) => {
           </header>
           <main>
             {props.children}</main>
-          {/* <footer>
-            <button className="close" onClick={close}>
-              close
-            </button>
-          </footer> */}
         </section>
       ) : close}
     </div>

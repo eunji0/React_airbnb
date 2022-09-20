@@ -137,7 +137,7 @@
 }
 
 .loginheadertxt {
-   padding-top: 25px;
+   padding-top: 20px;
    margin-left: auto;
    margin-right: auto;
    font-size: 16px;
@@ -163,6 +163,7 @@
     margin-bottom: 16px !important;
     font-weight: 400 !important;
     font-size: 12px !important;
+    height: 16px;
     line-height: 16px !important;
 }
 
@@ -322,6 +323,13 @@ option {
     font-weight: 400 !important;
 }
 
+._tddesd:focus-within{
+    border-radius: 8px !important;
+    border-left: 3px solid #222222 !important;
+    border-top: 3px solid #222222 !important;
+    border-right: 3px solid #222222 !important;
+    border-bottom: 2px solid #222222 !important;
+}
 ._1yw7hpv {
     position: relative !important;
     flex: 1 1 0% !important;
@@ -347,6 +355,7 @@ option {
     display: flex !important;
     opacity: 0 !important;
 }
+
 ._1dnryfrb {
     padding-top: 26px !important;
     padding-left: 12px !important;
@@ -382,12 +391,14 @@ option {
     opacity: 1 !important;
 }
 
-._166d2jm {
+._166d2jm1 {
     margin-top: 8px !important;
     color: rgb(34, 34, 34) !important;
-    font-size: 12px !important;
+    font-size:11px !important;
     line-height: 16px !important;
     font-weight: 400 !important;
+   text-align: left;
+   height: 32px;
 }
 
 ._1sikdxcl {
@@ -403,4 +414,84 @@ option {
     text-align: left;
     float: left;
     outline: none !important;
+}
+
+.lm2-btn {
+    margin-bottom: 24px !important;
+    margin-top: 16px !important;
+}
+
+.lm2btn {
+    cursor: pointer !important;
+    display: inline-block !important;
+    margin: 0px !important;
+    position: relative !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    touch-action: manipulation !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    outline: none !important;
+    padding: 14px 24px !important;
+    border: none !important;
+    background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%) !important;
+    color: rgb(255, 255, 255) !important;
+    width: 100% !important;
+}
+
+.lm2span {
+    position: absolute !important;
+    top: 0px !important;
+    left: 0px !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    border-radius: 8px !important;
+}
+
+._kaq6tx {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 200px !important;
+    background-size: 200% 200% !important;
+    opacity: 0 !important;
+    background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
+}
+
+.lm2span22 {
+    display: block !important;
+    position: relative !important;
+    pointer-events: none !important;
+}
+
+._16fq9mb {
+    display: flex !important;
+    align-items: center !important;
+    margin: 16px 0px !important;
+    height: 16px;
+}
+
+
+._16fq9mb::before {
+    content: "" !important;
+    display: block !important;
+    width: 100% !important;
+    height: 0.5px !important;
+    background-color: rgb(221, 221, 221) !important;
+    margin-right: 16px !important;
+    
+}
+
+._16fq9mb::after {
+    content: "" !important;
+    display: block !important;
+    width: 100% !important;
+    height: 0.5px !important;
+    background-color: rgb(221, 221, 221) !important;
+    margin-left: 16px !important;
 }

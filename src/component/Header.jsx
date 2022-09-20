@@ -5,27 +5,27 @@ import { ReactComponent as Search } from '../images/Search.svg';
 import { ReactComponent as Earth } from '../images/Earth.svg';
 import { ReactComponent as Menu } from '../images/Menu.svg';
 import { ReactComponent as My } from '../images/My.svg';
-import { useState} from 'react';
+import { useState, useRef} from 'react';
 import ModalLogin from './ModalLogin';
+import { useEffect } from "react";
 // import { ReactComponent as Closelogin } from '../images/Closelogin.svg';
 
 export default function Header() {
     const [modalOpen, setModalOpen] = useState(false);
-    // const [loginOpen, setLoginOpen] = useState(false);
+    const outSection = useRef(null);
 
-    const openModal = () => {
-      setModalOpen(true);
-    };
-    const closeModal = () => {
-      setModalOpen(false);
-    };
-   
-    // const openLogin = () => {
-    //     setLoginOpen(true);
-    //   };
-    //   const closeLogin = () => {
-    //     setLoginOpen(false);
-    //   };
+
+    useEffect(() => {
+        function handleClickOutside(e) {
+            if (outSection.current && !outSection.current.contains(e.target)) {
+                setModalOpen(false);
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [outSection]);
 
     return (
         <>
@@ -72,25 +72,14 @@ export default function Header() {
                             </div>
                             <div className="main_header_last_scd">
                                 <button className="main_header_last_last_box">
-                                    <button type="button" className="main_header_last_mymenu" onClick={openModal}>
+                                    <button type="button" className="main_header_last_mymenu" ref={outSection} onClick={()=>setModalOpen(true)}>
                                         <Menu className="menu" />
-                                        <ModalLogin open={modalOpen} close={closeModal}>
-                                            <div className="momo">
+                                        <ModalLogin open={modalOpen} >
+                                                    <div className="momo">
                                                 <div className="modalhome-btn">
-                                                    <div className="modalhome-btn2" onClick={closeModal}>
+                                                    <div className="modalhome-btn2" >
                                                         <div type="button" className="modalhome-signup" >회원 가입</div>
                                                         <div type="button" className="modalhome-login">로그인</div>
-                                                        {/* <ModalLogin open={loginOpen} close={closeLogin} >
-                                                            <div className="loginModal">
-                                                                <div className="login-modal">
-                                                                    <Header className="loginHeader">
-                                                                        <div type="button" className="closelogin" onClick={closeLogin}>
-                                                                            <Closelogin />
-                                                                        </div>
-                                                                    </Header>
-                                                                </div>
-                                                            </div>
-                                                        </ModalLogin> */}
                                                     </div>
                                                     <div className="modalhome-btn3">
                                                         <div type="button" className="modalhome-host">숙소 호스트 되기</div>
@@ -101,9 +90,27 @@ export default function Header() {
                                                 </div>
                                             </div>
                                         </ModalLogin>
-                                </button>
-                                <div className="main_header_last_mymy" onClick={closeModal}>
+                                        
+                                    </button>
+                                    
+                                <div className="main_header_last_mymy" ref={outSection} onClick={()=>setModalOpen(true)} >
                                     <My />
+                                    <ModalLogin open={modalOpen}>
+                                            <div className="momo">
+                                                <div className="modalhome-btn">
+                                                    <div className="modalhome-btn2" >
+                                                        <div type="button" className="modalhome-signup" >회원 가입</div>
+                                                        <div type="button" className="modalhome-login">로그인</div>
+                                                    </div>
+                                                    <div className="modalhome-btn3">
+                                                        <div type="button" className="modalhome-host">숙소 호스트 되기</div>
+                                                        <div type="button" className="modalhome-hosting">체험 호스팅하기</div>
+                                                        <div type="button" className="modalhome-help">도움말</div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </ModalLogin>
                                 </div>
                             </button>
                             
