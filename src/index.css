@@ -890,6 +890,10 @@
   vertical-align: middle;
 }
 
+.r-hdr-pf-e {
+  position: relative;
+}
+
 .room_header-mid-in1-btn {
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;

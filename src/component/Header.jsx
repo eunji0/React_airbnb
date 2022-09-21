@@ -8,11 +8,14 @@ import { ReactComponent as My } from '../images/My.svg';
 import { useState, useRef} from 'react';
 import ModalLogin from './ModalLogin';
 import { useEffect } from "react";
+import ModalSign from "./ModalSign";
 // import { ReactComponent as Closelogin } from '../images/Closelogin.svg';
 
 export default function Header() {
-    const [modalOpen, setModalOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);//메뉴모달
     const outSection = useRef(null);
+    const outSection2 = useRef(null);
+    const [loginOpen, setLoginOpen] = useState(false); //모달사인
 
 
     useEffect(() => {
@@ -26,6 +29,21 @@ export default function Header() {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [outSection]);
+
+    // 로그인 모달
+    useEffect(() => {
+
+        function handleClickOutsid(e) {
+            if (outSection2.current && !outSection2.current.contains(e.target)) {
+                setLoginOpen(false);
+                
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutsid);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutsid);
+        };
+    }, [outSection2]);
 
     return (
         <>
@@ -72,13 +90,15 @@ export default function Header() {
                             </div>
                             <div className="main_header_last_scd">
                                 <button className="main_header_last_last_box">
-                                    <button type="button" className="main_header_last_mymenu" ref={outSection} onClick={()=>setModalOpen(true)}>
+                                    <button type="button" className="main_header_last_mymenu" ref={outSection}  onClick={()=>setModalOpen(true)}>
                                         <Menu className="menu" />
                                         <ModalLogin open={modalOpen} >
                                                     <div className="momo">
                                                 <div className="modalhome-btn">
                                                     <div className="modalhome-btn2" >
-                                                        <div type="button" className="modalhome-signup" >회원 가입</div>
+                                                        <div type="button" className="modalhome-signup" ref={outSection2} onClick={()=>setLoginOpen(true)}>회원 가입
+                                                        <ModalSign open={loginOpen}></ModalSign>
+                                                        </div>
                                                         <div type="button" className="modalhome-login">로그인</div>
                                                     </div>
                                                     <div className="modalhome-btn3">
@@ -95,7 +115,7 @@ export default function Header() {
                                     
                                 <div className="main_header_last_mymy" ref={outSection} onClick={()=>setModalOpen(true)} >
                                     <My />
-                                    <ModalLogin open={modalOpen}>
+                                        <ModalLogin open={modalOpen}>
                                             <div className="momo">
                                                 <div className="modalhome-btn">
                                                     <div className="modalhome-btn2" >
@@ -107,7 +127,7 @@ export default function Header() {
                                                         <div type="button" className="modalhome-hosting">체험 호스팅하기</div>
                                                         <div type="button" className="modalhome-help">도움말</div>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </div>
                                         </ModalLogin>

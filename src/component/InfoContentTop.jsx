@@ -7,15 +7,31 @@ import { ReactComponent as AllPicture } from '../images/AllPicture.svg';
 import { useState, useEffect, useRef } from "react";
 import ModalSign from './/ModalSign';
 import { ReactComponent as Closelogin } from '../images/Closelogin.svg';
-import { ReactComponent as Down } from '../images/Down.svg';
+// import { ReactComponent as Down } from '../images/Down.svg';
+// import { ReactComponent as Facebook2 } from '../images/Facebook2.svg';
+// import { ReactComponent as Google } from '../images/Google.svg';
+// import { ReactComponent as Apple } from '../images/Apple.svg';
+// import { ReactComponent as Email } from '../images/Email.svg';
 
 
 export default function InfoContentTop() {
     const outSection = useRef(null);
-    const [loginOpen, setLoginOpen] = useState(false);
-    const [inputOn, setInputOn] = useState(false);
+    const outSection2 = useRef(null);
+    const [loginOpen, setLoginOpen] = useState(false); //로그인모달사인
+    const [inputOn, setInputOn] = useState(false);//전화번호 입력
+    const [share, setShare] = useState(false); //공유하기
+    const inputNumber = useRef(null);
 
+    const closeModal =()=> {
+        setLoginOpen(false);
+       
+    }
 
+    const closeShare = () => {
+        setShare(false);
+    }
+
+// 외부클릭
     useEffect(() => {
         function handleClickOutside(e) {
             if (outSection.current && !outSection.current.contains(e.target)) {
@@ -28,6 +44,35 @@ export default function InfoContentTop() {
         };
     }, [outSection]);
 
+    // 공유하기
+    useEffect(() => {
+
+        function handleClickOutside(e) {
+            if (outSection2.current && !outSection2.current.contains(e.target)) {
+                setShare(false);
+                
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [outSection2]);
+
+    // 전화번호
+    useEffect(()=>{
+        function phoneInput(e){
+            if(inputNumber.current && !inputNumber.current.contains(e.target)){
+                setInputOn(false);
+            }
+        }
+        document.addEventListener('mousedown', phoneInput);
+        return () => {
+            document.removeEventListener('mousedown', phoneInput);
+        };
+    }, [inputNumber]);
+
+    console.log(loginOpen);
 
     return(
         
@@ -82,11 +127,37 @@ export default function InfoContentTop() {
                                                 <div className="rmhdr2-div2-d">
                                                     <div className="rmhdr2-div2-i">
                                                         <div className="rmhdr2-div2-v1">
-                                                            <button type="button" className="rmhdr2-div2-v1btn">
+                                                            <button type="button" className="rmhdr2-div2-v1btn" ref={outSection2} onClick={()=> setShare(true)}>
                                                                 <div className="rmhdr2-div2-div" >
                                                                     <span className="rmhdr2-div2-span">
                                                                         <Share />
-                                                                            
+                                                                        <ModalSign open={share}>
+                                                                            {/* <div className="modalAll"> */}
+                                                                                <div className="loginModal">
+                                                                                    <div className="login-modal">
+                                                                                        <div className="loginHead">
+                                                                                            
+                                                                                            <div type="button" className="closelogin" onClick={closeShare}>
+                                                                                                <Closelogin />
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div className="loginmain">
+                                                                                            <div className="login-main">
+                                                                                                <section className="share-sec">
+                                                                                                    <h2 className="_u72b3" >가족 및 친구들과 이 장소를 공유하세요.</h2>
+                                                                                                    <div className="_1ywltba">
+                                                                                                        <img src="https://a0.muscache.com/pictures/8f67e49a-1194-439a-8a62-b0d4636abe92.jpg" alt="" className="_1x7xqyv"/>
+                                                                                                        <div className="_lo9vot">Steigen Lodge Sjøhytte Våg nr 1</div>
+                                                                                                    </div>
+                                                                                                    <div className="share-flex">
+
+                                                                                                    </div>
+                                                                                                </section>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                        </ModalSign>
                                                                     </span>
                                                                     공유하기
                                                                 </div>
@@ -97,12 +168,13 @@ export default function InfoContentTop() {
                                                                 <div aria-hidden="true" className="_5kaapu">
                                                                     <span className="_14tkmhr">
                                                                             <Save />
-                                                                            <ModalSign open={loginOpen} close={()=> setLoginOpen(false)}>
-                                                                                <div className="loginModal">
+                                                                            <ModalSign open={loginOpen} close={closeModal}>
+                                                                               
+                                                                                {/* <div className="loginModal">
                                                                                     <div className="login-modal">
                                                                                         <div className="loginHeader">
                                                                                             
-                                                                                            <div type="button" className="closelogin" close={()=> setLoginOpen(false)}>
+                                                                                            <div type="button" className="closelogin" onClick={closeModal}>
                                                                                                 <Closelogin />
                                                                                             </div>
                                                                                             <div className="loginheadertxt">로그인 또는 회원가입</div>
@@ -182,22 +254,23 @@ export default function InfoContentTop() {
                                                                                                             </div>
                                                                                                         </div>
                                                                                                         <div className="_jro6t0">
-                                                                                                            <div className="_e296pg" onClick={() => setInputOn(!inputOn)} style={{ flex: "2 1 0%", zIndex: inputOn === false ? "" : "1" }}>
+                                                                                                            <div className="_e296pg" ref={inputNumber} onClick={() => setInputOn(true)} style={{ flex: "2 1 0%", zIndex: inputOn === false ? "" : "1"}}>
                                                                                                                 <div role="presentation" className="_sbmagf" style={{ borderRadius: "0px 0px 8px 8px", inset: "0px 0px -1px;" }}>
                                                                                                                 </div>
-                                                                                                                <div className="_tddesd">
+                                                                                                                <div className={`${inputOn === false ? "_tddesd":"_wbq"}`}>
                                                                                                                     <label className="_1yw7hpv" for="phoneInputphoneNumber" >
-                                                                                                                        <div className="_1jn0ze9">
+                                                                                                                        <div className={`${inputOn === false ? "_1jn0ze9": "lm222"}`}>
                                                                                                                             <div className="_11hx67x">전화번호</div>
                                                                                                                         </div>
                                                                                                                         <div dir="ltr">
-                                                                                                                            <div className="_js9i23" >
+                                                                                                                            <div className={`${inputOn === false ? "_js9i23": "lm223"}`}>
                                                                                                                                 <div className="_1dnryfrb">+1</div>
                                                                                                                                 <input name="phoneInputphoneNumber" placeholder="(XXX) XXX-XXXX" aria-required="true" data-testid="login-signup-phonenumber" className="_c5rhl5" id="phoneInputphoneNumber" autocomplete="tel-national" inputmode="tel" type="tel" aria-describedby="phone-number-help-text-phoneNumber airlock-inline-container" value="" />
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                     </label>
                                                                                                                 </div>
+                                                                                                                
                                                                                                                 <div className="_t26glb" style={{ inset: "0px 0px -1px", borderRadius: "0px 0px 8px 8px", borderTopColor: "#DDDDDD", borderRightColor: "#DDDDDD", borderBottomColor: "#DDDDDD", borderLeftColor: "#DDDDDD", borderWidth: "1px", zIndex: "0" }}></div></div></div>
                                                                                                         <div className="_166d2jm1">
                                                                                                             <span id="phone-number-help-text-phoneNumber">
@@ -218,13 +291,68 @@ export default function InfoContentTop() {
                                                                                                     </div>
                                                                                                 </form>
                                                                                                 <div className="lm3">
-                                                                                                <div class="_16fq9mb">또는</div>
+                                                                                                <div class="_16fq9mb"><div className="lmor">또는</div></div>
                                                                                                 </div>
-                                                                                                <div className="lm4"></div>
+                                                                                                <div className="lm4">
+                                                                                                    <div className="lm4-inner">
+                                                                                                        <div className="lm4-in">
+                                                                                                            <form>
+                                                                                                                <button className="lm4-btn">
+                                                                                                                    <div className="lm4in">
+                                                                                                                        <div className="lm4div1">
+                                                                                                                            <Facebook2 />
+                                                                                                                        </div>
+                                                                                                                        <div className="lm4div2">페이스북으로 로그인하기</div>
+                                                                                                                        <div className="lm4div3"></div>
+                                                                                                                    </div>
+                                                                                                                </button>
+                                                                                                            </form>
+                                                                                                        </div>
+                                                                                                        <div className="lm4-in">
+                                                                                                        <form>
+                                                                                                                <button className="lm4-btn">
+                                                                                                                    <div className="lm4in">
+                                                                                                                        <div className="lm4div1">
+                                                                                                                            <Google />
+                                                                                                                        </div>
+                                                                                                                        <div className="lm4div2">구글로 로그인하기</div>
+                                                                                                                        <div className="lm4div3"></div>
+                                                                                                                    </div>
+                                                                                                                </button>
+                                                                                                            </form>
+                                                                                                        </div>
+                                                                                                        <div className="lm4-in">
+                                                                                                        <form>
+                                                                                                                <button className="lm4-btn">
+                                                                                                                    <div className="lm4in">
+                                                                                                                        <div className="lm4div1">
+                                                                                                                            <Apple />
+                                                                                                                        </div>
+                                                                                                                        <div className="lm4div2">Apple 계정으로 계속하기</div>
+                                                                                                                        <div className="lm4div3"></div>
+                                                                                                                    </div>
+                                                                                                                </button>
+                                                                                                            </form>
+                                                                                                        </div>
+                                                                                                        <div className="lm4-in">
+                                                                                                        <form>
+                                                                                                                <button className="lm4-btn">
+                                                                                                                    <div className="lm4in">
+                                                                                                                        <div className="lm4div1">
+                                                                                                                            <Email />
+                                                                                                                        </div>
+                                                                                                                        <div className="lm4div2">이메일로 로그인하기</div>
+                                                                                                                        <div className="lm4div3"></div>
+                                                                                                                    </div>
+                                                                                                                </button>
+                                                                                                            </form>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                </div>
+                                                                                </div> */}
                                                                             </ModalSign>
                                                                     </span>
                                                                     저장
