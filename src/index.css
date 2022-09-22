@@ -828,7 +828,7 @@
   flex: 0 1 auto !important;
   min-width: 348px !important;
   padding: 0 12px !important;
-  z-index: 3;
+  position: relative;
 }
 
 .room_header-end {
@@ -859,6 +859,7 @@
   width: 100% !important;
   transform: scale(1, 1) translateY(0px) !important;
   visibility: visible !important;
+  position: relative;
 }
 
 .room_header-mid-s {

@@ -411,6 +411,9 @@
   padding-bottom: 0px !important;
   max-width: 1760px !important;
   margin: 0 auto !important;
+
+  height: 1054px;
+  /* 임시 */
 }
 
 .hmmain2-inner {
@@ -423,4 +426,32 @@
   font-weight: 600 !important;
   letter-spacing: -0.02em !important;
   margin-bottom: 0px !important;
+}
+
+.hmmain2-in {
+  position: relative;
+}
+
+.hmmain2-btn {
+  bottom: 46px !important;
+  position: absolute;
+  z-index: 2 !important;
+  right: calc(33.3% + 16px) !important;
+}
+
+.hmmain2-img {
+  margin: 64px auto 0 !important;
+  padding-top: 0px;
+  scroll-snap-type: x mandatory !important;
+  overflow-x: auto !important;
+  display: flex;
+  position: relative;
+}
+
+.hmmain2-flex {
+  flex: 1 0 calc(32.75% + 1px) !important;
+  scroll-snap-align: center !important;
+  scroll-snap-stop: always !important;
+  display: flex;
+  flex-direction: column !important;
 }

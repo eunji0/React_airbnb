@@ -6,18 +6,29 @@ const ModalLogin = (props) => {
 
   return (
     // 모달이 열릴때 openModal 클래스가 생성된다.
-    <div className={open ? 'openModal modal' : 'modal'}>
+    // <div className={open ? 'openModal modal' : 'modal'}>
+    //   {open ? (
+    //     <section>
+    //       <header>
+    //         {header}
+    //       </header>
+    //       <main>{props.children}</main>
+    //       {/* <footer>
+    //         <button className="close" onClick={close}>
+    //           close
+    //         </button>
+    //       </footer> */}
+    //     </section>
+    //   ) : close}
+    // </div>
+
+     <div className={open ? 'openModal modal' : 'modal'}>
       {open ? (
         <section>
           <header>
             {header}
           </header>
           <main>{props.children}</main>
-          {/* <footer>
-            <button className="close" onClick={close}>
-              close
-            </button>
-          </footer> */}
         </section>
       ) : close}
     </div>

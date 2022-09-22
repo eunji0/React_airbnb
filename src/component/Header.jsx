@@ -36,7 +36,7 @@ export default function Header() {
         function handleClickOutsid(e) {
             if (outSection2.current && !outSection2.current.contains(e.target)) {
                 setLoginOpen(false);
-                
+                return
             }
         }
         document.addEventListener('mousedown', handleClickOutsid);
@@ -44,6 +44,16 @@ export default function Header() {
             document.removeEventListener('mousedown', handleClickOutsid);
         };
     }, [outSection2]);
+
+    //동시에 켜지고 꺼지게 하기
+    // useEffect(() => {
+    //     if (modalOpen === true && loginOpen === true) {
+    //         setModalOpen(false);
+    //         return
+    //     }
+    //     setModalOpen(true);
+    // }, [modalOpen, loginOpen]);
+    // console.log(modalOpen);
 
     return (
         <>
@@ -92,11 +102,11 @@ export default function Header() {
                                 <button className="main_header_last_last_box">
                                     <button type="button" className="main_header_last_mymenu" ref={outSection}  onClick={()=>setModalOpen(true)}>
                                         <Menu className="menu" />
-                                        <ModalLogin open={modalOpen} >
+                                        <ModalLogin open={modalOpen}>
                                                     <div className="momo">
                                                 <div className="modalhome-btn">
-                                                    <div className="modalhome-btn2" >
-                                                        <div type="button" className="modalhome-signup" ref={outSection2} onClick={()=>setLoginOpen(true)}>회원 가입
+                                                    <div className="modalhome-btn2">
+                                                        <div type="button" className="modalhome-signup" ref={outSection2} >회원 가입
                                                         <ModalSign open={loginOpen}></ModalSign>
                                                         </div>
                                                         <div type="button" className="modalhome-login">로그인</div>

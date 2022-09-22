@@ -2,9 +2,32 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as HostLogo2 } from '../images/HostLogo2.svg';
 import { ReactComponent as Play } from '../images/Play.svg';
+import ModalSign from "./ModalSign";
+import { useState, useEffect, useRef } from "react";
 
 
 export default function HostMain() {
+    const outSection = useRef(null);
+    const [loginOpen, setLoginOpen] = useState(false); //로그인모달사인
+
+    const closeModal =()=> {
+        setLoginOpen(false);
+    }
+
+    //로그인 창
+    useEffect(() => {
+        function handleClickOutside(e) {
+            if (outSection.current && !outSection.current.contains(e.target)) {
+                setLoginOpen(false);
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [outSection]);
+
+
     return(
         <main>
             <div className="hostmain">
@@ -23,11 +46,13 @@ export default function HostMain() {
                             </div>
                         </h1>
                         <div className="hml-inner">
-                            <Link to="/" className="hostheader-right2">
+                            <div className="hostheader-right2" ref={outSection} onClick={()=> setLoginOpen(true)} type="button">
                             <span className="hostheader-right2txt">
                               호스팅 시작하기
+                              <ModalSign open={loginOpen} >
+                             </ModalSign>
                             </span>
-                             </Link>
+                             </div>
                         </div>
                     </div>
                 </div>
@@ -124,8 +149,14 @@ export default function HostMain() {
                     <h2 className="hmmain2-inner">
                         언제 어디서든 <br/>호스팅하실 수 있습니다
                     </h2>
-                    <div>
-                        
+                    <div className="hmmain2-in">
+                        <div className="hmmain2-btn"></div>
+                        <div className="hmmain2-img">
+                            <div className="hmmain2-flex"></div>
+                            <div className="hmmain2-flex" aria-hidden="false">
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

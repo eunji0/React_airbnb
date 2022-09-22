@@ -6,13 +6,19 @@ import { ReactComponent as Save } from '../images/Save.svg';
 import { ReactComponent as AllPicture } from '../images/AllPicture.svg';
 import { useState, useEffect, useRef } from "react";
 import ModalSign from './/ModalSign';
+import ModalLogin from "./ModalLogin";
 import { ReactComponent as Closelogin } from '../images/Closelogin.svg';
+import { ReactComponent as Copy } from '../images/Copy.svg';
 // import { ReactComponent as Down } from '../images/Down.svg';
-// import { ReactComponent as Facebook2 } from '../images/Facebook2.svg';
+import { ReactComponent as Facebook3 } from '../images/Facebook3.svg';
 // import { ReactComponent as Google } from '../images/Google.svg';
-// import { ReactComponent as Apple } from '../images/Apple.svg';
-// import { ReactComponent as Email } from '../images/Email.svg';
-
+import { ReactComponent as Twitter2 } from '../images/Twitter2.svg';
+import { ReactComponent as Emailshare } from '../images/Emailshare.svg';
+import { ReactComponent as Massage } from '../images/Massage.svg';
+import { ReactComponent as Massenger } from '../images/Massenger.svg';
+import { ReactComponent as Whats } from '../images/Whats.svg';
+import { ReactComponent as Insert } from '../images/Insert.svg';
+import { ReactComponent as Option } from '../images/Option.svg';
 
 export default function InfoContentTop() {
     const outSection = useRef(null);
@@ -72,7 +78,6 @@ export default function InfoContentTop() {
         };
     }, [inputNumber]);
 
-    console.log(loginOpen);
 
     return(
         
@@ -131,15 +136,15 @@ export default function InfoContentTop() {
                                                                 <div className="rmhdr2-div2-div" >
                                                                     <span className="rmhdr2-div2-span">
                                                                         <Share />
-                                                                        <ModalSign open={share}>
+                                                                        <ModalLogin open={share}>
                                                                             {/* <div className="modalAll"> */}
                                                                                 <div className="loginModal">
                                                                                     <div className="login-modal">
-                                                                                        <div className="loginHead">
+                                                                                        <div className="_pa35zs">
                                                                                             
-                                                                                            <div type="button" className="closelogin" onClick={closeShare}>
+                                                                                            <button type="button" className="_oda838" onClick={closeShare}>
                                                                                                 <Closelogin />
-                                                                                            </div>
+                                                                                            </button>
                                                                                         </div>
                                                                                         <div className="loginmain">
                                                                                             <div className="login-main">
@@ -150,14 +155,120 @@ export default function InfoContentTop() {
                                                                                                         <div className="_lo9vot">Steigen Lodge Sjøhytte Våg nr 1</div>
                                                                                                     </div>
                                                                                                     <div className="share-flex">
-
+                                                                                                        <div className="shareflex">
+                                                                                                            <div className="sf-div">
+                                                                                                                <button className="sf-btn">
+                                                                                                                    <div className="sfbtn">
+                                                                                                                        <div className="sfbtndiv">
+                                                                                                                            <Copy />
+                                                                                                                        </div>
+                                                                                                                        <div class="_1xzp9wc">링크 복사</div>
+                                                                                                                    </div>
+                                                                                                                </button>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div className="shareflex">
+                                                                                                            <div className="sf-div">
+                                                                                                                <button className="sf-btn">
+                                                                                                                    <div className="sfbtn">
+                                                                                                                        <div className="sfbtndiv">
+                                                                                                                            <Emailshare />
+                                                                                                                        </div>
+                                                                                                                        <div class="_1xzp9wc">이메일</div>
+                                                                                                                    </div>
+                                                                                                                </button>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div className="shareflex">
+                                                                                                            <div className="sf-div">
+                                                                                                                <button className="sf-btn">
+                                                                                                                    <div className="sfbtn">
+                                                                                                                        <div className="sfbtndiv">
+                                                                                                                            <Massage />
+                                                                                                                        </div>
+                                                                                                                        <div class="_1xzp9wc">메세지</div>
+                                                                                                                    </div>
+                                                                                                                </button>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div className="shareflex">
+                                                                                                            <div className="sf-div">
+                                                                                                                <button className="sf-btn">
+                                                                                                                    <div className="sfbtn">
+                                                                                                                        <div className="sfbtndiv">
+                                                                                                                            <Whats />
+                                                                                                                        </div>
+                                                                                                                        <div class="_1xzp9wc">왓츠앱</div>
+                                                                                                                    </div>
+                                                                                                                </button>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div className="shareflex">
+                                                                                                            <div className="sf-div">
+                                                                                                                <button className="sf-btn">
+                                                                                                                    <div className="sfbtn">
+                                                                                                                        <div className="sfbtndiv">
+                                                                                                                            <Massenger />
+                                                                                                                        </div>
+                                                                                                                        <div class="_1xzp9wc">메신저</div>
+                                                                                                                    </div>
+                                                                                                                </button>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div className="shareflex">
+                                                                                                            <div className="sf-div">
+                                                                                                                <button className="sf-btn">
+                                                                                                                    <div className="sfbtn">
+                                                                                                                        <div className="sfbtndiv">
+                                                                                                                            <Facebook3 />
+                                                                                                                        </div>
+                                                                                                                        <div class="_1xzp9wc">페이스북</div>
+                                                                                                                    </div>
+                                                                                                                </button>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div className="shareflex">
+                                                                                                            <div className="sf-div">
+                                                                                                                <button className="sf-btn">
+                                                                                                                    <div className="sfbtn">
+                                                                                                                        <div className="sfbtndiv">
+                                                                                                                            <Twitter2 />
+                                                                                                                        </div>
+                                                                                                                        <div class="_1xzp9wc">트위터</div>
+                                                                                                                    </div>
+                                                                                                                </button>
+                                                                                                            </div>
+                                                                                                        </div><div className="shareflex">
+                                                                                                            <div className="sf-div">
+                                                                                                                <button className="sf-btn">
+                                                                                                                    <div className="sfbtn">
+                                                                                                                        <div className="sfbtndiv">
+                                                                                                                            <Insert />
+                                                                                                                        </div>
+                                                                                                                        <div class="_1xzp9wc">삽입</div>
+                                                                                                                    </div>
+                                                                                                                </button>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div className="shareflex">
+                                                                                                            <div className="sf-div">
+                                                                                                                <button className="sf-btn">
+                                                                                                                    <div className="sfbtn">
+                                                                                                                        <div className="sfbtndiv">
+                                                                                                                            <Option />
+                                                                                                                        </div>
+                                                                                                                        <div class="_1xzp9wc">옵션 더보기</div>
+                                                                                                                    </div>
+                                                                                                                </button>
+                                                                                                            </div>
+                                                                                                        </div>
                                                                                                     </div>
                                                                                                 </section>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                        </ModalSign>
+                                                                        </ModalLogin>
                                                                     </span>
                                                                     공유하기
                                                                 </div>

@@ -6,32 +6,53 @@ import { ReactComponent as Apple } from '../images/Apple.svg';
 import { ReactComponent as Email } from '../images/Email.svg';
 import { useState, useEffect, useRef } from "react";
 import { ReactComponent as Closelogin } from '../images/Closelogin.svg';
+// import { ReactComponent as Error } from '../images/Error.svg';
 
 
 const ModalSign = (props) => {
   // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
   const { open, close, header } = props;
   const [loginOpen, setLoginOpen] = useState(false); //모달사인
-  const [inputOn, setInputOn] = useState(false);//전화번호 입력
+  const [inputOn, setInputOn] = useState(false);//전화번호 입력 밖 터치
+  const [phoneNum, setphoneNum] = useState("");//전화번호 입력
+  const [isConfirm, setisConfirm] = useState(false);
   const outSection = useRef(null);
   const inputNumber = useRef(null);
 
-  const closeModal =()=> {
-    setLoginOpen(false);
-  }
-   
-    useEffect(() => {
-      function handleClickOutside(e) {
-          if (outSection.current && !outSection.current.contains(e.target)) {
-              setLoginOpen(false);
-          }
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (outSection.current && !outSection.current.contains(e.target)) {
+        setLoginOpen(false);
       }
-      document.addEventListener('mousedown', handleClickOutside);
-      return () => {
-          document.removeEventListener('mousedown', handleClickOutside);
-      };
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, [outSection]);
 
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (inputNumber.current && !inputNumber.current.contains(e.target)) {
+        setInputOn(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [inputNumber]);
+
+  //  전화번호 공란
+
+  useEffect(()=>{
+    if(phoneNum){
+      setisConfirm(true);
+      return
+    }
+    setisConfirm(false);
+  })
   return (
     // 모달이 열릴때 openModal 클래스가 생성된다.
     <div className={open ? 'openModal modal' : 'modal'}>
@@ -46,7 +67,7 @@ const ModalSign = (props) => {
               <div className="login-modal">
                 <div className="loginHeader">
 
-                  <div type="button" className="closelogin" onClick={closeModal}>
+                  <div type="button" className="closelogin" >
                     <Closelogin />
                   </div>
                   <div className="loginheadertxt">로그인 또는 회원가입</div>
@@ -61,10 +82,10 @@ const ModalSign = (props) => {
                       <div className="lm2-form">
 
                       </div>
-                      <div className="cx1v2qp dir dir-ltr" style={{ borderRadius: "8px;" }}>
+                      <div className="cx1v2qp dir dir-ltr" style={{ borderRadius: "8px" }}>
                         <div className="_jro6t0">
-                          <div className="_e296pg" style={{ flex: "1 1 0%;" }}>
-                            <div role="presentation" className="_sbmagf" style={{ background: "#fff;", borderRadius: "8px 8px 0px 0px", borderTopColor: "rgb(221,221,221)", inset: "0px 0px -1px;" }}>
+                          <div className="_e296pg" style={{ flex: "1 1 0%" }}>
+                            <div role="presentation" className="_sbmagf" style={{ background: "#fff", borderRadius: "8px 8px 0px 0px", borderTopColor: "rgb(221,221,221)", inset: "0px 0px -1px" }}>
                             </div>
                             <div className="_ey3tib">
                               <label className="_19nw8j1" for="country">
@@ -121,13 +142,13 @@ const ModalSign = (props) => {
                                 <Down />
                               </div>
                             </div>
-                            <div className="_t26glb" style={{ inset: "0px 0px -1px", borderRadius: "8px 8px 0px 0px", borderTopColor: "rgb(221,221,221)", borderLeftColor: "rgb(221,221,221)", borderRightColor: "rgb(221,221,221)", borderWidth: "1px", zIndex: "0" }}>
+                            <div className="_t26glb" style={{ inset: "0px 0px -1px", borderRadius: "8px 8px 0px 0px", borderTopColor: "rgb(221,221,221)", borderLeftColor: "rgb(221,221,221)", borderRightColor: "rgb(221,221,221)", borderWidth: "1px 1px 0px 1px", zIndex: "0" }}>
                             </div>
                           </div>
                         </div>
                         <div className="_jro6t0">
                           <div className="_e296pg" ref={inputNumber} onClick={() => setInputOn(true)} style={{ flex: "2 1 0%", zIndex: inputOn === false ? "" : "1" }}>
-                            <div role="presentation" className="_sbmagf" style={{ borderRadius: "0px 0px 8px 8px", inset: "0px 0px -1px;" }}>
+                            <div role="presentation" className="_sbmagf" style={{ borderRadius: "0px 0px 8px 8px", inset: "0px 0px -1px" }}>
                             </div>
                             <div className={`${inputOn === false ? "_tddesd" : "_wbq"}`}>
                               <label className="_1yw7hpv" for="phoneInputphoneNumber" >
@@ -135,30 +156,32 @@ const ModalSign = (props) => {
                                   <div className="_11hx67x">전화번호</div>
                                 </div>
                                 <div dir="ltr">
-                                  <div className={`${inputOn === false ? "_js9i23" : "lm223"}`}>
+                                  <div className={`${inputOn === false ? "_js9i23" : "_fywymp7"}`}>
                                     <div className="_1dnryfrb">+1</div>
-                                    <input name="phoneInputphoneNumber" placeholder="(XXX) XXX-XXXX" aria-required="true" data-testid="login-signup-phonenumber" className="_c5rhl5" id="phoneInputphoneNumber" autocomplete="tel-national" inputmode="tel" type="tel" aria-describedby="phone-number-help-text-phoneNumber airlock-inline-container" value="" />
+                                    <input name="phoneInputphoneNumber" onChange={(e)=>setphoneNum(e.target.value)} aria-required="true" data-testid="login-signup-phonenumber" className="_c5rhl5" id="phoneInputphoneNumber" autocomplete="tel-national" inputmode="tel" type="tel" aria-describedby="phone-number-help-text-phoneNumber airlock-inline-container" value={phoneNum} />
                                   </div>
                                 </div>
                               </label>
                             </div>
 
                             <div className="_t26glb" style={{ inset: "0px 0px -1px", borderRadius: "0px 0px 8px 8px", borderTopColor: "#DDDDDD", borderRightColor: "#DDDDDD", borderBottomColor: "#DDDDDD", borderLeftColor: "#DDDDDD", borderWidth: "1px", zIndex: "0" }}></div></div></div>
-                        <div className="_166d2jm1">
+                        <div className="_166d2jm1" >
                           <span id="phone-number-help-text-phoneNumber">
-                            <div className="txtxxx">전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.</div>
+                            <div className="txtxxx" >전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.</div>
                             <a target="_blank" href="/terms/privacy_policy?source=signup" className="_1sikdxcl">개인정보 처리방침</a>
                           </span>
+                          
                         </div>
+                      
                         <div className="lm2-btn">
-                          <button className="lm2btn">
+                          <div className="lm2btn">
                             <span className="lm2span">
                               <span class="_kaq6tx" ></span>
                             </span>
                             <span className="lm2span22">
                               계속
                             </span>
-                          </button>
+                          </div>
                         </div>
                       </div>
                     </form>

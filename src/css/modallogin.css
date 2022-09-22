@@ -111,12 +111,12 @@
     justify-content: center !important;
     width: 568px;
     background-color: transparent;
-    padding-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 40PX;
-    max-height: 100%;
+    max-height: 90%;
     z-index: 10;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .modalAll {
@@ -394,9 +394,8 @@ option {
     padding: 0px !important;
     margin: 26px 12px 6px !important;
     min-height: 1px !important;
-    color: inherit !important;
+    color: #222222 !important;
     background-color: transparent !important;
-    font-family: inherit !important;
     font-size: inherit !important;
     font-weight: inherit !important;
     line-height: inherit !important;
@@ -623,7 +622,6 @@ option {
 }
 
 .loginmain {
-    padding-top: 0 !important;
     padding: 24px ;
     flex: 1 1 auto !important;
     overflow-y: auto !important;
@@ -643,8 +641,8 @@ option {
     font-weight: 600 !important;
     color: rgb(34, 34, 34) !important;
     display: block !important;
-    float: left;
-    
+    text-align: left;
+    margin-top: 35px;
 }
 
 ._1ywltba {
@@ -684,4 +682,109 @@ option {
     justify-content: flex-start !important;
     flex-wrap: wrap !important;
     width: 519.2px;
+}
+
+.shareflex {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    width: 50%;
+    position: relative !important;
+    margin-left: 0% !important;
+    margin-right: 0% !important;
+}
+
+.sf-div {
+    width: 100% !important;
+    height: 76px !important;
+    outline: none !important;
+    cursor: pointer !important;
+    border: 1px solid rgb(221, 221, 221) !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+    background: rgb(255, 255, 255) !important;
+    margin-bottom: 16px !important;
+}
+
+.sf-btn {
+    cursor: pointer !important;
+    position: relative !important;
+    touch-action: manipulation !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    font-weight: inherit !important;
+    border-radius: 0px !important;
+    outline: none !important;
+    background: transparent !important;
+    border: none !important;
+    color: inherit !important;
+    display: block !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    text-align: inherit !important;
+    text-decoration: none !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.sfbtn {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.sfbtndiv {
+    margin-left: 22px !important;
+    margin-right: 22px !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+}
+
+._1xzp9wc {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    font-weight: 600 !important;
+    overflow: hidden !important;
+    color: rgb(34, 34, 34) !important;
+    text-overflow: ellipsis !important;
+}
+
+._pa35zs {
+    top: 24px !important;
+    position: absolute !important;
+    display: flex !important;
+    left: 24px !important;
+    z-index: 1 !important;
+}
+
+._oda838 {
+    appearance: none !important;
+    display: inline-block !important;
+    border-radius: 50% !important;
+    border: none !important;
+    outline: none !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    color: rgb(34, 34, 34) !important;
+    cursor: pointer !important;
+    touch-action: manipulation !important;
+    position: relative !important;
+    background: transparent !important;
+}
+
+._fywymp7 {
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+._4l12l8 {
+    margin-top: 8px !important;
+}
+
+._1yhfti2 {
+    display: flex !important;
+    color: rgb(193, 53, 21) !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+    font-weight: 400 !important;
+    
 }
