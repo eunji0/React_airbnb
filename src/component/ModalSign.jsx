@@ -52,7 +52,7 @@ const ModalSign = (props) => {
       return
     }
     setisConfirm(false);
-  })
+  }, [phoneNum])
   return (
     // 모달이 열릴때 openModal 클래스가 생성된다.
     <div className={open ? 'openModal modal' : 'modal'}>
@@ -167,7 +167,7 @@ const ModalSign = (props) => {
                             <div className="_t26glb" style={{ inset: "0px 0px -1px", borderRadius: "0px 0px 8px 8px", borderTopColor: "#DDDDDD", borderRightColor: "#DDDDDD", borderBottomColor: "#DDDDDD", borderLeftColor: "#DDDDDD", borderWidth: "1px", zIndex: "0" }}></div></div></div>
                         <div className="_166d2jm1" >
                           <span id="phone-number-help-text-phoneNumber">
-                            <div className="txtxxx" >전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.</div>
+                            <div className="txtxxx" > 전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.</div>
                             <a target="_blank" href="/terms/privacy_policy?source=signup" className="_1sikdxcl">개인정보 처리방침</a>
                           </span>
                           
