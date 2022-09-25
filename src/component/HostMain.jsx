@@ -4,6 +4,10 @@ import { ReactComponent as HostLogo2 } from '../images/HostLogo2.svg';
 import { ReactComponent as Play } from '../images/Play.svg';
 import ModalSign from "./ModalSign";
 import { useState, useEffect, useRef } from "react";
+import { ReactComponent as Hostsearch } from '../images/Hostsearch.svg';
+import { ReactComponent as Next } from '../images/Next.svg';
+import { ReactComponent as Plus } from '../images/Plus.svg';
+import { ReactComponent as Minus } from '../images/Minus.svg';
 
 
 export default function HostMain() {
@@ -129,7 +133,133 @@ export default function HostMain() {
                                     </div>
                                     <div className="hmmain-b">
                                         <h3 className="_m37l9b">숙소를 소개해주세요</h3>
-                                        <div className="hm-map"></div>
+                                        <div className="hm-map">
+                                            <div aria-hidden="false" style={{position:"relative", width:"100%", height:"100%"}}>
+                                                <div className="hmmapd1">
+                                                    <div className="hmmapd2">
+                                                        <div className="hmmapdd">
+                                                            <div className="hmmapds">
+                                                                <div className="hmmapa">
+                                                                    <div className="hmmapb">
+                                                                    <span className="hmmapc">
+                                                                    주소 또는 지역
+                                                                    </span>
+                                                                    <button classname="_b2fxuo" data-index="0" type="button">
+                                                                        <span classname="a8jt5op dir dir-ltr">주소 또는 지역</span>
+                                                                        <div classname="_1g5ss3l">Yangcheon-gu</div>
+                                                                    </button>
+                                                                    <span className="_10u04nz"></span>
+
+                                                                    <button className="_b2fxuo" data-index="1" type="button">
+                                                                        <span className="a8jt5op dir dir-ltr">숙소 유형</span>
+                                                                        <div className="_1g5ss3l">공간 전체</div>
+                                                                    </button>
+                                                                    <span className="_10u04nz"></span>
+                                                                    <button className="_b2fxuo" data-index="2" type="button">
+                                                                        <span className="a8jt5op dir dir-ltr">게스트</span>
+                                                                        <div className="_1g5ss3l">게스트 4명</div>
+                                                                        <div className="_o5ir51" data-icon="true">
+                                                                        <Hostsearch />
+                                                                        </div>
+                                                                    </button>
+                                                                   </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className="hmmapdt">
+                                                                <form className="hmmapform">
+                                                                    <div className="hmmapfa">
+                                                                        <div className="hmmapfb">
+                                                                            <div className="hmmapfc">
+                                                                            <label className="_5wnqr6h" for="location-query-input">
+                                                                                <div className="_gor68n">
+                                                                                    <div className="_wtz1co">주소 또는 지역</div>
+                                                                                    <input className="_3vy1xi" id="location-query-input" aria-describedby="location-query-input-description" role="combobox" placeholder="숙소 위치는 어디인가요?" name="query" spellcheck="false" autocomplete="off" autocorrect="off" aria-haspopup="listbox" aria-expanded="false" aria-controls="autocomplete-results" aria-autocomplete="list" value="Yangcheon-gu"/>
+                                                                                </div>
+                                                                            </label>
+                                                                            <span id="location-query-input-description" className="_1u9fru1">추천 검색 결과를 확인하려면 계속 진행하세요.</span>
+                                                                            </div>
+                                                                            <div className="_43mycv"></div>
+                                                                            <div className="_j8gg2a">
+                                                                                <div className="_uv7xow" role="button" tabindex="0" aria-expanded="false">
+                                                                                    <div className="_seuyf">
+                                                                                        <div className="_wtz1co">숙소 유형</div>
+                                                                                        <div className="_vuaqekp">공간 전체</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div className="_43mycv"></div>
+                                                                            <div className="_5t6sn0g">
+                                                                                <div className="_xdgf3kq" role="button" tabindex="0" aria-expanded="false">
+                                                                                    <div className="_seuyf">
+                                                                                        <div className="_wtz1co">게스트</div>
+                                                                                        <div className="_vuaqekp">게스트 4명</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div className="_w64aej">
+                                                                                    <button className="_19960d4z" type="button">
+                                                                                        <div className="_1hb5o3s">
+                                                                                            <div className="_14lk9e14">
+                                                                                                <Hostsearch/>
+                                                                                            </div>
+                                                                                            <div className="_c5qlo1f">검색</div>
+                                                                                        </div>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div className="_pawvzww">
+                                                    <div className=" dir dir-ltr" aria-hidden="false" style={{whiteSpace: "nowrap", position: "absolute", marginLeft: "24px", marginTop: "24px", top: "0px", left: "0px", zIndex: "1", transition: "transform 850ms cubic-bezier(0.25, 1, 0.5, 1) 0s"}}>
+                                                        <div className="c15e4bhw ctbkggg dir dir-ltr" style={{height: "40px", flexDirection: "row"}}>
+                                                            <button aria-label="숙소 표시 목록이 있는 측면 패널 열기" type="button" className="b117oblx dir dir-ltr">
+                                                                <div className="_567fxf">
+                                                                    <Next />
+                                                                </div>
+                                                                <div aria-hidden="false" className="_qbhwkq">
+                                                                    <span className="_8wjgtw">목록 보기</span>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div className="_pawvzww">
+                                                        <div className=" dir dir-ltr" aria-hidden="false" style={{whiteSpace: "nowrap", position: "absolute", marginRight: "24px", marginTop: "24px", top: "0px", right: "0px", zIndex: "1", transition: "transform 850ms cubic-bezier(0.25, 1, 0.5, 1) 0s"}}>
+                                                            <div className="c15e4bhw ctbkggg dir dir-ltr" style={{height: "40px", flexDirection: "row"}}>
+                                                                <button aria-label="확대" data-testid="map/ZoomInButton" type="button" className="cj0q2ib sne7mb7 rp6dtyx t92tojf c1y4i074 dir dir-ltr">
+                                                                <Plus />
+                                                                </button>
+                                                                <div className="c1fisx1o dir dir-ltr">
+                                                                </div>
+                                                                <button aria-label="축소" data-testid="map/ZoomOutButton" type="button" className="cj0q2ib sne7mb7 rp6dtyx b1d5ierg c1y4i074 dir dir-ltr">
+                                                                <Minus />
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="_17ctt5">
+                                                    <div className=" dir dir-ltr" aria-hidden="false" style={{whiteSpace: "nowrap", position: "absolute", marginRight: "24px", marginTop: "24px", top: "0px", left: "0px", zIndex: "1", transition: "transform 850ms cubic-bezier(0.25, 1, 0.5, 1) 0s"}}>
+                                                            <div className="c15e4bhw ctbkggg dir dir-ltr" style={{height: "40px", flexDirection: "row"}}>
+                                                                <button aria-label="확대" data-testid="map/ZoomInButton" type="button" className="cj0q2ib sne7mb7 rp6dtyx t92tojf c1y4i074 dir dir-ltr">
+                                                                <Plus />
+                                                                </button>
+                                                                <div className="c1fisx1o dir dir-ltr">
+                                                                </div>
+                                                                <button aria-label="축소" data-testid="map/ZoomOutButton" type="button" className="cj0q2ib sne7mb7 rp6dtyx b1d5ierg c1y4i074 dir dir-ltr">
+                                                                <Minus />
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className="hmmain-c">
                                     <div class="_hbygyl">
