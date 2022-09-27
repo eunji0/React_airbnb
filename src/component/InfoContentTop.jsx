@@ -27,17 +27,25 @@ export default function InfoContentTop() {
     const [inputOn, setInputOn] = useState(false);//전화번호 입력
     const [share, setShare] = useState(false); //공유하기
     const inputNumber = useRef(null);
+    const [scrollPosition, setScrollPosition] = useState(0);
 
-    const closeModal =()=> {
+    const updateScroll = () => {
+        setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', updateScroll);
+    });
+
+    const closeModal = () => {
         setLoginOpen(false);
-       
+
     }
 
     const closeShare = () => {
         setShare(false);
     }
 
-// 외부클릭
+    // 외부클릭
     useEffect(() => {
         function handleClickOutside(e) {
             if (outSection.current && !outSection.current.contains(e.target)) {
@@ -56,7 +64,7 @@ export default function InfoContentTop() {
         function handleClickOutside(e) {
             if (outSection2.current && !outSection2.current.contains(e.target)) {
                 setShare(false);
-                
+
             }
         }
         document.addEventListener('mousedown', handleClickOutside);
@@ -66,9 +74,9 @@ export default function InfoContentTop() {
     }, [outSection2]);
 
     // 전화번호
-    useEffect(()=>{
-        function phoneInput(e){
-            if(inputNumber.current && !inputNumber.current.contains(e.target)){
+    useEffect(() => {
+        function phoneInput(e) {
+            if (inputNumber.current && !inputNumber.current.contains(e.target)) {
                 setInputOn(false);
             }
         }
@@ -79,69 +87,151 @@ export default function InfoContentTop() {
     }, [inputNumber]);
 
 
-    return(
-        
+    return (
         <div>
             <main className="room-content">
-            <div className="rmctt">
-                <div className="rmctt1">
-                    <div className="rmctt1-1">
-                        <div className="rmctt-hdr">
-                            <div className="rmctt-hdr-inner">
-                                <div className="rmctt-hdr-in">
-                                    <section>
-                                        <div className="rmhdr1">
-                                            <span className="rmhdr1-1">
-                                                <button type="button" className="rmhdr1-1btn">
-                                                <Translation />
+                <div className="rmctt">
+                     {/* <div className="rmzi" aria-hidden={scrollPosition < 600 ? "true" : "false"}>
+                <div className="rmzii">
+                    <div className="rmzzi">
+                        <div className="rmzzi2">
+                            <div>
+                                <div style={{ display: "contents" }}>
+                                    <div className="rmzzi3">
+                                        <div className="rmzzi4">
+                                            <div className="rmrm4">
+                                                <button type="button" className="_1yydbd74">
+                                                    <div className="_11g6x33">사진</div>
                                                 </button>
-                                            </span>
-                                            <span className="rmhdr1-2">
-                                                <h1 tabindex="-1" className="rmhdr1-2h" elementtiming="LCP-target">아우라 하우스 2비즈 에코 대나무 하우스, 수영장, 리버 뷰</h1>
-                                            </span>
+                                            </div>
+                                            <div className="rmrm4">
+                                                <button type="button" className="_1yydbd74">
+                                                    <div className="_11g6x33">편의시설</div>
+                                                </button>
+                                            </div>
+                                            <div className="rmrm4">
+                                                <button type="button" className="_1yydbd74">
+                                                    <div className="_11g6x33">후기</div>
+                                                </button>
+                                            </div>
+                                            <div className="rmrm4">
+                                                <button type="button" className="_1yydbd74">
+                                                    <div className="_11g6x33">위치</div>
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div className="rmhdr2">
-                                            <div className="rmhdr2-div1">
-                                                <span className="rmhdr2-span1">
-                                                    <span className="rmhdr2-sp11">
-                                                        <Star />
-                                                    </span>
-                                                    <span className="rmhdr2-sp12" aria-hidden="true">4.87 ·</span>
-                                                    <span className="rmhdr2-sp13">
-                                                        <button aria-label="후기 143개로부터 5점 만점에 4.87점을 받은 숙소입니다." type="button" className="rmhdr2-sp13-btn">후기 143개</button>
-                                                    </span>
-                                                </span>
-                                                <span className="rmhdr2-span2">·
-                                                </span>
-                                                <span className="rmhdr2-span1">
-                                                    <span className="rmhdr2-sp11">
-                                                        <span className="rmhdr2-sp11-span" aria-hidden="true">󰀃</span>
-                                                        <span aria-hidden="false" className="_1mhorg9">슈퍼호스트</span>
-                                                    </span>
-                                                </span>
-                                                <span className="rmhdr2-span2">·
-                                                </span>
-                                                <span className="rmhdr2-span1">
-                                                    <button type="button" className="_11eqlma4">
-                                                        <span className="_9xiloll" aria-hidden="false">Abiansemal, 발리, 인도네시아</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style={{ display: "contents" }}>
+                                    <div style={{ position: "relative" }}>
+                                        <div className="_xkkzkj">
+                                            <div className="_15tm0yy3">
+                                                <div className="_1fxck3d">
+                                                    <div className="_ixddx0">
+                                                        <div>
+                                                            <div className="_ati8ih">
+                                                                <span className="_14y1gc">
+                                                                    <div className="_1jo4hgw" aria-hidden="true">
+                                                                        <span className="_tyxjp1">₩213,687</span>
+                                                                        <span className="_r1nvod">&nbsp;/박</span>
+                                                                    </div>
+                                                                    <span className="a8jt5op dir dir-ltr">₩213,687/박</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div className="_176k0ns">
+                                                            <span className="_1pg77l15">
+                                                                <span className="_9qqdp4" style={{ fontSize: "10px" }}>
+                                                                    <Star style={{ width: "10px", height: "10px" }} />
+                                                                </span>
+                                                                <span className="_12si43g" aria-hidden="true">4.66 ·</span>
+                                                                <button aria-label="후기 125개로부터 5점 만점에 4.66점을 받은 숙소입니다." type="button" className="_u1thwpg">
+                                                                    <span className="_1qx9l5ba">후기 125개</span>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="_fz3zdn">
+                                                        <div className=" dir dir-ltr">
+                                                            <button data-testid="homes-pdp-cta-btn" type="button" className="_108mstlv">
+                                                                <span className="tjxdvlu dir dir-ltr">
+                                                                    <span className="t12u7nq4 dir dir-ltr">
+                                                                    </span>
+                                                                </span>
+                                                                <span className="c4wd1yj dir dir-ltr">예약하기 </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> */}
+                    <div className="rmctt1">
+                        <div className="rmctt1-1">
+                            <div className="rmctt-hdr">
+                                <div className="rmctt-hdr-inner">
+                                    <div className="rmctt-hdr-in">
+                                        <section>
+                                            <div className="rmhdr1">
+                                                <span className="rmhdr1-1">
+                                                    <button type="button" className="rmhdr1-1btn">
+                                                        <Translation />
                                                     </button>
-                                               
+                                                </span>
+                                                <span className="rmhdr1-2">
+                                                    <h1 tabindex="-1" className="rmhdr1-2h" elementtiming="LCP-target">아우라 하우스 2비즈 에코 대나무 하우스, 수영장, 리버 뷰</h1>
                                                 </span>
                                             </div>
-                                            <div className="rmhdr2-div2">
-                                                <div className="rmhdr2-div2-d">
-                                                    <div className="rmhdr2-div2-i">
-                                                        <div className="rmhdr2-div2-v1">
-                                                            <button type="button" className="rmhdr2-div2-v1btn" ref={outSection2} onClick={()=> setShare(true)}>
-                                                                <div className="rmhdr2-div2-div" >
-                                                                    <span className="rmhdr2-div2-span">
-                                                                        <Share />
-                                                                        <ModalLogin open={share}>
-                                                                            {/* <div className="modalAll"> */}
+                                            <div className="rmhdr2">
+                                                <div className="rmhdr2-div1">
+                                                    <span className="rmhdr2-span1">
+                                                        <span className="rmhdr2-sp11">
+                                                            <Star />
+                                                        </span>
+                                                        <span className="rmhdr2-sp12" aria-hidden="true">4.87 ·</span>
+                                                        <span className="rmhdr2-sp13">
+                                                            <button aria-label="후기 143개로부터 5점 만점에 4.87점을 받은 숙소입니다." type="button" className="rmhdr2-sp13-btn">후기 143개</button>
+                                                        </span>
+                                                    </span>
+                                                    <span className="rmhdr2-span2">·
+                                                    </span>
+                                                    <span className="rmhdr2-span1">
+                                                        <span className="rmhdr2-sp11">
+                                                            <span className="rmhdr2-sp11-span" aria-hidden="true">󰀃</span>
+                                                            <span aria-hidden="false" className="_1mhorg9">슈퍼호스트</span>
+                                                        </span>
+                                                    </span>
+                                                    <span className="rmhdr2-span2">·
+                                                    </span>
+                                                    <span className="rmhdr2-span1">
+                                                        <button type="button" className="_11eqlma4">
+                                                            <span className="_9xiloll" aria-hidden="false">Abiansemal, 발리, 인도네시아</span>
+                                                        </button>
+
+                                                    </span>
+                                                </div>
+                                                <div className="rmhdr2-div2">
+                                                    <div className="rmhdr2-div2-d">
+                                                        <div className="rmhdr2-div2-i">
+                                                            <div className="rmhdr2-div2-v1">
+                                                                <button type="button" className="rmhdr2-div2-v1btn" ref={outSection2} onClick={() => setShare(true)}>
+                                                                    <div className="rmhdr2-div2-div" >
+                                                                        <span className="rmhdr2-div2-span">
+                                                                            <Share />
+                                                                            <ModalLogin open={share}>
+                                                                                {/* <div className="modalAll"> */}
                                                                                 <div className="loginModal">
                                                                                     <div className="login-modal">
                                                                                         <div className="_pa35zs">
-                                                                                            
+
                                                                                             <button type="button" className="_oda838" onClick={closeShare}>
                                                                                                 <Closelogin />
                                                                                             </button>
@@ -151,7 +241,7 @@ export default function InfoContentTop() {
                                                                                                 <section className="share-sec">
                                                                                                     <h2 className="_u72b3" >가족 및 친구들과 이 장소를 공유하세요.</h2>
                                                                                                     <div className="_1ywltba">
-                                                                                                        <img src="https://a0.muscache.com/pictures/8f67e49a-1194-439a-8a62-b0d4636abe92.jpg" alt="" className="_1x7xqyv"/>
+                                                                                                        <img src="https://a0.muscache.com/pictures/8f67e49a-1194-439a-8a62-b0d4636abe92.jpg" alt="" className="_1x7xqyv" />
                                                                                                         <div className="_lo9vot">Steigen Lodge Sjøhytte Våg nr 1</div>
                                                                                                     </div>
                                                                                                     <div className="share-flex">
@@ -268,19 +358,19 @@ export default function InfoContentTop() {
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                        </ModalLogin>
-                                                                    </span>
-                                                                    공유하기
-                                                                </div>
-                                                            </button>
-                                                        </div>
-                                                        <div>
-                                                            <button aria-label="목록에 숙소 추가하기" ref={outSection} onClick={()=> setLoginOpen(true)} data-testid="pdp-save-button-unsaved" type="button" className="_1e5q4qoz">
-                                                                <div aria-hidden="true" className="_5kaapu">
-                                                                    <span className="_14tkmhr">
+                                                                            </ModalLogin>
+                                                                        </span>
+                                                                        공유하기
+                                                                    </div>
+                                                                </button>
+                                                            </div>
+                                                            <div>
+                                                                <button aria-label="목록에 숙소 추가하기" ref={outSection} onClick={() => setLoginOpen(true)} data-testid="pdp-save-button-unsaved" type="button" className="_1e5q4qoz">
+                                                                    <div aria-hidden="true" className="_5kaapu">
+                                                                        <span className="_14tkmhr">
                                                                             <Save />
                                                                             <ModalSign open={loginOpen} close={closeModal}>
-                                                                               
+
                                                                                 {/* <div className="loginModal">
                                                                                     <div className="login-modal">
                                                                                         <div className="loginHeader">
@@ -465,159 +555,159 @@ export default function InfoContentTop() {
                                                                                     </div>
                                                                                 </div> */}
                                                                             </ModalSign>
-                                                                    </span>
-                                                                    저장
+                                                                        </span>
+                                                                        저장
+                                                                    </div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="rmctt2">
+                        <div className="rmctt2-inner">
+                            <div className="rmctt2-in">
+                                <div className="rmctt2-inin">
+                                    <div className="rmctt2-inin2">
+                                        <div className="rmctt2-inin3">
+                                            <div className="rmctt2-inin4">
+                                                <div className="rmctt2-inin5">
+                                                    <div className="rmctt2-in1">
+                                                        <div className="rmctt2-in11">
+                                                            <button aria-label="숙소 이미지 1, 사진 모두 보기" type="button" className="_1xh26pm2">
+                                                                <div className="_1h6n1zu" style={{ display: "inline-block", verticalAlign: "bottom", height: "100%", width: "100%", minHeight: "1px" }}>
+                                                                    <picture>
+                                                                        <source srcset="https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=960 1x" media="(max-width: 743px)" />
+                                                                        <source srcset="https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=960 1x" media="(min-width: 743.1px) and (max-width: 1127px)" />
+                                                                        <source srcset="https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=960 1x" media="(min-width: 1127.1px) and (max-width: 1439px)" />
+                                                                        <source srcset="https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=1200 1x" media="(min-width: 1439.1px)" />
+                                                                        <img className="_6tbg2q1" aria-hidden="true" alt="" elementtiming="LCP-target" fetchpriority="high" id="FMP-target" src="https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=720" data-original-uri="https://a0.muscache.com/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg" style={{ objectFit: "cover", verticalAlign: "bottom" }} />
+                                                                    </picture>
+                                                                    <div className="_15p4g025" style={{ backgroundImage: "url(&quot;https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=720&quot;)", backgroundSize: "cover" }}>
+                                                                    </div>
                                                                 </div>
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    
                                                 </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="rmctt2">
-                    <div className="rmctt2-inner">
-                        <div className="rmctt2-in">
-                            <div className="rmctt2-inin">
-                                <div className="rmctt2-inin2">
-                                    <div className="rmctt2-inin3">
-                                        <div className="rmctt2-inin4">
-                                             <div className="rmctt2-inin5">
-                                                <div className="rmctt2-in1">
-                                                    <div className="rmctt2-in11">
-                                                        <button aria-label="숙소 이미지 1, 사진 모두 보기" type="button" className="_1xh26pm2">
-                                                            <div className="_1h6n1zu" style={{display: "inline-block", verticalAlign: "bottom", height: "100%", width: "100%", minHeight: "1px"}}>
-                                                                <picture>
-                                                                    <source srcset="https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=960 1x" media="(max-width: 743px)"/>
-                                                                    <source srcset="https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=960 1x" media="(min-width: 743.1px) and (max-width: 1127px)"/>
-                                                                    <source srcset="https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=960 1x" media="(min-width: 1127.1px) and (max-width: 1439px)"/>
-                                                                    <source srcset="https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=1200 1x" media="(min-width: 1439.1px)"/>
-                                                                    <img className="_6tbg2q1" aria-hidden="true" alt="" elementtiming="LCP-target" fetchpriority="high" id="FMP-target" src="https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=720" data-original-uri="https://a0.muscache.com/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg" style={{objectFit: "cover", verticalAlign: "bottom"}}/>
-                                                                </picture>
-                                                                <div className="_15p4g025" style={{backgroundImage: "url(&quot;https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=720&quot;)", backgroundSize: "cover"}}>
+
+                                                <div className="rmctt2-in2">
+                                                    <div className="rmctt2-in21">
+                                                        <div className="rmctt2-in211">
+                                                            <div className="_100fji8">
+                                                                <div className="_1emsdka">
+                                                                    <button aria-label="숙소 이미지 2, 사진 모두 보기" type="button" className="_1xh26pm2">
+                                                                        <div className="_1h6n1zu" style={{ display: "inline-block", verticalAlign: "bottom", height: "100%", width: "100%", minHeight: "1px" }}>
+                                                                            <picture>
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=480 1x" media="(max-width: 743px)" />
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=480 1x" media="(min-width: 743.1px) and (max-width: 1127px)" />
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720 1x" media="(min-width: 1127.1px) and (max-width: 1439px)" />
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720 1x" media="(min-width: 1439.1px)" />
+                                                                                <img className="_6tbg2q" aria-hidden="true" alt="" elementtiming="LCP-target" src="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720" data-original-uri="https://a0.muscache.com/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg" style={{ objectFit: "cover", verticalAlign: "bottom" }} />
+                                                                            </picture>
+                                                                            <div className="_15p4g025" style={{ backgroundImage: "url(&quot;https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720&quot;)", backgroundSize: "cover" }}>
+                                                                            </div>
+                                                                        </div>
+                                                                    </button>
                                                                 </div>
                                                             </div>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div className="rmctt2-in2">
-                                                <div className="rmctt2-in21">
-                                                    <div className="rmctt2-in211">
-                                                        <div className="_100fji8">
-                                                            <div className="_1emsdka">
-                                                                <button aria-label="숙소 이미지 2, 사진 모두 보기" type="button" className="_1xh26pm2">
-                                                                    <div className="_1h6n1zu" style={{display: "inline-block", verticalAlign: "bottom", height: "100%", width: "100%", minHeight: "1px"}}>
-                                                                        <picture>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=480 1x" media="(max-width: 743px)"/>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=480 1x" media="(min-width: 743.1px) and (max-width: 1127px)"/>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720 1x" media="(min-width: 1127.1px) and (max-width: 1439px)"/>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720 1x" media="(min-width: 1439.1px)"/>
-                                                                            <img className="_6tbg2q" aria-hidden="true" alt="" elementtiming="LCP-target" src="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720" data-original-uri="https://a0.muscache.com/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg" style={{objectFit: "cover", verticalAlign: "bottom"}}/>
-                                                                        </picture>
-                                                                        <div className="_15p4g025" style={{backgroundImage: "url(&quot;https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720&quot;)", backgroundSize: "cover"}}>
-                                                                        </div>
-                                                                    </div>
-                                                                </button>
-                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className="rmctt2-in212">
-                                                        <div className="_100fji8">
-                                                            <div className="_1emsdka">
-                                                                <button aria-label="숙소 이미지 2, 사진 모두 보기" type="button" class="_1xh26pm2">
-                                                                    <div className="_1h6n1zu"style={{display: "inline-block", verticalAlign: "bottom", height: "100%", width: "100%", minHeight: "1px"}}>
-                                                                        <picture>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=480 1x" media="(max-width: 743px)"/>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=480 1x" media="(min-width: 743.1px) and (max-width: 1127px)"/>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720 1x" media="(min-width: 1127.1px) and (max-width: 1439px)"/>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720 1x" media="(min-width: 1439.1px)"/>
-                                                                            <img className="_6tbg2q" aria-hidden="true" alt="" elementtiming="LCP-target" src="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/372e7d6f-7fb9-4668-92f0-25bb9a346814.jpeg?im_w=720" data-original-uri="https://a0.muscache.com/pictures/miso/Hosting-34113796/original/372e7d6f-7fb9-4668-92f0-25bb9a346814.jpeg" style={{objectFit: "cover", verticalAlign: "bottom"}}/>
-                                                                        </picture>
-                                                                        <div className="_15p4g025" style={{backgroundImage: "url(&quot;https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720&quot;)", backgroundSize: "cover"}}>
+                                                        <div className="rmctt2-in212">
+                                                            <div className="_100fji8">
+                                                                <div className="_1emsdka">
+                                                                    <button aria-label="숙소 이미지 2, 사진 모두 보기" type="button" class="_1xh26pm2">
+                                                                        <div className="_1h6n1zu" style={{ display: "inline-block", verticalAlign: "bottom", height: "100%", width: "100%", minHeight: "1px" }}>
+                                                                            <picture>
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=480 1x" media="(max-width: 743px)" />
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=480 1x" media="(min-width: 743.1px) and (max-width: 1127px)" />
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720 1x" media="(min-width: 1127.1px) and (max-width: 1439px)" />
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720 1x" media="(min-width: 1439.1px)" />
+                                                                                <img className="_6tbg2q" aria-hidden="true" alt="" elementtiming="LCP-target" src="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/372e7d6f-7fb9-4668-92f0-25bb9a346814.jpeg?im_w=720" data-original-uri="https://a0.muscache.com/pictures/miso/Hosting-34113796/original/372e7d6f-7fb9-4668-92f0-25bb9a346814.jpeg" style={{ objectFit: "cover", verticalAlign: "bottom" }} />
+                                                                            </picture>
+                                                                            <div className="_15p4g025" style={{ backgroundImage: "url(&quot;https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720&quot;)", backgroundSize: "cover" }}>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </button>
+                                                                    </button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="rmctt2-in3">
-                                                <div className="rmctt2-in21">
-                                                    <div className="rmctt2-in211">
-                                                        <div className="_100fji8">
-                                                            <div className="_1emsdka">
-                                                                <button aria-label="숙소 이미지 2, 사진 모두 보기" type="button" className="_1xh26pm2">
-                                                                    <div className="_1h6n1zu" style={{display: "inline-block", verticalAlign: "bottom", height: "100%", width: "100%", minHeight: "1px"}}>
-                                                                        <picture>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/4756e699-f474-4ca7-8b77-06b12715a6cb.jpeg?im_w=480 1x" media="(max-width: 743px)"/>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/4756e699-f474-4ca7-8b77-06b12715a6cb.jpeg?im_w=480 1x" media="(min-width: 743.1px) and (max-width: 1127px)"/>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/4756e699-f474-4ca7-8b77-06b12715a6cb.jpeg?im_w=720 1x" media="(min-width: 1127.1px) and (max-width: 1439px)"/>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/4756e699-f474-4ca7-8b77-06b12715a6cb.jpeg?im_w=720 1x" media="(min-width: 1439.1px)"/>
-                                                                            <img className="_6tbg2q" aria-hidden="true" alt="" elementtiming="LCP-target" src="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/4756e699-f474-4ca7-8b77-06b12715a6cb.jpeg?im_w=720" data-original-uri="https://a0.muscache.com/pictures/miso/Hosting-34113796/original/4756e699-f474-4ca7-8b77-06b12715a6cb.jpeg"style={{objectFit: "cover", verticalAlign: "bottom"}}/>
-                                                                        </picture>
-                                                                        <div className="_15p4g025" style={{backgroundImage: "url(&quot;https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/4756e699-f474-4ca7-8b77-06b12715a6cb.jpeg?im_w=720&quot;)", backgroundSize: "cover"}}>
+                                                <div className="rmctt2-in3">
+                                                    <div className="rmctt2-in21">
+                                                        <div className="rmctt2-in211">
+                                                            <div className="_100fji8">
+                                                                <div className="_1emsdka">
+                                                                    <button aria-label="숙소 이미지 2, 사진 모두 보기" type="button" className="_1xh26pm2">
+                                                                        <div className="_1h6n1zu" style={{ display: "inline-block", verticalAlign: "bottom", height: "100%", width: "100%", minHeight: "1px" }}>
+                                                                            <picture>
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/4756e699-f474-4ca7-8b77-06b12715a6cb.jpeg?im_w=480 1x" media="(max-width: 743px)" />
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/4756e699-f474-4ca7-8b77-06b12715a6cb.jpeg?im_w=480 1x" media="(min-width: 743.1px) and (max-width: 1127px)" />
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/4756e699-f474-4ca7-8b77-06b12715a6cb.jpeg?im_w=720 1x" media="(min-width: 1127.1px) and (max-width: 1439px)" />
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/4756e699-f474-4ca7-8b77-06b12715a6cb.jpeg?im_w=720 1x" media="(min-width: 1439.1px)" />
+                                                                                <img className="_6tbg2q" aria-hidden="true" alt="" elementtiming="LCP-target" src="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/4756e699-f474-4ca7-8b77-06b12715a6cb.jpeg?im_w=720" data-original-uri="https://a0.muscache.com/pictures/miso/Hosting-34113796/original/4756e699-f474-4ca7-8b77-06b12715a6cb.jpeg" style={{ objectFit: "cover", verticalAlign: "bottom" }} />
+                                                                            </picture>
+                                                                            <div className="_15p4g025" style={{ backgroundImage: "url(&quot;https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/4756e699-f474-4ca7-8b77-06b12715a6cb.jpeg?im_w=720&quot;)", backgroundSize: "cover" }}>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </button>
+                                                                    </button>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div className="rmctt2-in212">
-                                                        <div className="_100fji8">
-                                                            <div className="_1emsdka">
-                                                                <button aria-label="숙소 이미지 2, 사진 모두 보기" type="button" className="_1xh26pm2">
-                                                                    <div className="_1h6n1zu" style={{display: "inline-block", verticalAlign: "bottom", height: "100%", width: "100%", minHeight: "1px"}}>
-                                                                        <picture>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=480 1x" media="(max-width: 743px)"/>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=480 1x" media="(min-width: 743.1px) and (max-width: 1127px)"/>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720 1x" media="(min-width: 1127.1px) and (max-width: 1439px)"/>
-                                                                            <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720 1x" media="(min-width: 1439.1px)"/>
-                                                                            <img className="_6tbg2q" aria-hidden="true" alt="" elementtiming="LCP-target" src="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/fca892a4-3481-4ad1-9f92-404feaa42e9f.jpeg?im_w=720" data-original-uri="https://a0.muscache.com/pictures/miso/Hosting-34113796/original/fca892a4-3481-4ad1-9f92-404feaa42e9f.jpeg" style={{objectFit: "cover", verticalAlign: "bottom"}}/>
-                                                                        </picture>
-                                                                        <div className="_15p4g025" style={{backgroundImage: "url(&quot;https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720&quot;)", backgroundSize: "cover"}}>
+                                                        <div className="rmctt2-in212">
+                                                            <div className="_100fji8">
+                                                                <div className="_1emsdka">
+                                                                    <button aria-label="숙소 이미지 2, 사진 모두 보기" type="button" className="_1xh26pm2">
+                                                                        <div className="_1h6n1zu" style={{ display: "inline-block", verticalAlign: "bottom", height: "100%", width: "100%", minHeight: "1px" }}>
+                                                                            <picture>
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=480 1x" media="(max-width: 743px)" />
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=480 1x" media="(min-width: 743.1px) and (max-width: 1127px)" />
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720 1x" media="(min-width: 1127.1px) and (max-width: 1439px)" />
+                                                                                <source srcset="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720 1x" media="(min-width: 1439.1px)" />
+                                                                                <img className="_6tbg2q" aria-hidden="true" alt="" elementtiming="LCP-target" src="https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/fca892a4-3481-4ad1-9f92-404feaa42e9f.jpeg?im_w=720" data-original-uri="https://a0.muscache.com/pictures/miso/Hosting-34113796/original/fca892a4-3481-4ad1-9f92-404feaa42e9f.jpeg" style={{ objectFit: "cover", verticalAlign: "bottom" }} />
+                                                                            </picture>
+                                                                            <div className="_15p4g025" style={{ backgroundImage: "url(&quot;https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/f4f7b242-db33-46fc-9080-c3d6a6fd55ec.jpeg?im_w=720&quot;)", backgroundSize: "cover" }}>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </button>
+                                                                    </button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
-                
+
+
                                         </div>
-    
-                                
                                     </div>
                                 </div>
-                            </div>
 
-                            <div className="rmctt-pic">
-                                <button className="rmctt-pic-btn">
-                                    <div className="rmctt-pic-div">
-                                    <AllPicture />
-                                    <div className="_uhxsfg">사진 모두 보기</div>
-                                    </div>
-                                </button>
+                                <div className="rmctt-pic">
+                                    <button className="rmctt-pic-btn">
+                                        <div className="rmctt-pic-div">
+                                            <AllPicture />
+                                            <div className="_uhxsfg">사진 모두 보기</div>
+                                        </div>
+                                    </button>
+                                </div>
+
                             </div>
-                            
                         </div>
                     </div>
+
+
+
                 </div>
-
-
-                                        
-            </div>
-        </main>
+            </main>
         </div>
     );
 }
