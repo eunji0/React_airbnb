@@ -89,9 +89,7 @@ export default function InfoContentTop() {
 
     return (
         <div>
-            <main className="room-content">
-                <div className="rmctt">
-                     {/* <div className="rmzi" aria-hidden={scrollPosition < 600 ? "true" : "false"}>
+            <div  className={scrollPosition < 600 ? "hostheader": "rmzi"} aria-hidden={scrollPosition < 600 ? "true" : "false"}>
                 <div className="rmzii">
                     <div className="rmzzi">
                         <div className="rmzzi2">
@@ -126,7 +124,7 @@ export default function InfoContentTop() {
                             <div>
                                 <div style={{ display: "contents" }}>
                                     <div style={{ position: "relative" }}>
-                                        <div className="_xkkzkj">
+                                        <div className="_xkkzkj" style={{opacity: scrollPosition < 2080 ? "0" : "1"}}>
                                             <div className="_15tm0yy3">
                                                 <div className="_1fxck3d">
                                                     <div className="_ixddx0">
@@ -173,7 +171,10 @@ export default function InfoContentTop() {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
+            <main className="room-content">
+                <div className="rmctt">
+                     
                     <div className="rmctt1">
                         <div className="rmctt1-1">
                             <div className="rmctt-hdr">
