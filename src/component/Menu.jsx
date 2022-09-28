@@ -4,7 +4,7 @@ import { ReactComponent as Like } from '../images/Like.svg';
 import { ReactComponent as Star } from '../images/Star.svg';
 
 
-export default function Menu1({ place, img_path, km, day, price }) {
+export default function Menu({ place, img_path, km, day, price }) {
     return (
 
         <div>

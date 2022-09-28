@@ -4,7 +4,7 @@ import { ReactComponent as Down } from '../images/Down.svg';
 import { ReactComponent as Jewel  } from "../images/Jewel.svg";
 import { ReactComponent as Flag  } from "../images/Flag.svg";
 
-export default function InfoNav() {
+export default function InfoNav({price}) {
     return (
     <div className="rmctt3-r">
     <div className="rmctt3r">
@@ -19,12 +19,12 @@ export default function InfoNav() {
                         <div className="rmctt3r-f1">
                             <div>
                                 <div className="rmctt3r-f1f">
-                                    ₩456,529<span style={{fontWeight: "400 !important", fontSize: "16px !important", lineHeight:"20px !important"}}>/박</span>
+                                    ₩{price}<span style={{fontWeight: "400", fontSize: "16px", lineHeight:"20px"}}>/박</span>
                                 </div>
                             </div>
                             <div className="rmctt3r-f1ff">
                                 <span className="rmctt3r-f11">
-                                    <Star />
+                                    <Star style={{width:"12px", height:"12px"}}/>
                                 </span>
                                 <span className="rmctt3r-f12">4.87 ·</span>
                                 <button className="rmctt3r-f13">후기 143개</button>
@@ -69,18 +69,16 @@ export default function InfoNav() {
                         <section>
                             <div className="rmctt3r-ef">
                                 <div className="rmctt3r-ef1">
-                                    <div className="rmctt3r-eff">₩456,529 x 2박</div>
+                                    <div className="rmctt3r-eff">₩{price} x 2박</div>
                                     <div className="rmctt3r-efs">
-                                        ₩913,058
+                                        ₩{price}
                                     </div>
                                 </div>
                                 <div className="rmctt3r-ef2">
-                                    <div className="rmctt3r-ef1">
                                         <div className="rmctt3r-eff">서비스 수수료</div>
                                         <div className="rmctt3r-efs">
                                             ₩0
                                         </div>
-                                    </div>
                                 </div>
                             </div>
                             <div className="rmctt3r-es">

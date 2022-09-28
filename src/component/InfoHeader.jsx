@@ -23,7 +23,7 @@ export default function InfoHeader() {
         function handleClickOutside(e) {
             if (outSection.current && !outSection.current.contains(e.target)) {
                 setModalOpen(false);
-                setLoginOpen(false)
+                setLoginOpen(false);
                 return
             }
         }
