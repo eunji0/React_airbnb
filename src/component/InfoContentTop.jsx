@@ -19,8 +19,9 @@ import { ReactComponent as Massenger } from '../images/Massenger.svg';
 import { ReactComponent as Whats } from '../images/Whats.svg';
 import { ReactComponent as Insert } from '../images/Insert.svg';
 import { ReactComponent as Option } from '../images/Option.svg';
+import { useLocation } from "react-router-dom";
 
-export default function InfoContentTop() {
+export default function InfoContentTop(props) {
     const outSection = useRef(null);
     const outSection2 = useRef(null);
     const [loginOpen, setLoginOpen] = useState(false); //로그인모달사인
@@ -29,9 +30,13 @@ export default function InfoContentTop() {
     const inputNumber = useRef(null);
     const [scrollPosition, setScrollPosition] = useState(0);
 
+    const { state } = useLocation();
+
+
     const updateScroll = () => {
         setScrollPosition(window.scrollY || document.documentElement.scrollTop);
     }
+
     useEffect(() => {
         window.addEventListener('scroll', updateScroll);
     });
@@ -86,7 +91,7 @@ export default function InfoContentTop() {
         };
     }, [inputNumber]);
 
-
+    
     return (
         <div>
             <div  className={scrollPosition < 600 ? "hostheader": "rmzi"} aria-hidden={scrollPosition < 600 ? "true" : "false"}>
@@ -197,7 +202,7 @@ export default function InfoContentTop() {
                                                         <span className="rmhdr2-sp11">
                                                             <Star />
                                                         </span>
-                                                        <span className="rmhdr2-sp12" aria-hidden="true">4.87 ·</span>
+                                                        <span className="rmhdr2-sp12" aria-hidden="true">{state.star} ·</span>
                                                         <span className="rmhdr2-sp13">
                                                             <button aria-label="후기 143개로부터 5점 만점에 4.87점을 받은 숙소입니다." type="button" className="rmhdr2-sp13-btn">후기 143개</button>
                                                         </span>
@@ -214,7 +219,7 @@ export default function InfoContentTop() {
                                                     </span>
                                                     <span className="rmhdr2-span1">
                                                         <button type="button" className="_11eqlma4">
-                                                            <span className="_9xiloll" aria-hidden="false">Abiansemal, 발리, 인도네시아</span>
+                                                            <span className="_9xiloll" aria-hidden="false">{state.place}</span>
                                                         </button>
 
                                                     </span>
@@ -222,8 +227,8 @@ export default function InfoContentTop() {
                                                 <div className="rmhdr2-div2">
                                                     <div className="rmhdr2-div2-d">
                                                         <div className="rmhdr2-div2-i">
-                                                            <div className="rmhdr2-div2-v1">
-                                                                <button type="button" className="rmhdr2-div2-v1btn" ref={outSection2} onClick={() => setShare(true)}>
+                                                            <div className="rmhdr2-div2-v1" >
+                                                                <button type="button" className="rmhdr2-div2-v1btn" ref={outSection2} onClick={() => setShare(!share)}>
                                                                     <div className="rmhdr2-div2-div" >
                                                                         <span className="rmhdr2-div2-span">
                                                                             <Share />

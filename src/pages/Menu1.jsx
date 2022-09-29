@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Like } from '../images/Like.svg';
 import { ReactComponent as Star } from '../images/Star.svg';
 
+export default function Menu1({ place, img_path, km, day, price, star }) {
 
-export default function Menu1({ place, img_path, km, day, price }) {
     return (
 
         <div>
 
             <div className="main_ctt_crd">
-                <div className="main_ctt_crd1">
+                <Link to="/menuinfo"  state={{place, star, price}} className="main_ctt_crd1">
                     <div className="main_ctt_crd1_link">
-                        <Link to="/menuinfo" class="main_info_link"></Link>
-
+                        {/* <Link to="/menuinfo" state={{place, star, price}} class="main_info_link"></Link> */}
+                        
                     </div>
                     <div className="main_ctt_crd1_grid">
                         <img className="main_ctt_crd1_img" src={img_path} aria-hidden="true" alt="Image 1" elementtiming="LCP-target" fetchpriority="high" id="FMP-target" loading="eager" data-original-uri="https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=720" style={{ objectFit: "cover", verticalAlign: "bottom" }} />
@@ -55,10 +55,10 @@ export default function Menu1({ place, img_path, km, day, price }) {
                                 <span className="s1dxllyb dir dir-ltr">
                                 <Star style={{width:"12px", height:"12px"}}/>
                                 </span>
-                                <span aria-hidden="true" className="ru0q88m dir dir-ltr">4.88</span>
+                                <span aria-hidden="true" className="ru0q88m dir dir-ltr">{star}</span>
                             </span>
                     </div>
-                </div>
+                </Link>
             </div>
 
         </div>

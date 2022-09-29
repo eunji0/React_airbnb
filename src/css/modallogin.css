@@ -38,14 +38,13 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #DDDDDD;
-    height: 90px;
+    height: 100px;
 }
 
 .modalhome-btn3 {
     display: flex;
     flex-direction: column;
     height: 130px;
-    padding-top: 20px;
 }
 
 .modalhome-signup {
@@ -57,7 +56,11 @@
     font-weight: 600;
     text-align: left;
     padding-left: 15px;
-    padding-top: 10px;
+    padding-top: 15px;
+}
+
+.modalhome-signup:hover {
+    background-color: #DDDDDD;
 }
 
 .modalhome-login {
@@ -68,6 +71,11 @@
     padding-left: 15px;
     font-size: 14px;
     line-height: 18px;
+    padding-top: 10px;
+}
+
+.modalhome-login:hover {
+    background-color: #DDDDDD;
 }
 
 .modalhome-host {
@@ -78,6 +86,11 @@
     padding-left: 15px;
     font-size: 14px;
     line-height: 18px;
+    padding-top: 12px;
+}
+
+.modalhome-host:hover {
+    background-color: #DDDDDD;
 }
 
 .modalhome-hosting {
@@ -88,6 +101,11 @@
     padding-left: 15px;
     font-size: 14px;
     line-height: 18px;
+    padding-top: 12px;
+}
+
+.modalhome-hosting:hover {
+    background-color: #DDDDDD;
 }
 
 .modalhome-help {
@@ -98,6 +116,11 @@
     padding-left: 15px;
     font-size: 14px;
     line-height: 18px;
+    padding-top: 12px;
+}
+
+.modalhome-help:hover {
+    background-color: #DDDDDD;
 }
 
 /* 로그인 모달 */
@@ -586,10 +609,15 @@ option {
     line-height: 20px;
     font-weight: 400;
     border-radius: 8px !important;
-    border-left: 3px solid #222222 !important;
+    /* border-left: 3px solid #222222 !important;
     border-top: 3px solid #222222 !important;
     border-right: 3px solid #222222 !important;
-    border-bottom: 2px solid #222222 !important;
+    border-bottom: 2px solid #222222 !important; */
+}
+
+.few23 {
+    display: flex;
+    flex-direction: row;
 }
 
 .lm222 {

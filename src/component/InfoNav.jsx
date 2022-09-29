@@ -3,8 +3,11 @@ import { ReactComponent as Star } from '../images/Star.svg';
 import { ReactComponent as Down } from '../images/Down.svg';
 import { ReactComponent as Jewel  } from "../images/Jewel.svg";
 import { ReactComponent as Flag  } from "../images/Flag.svg";
+import { useLocation } from "react-router-dom";
 
-export default function InfoNav({price}) {
+export default function InfoNav() {
+    const { state } = useLocation();
+
     return (
     <div className="rmctt3-r">
     <div className="rmctt3r">
@@ -19,14 +22,14 @@ export default function InfoNav({price}) {
                         <div className="rmctt3r-f1">
                             <div>
                                 <div className="rmctt3r-f1f">
-                                    ₩{price}<span style={{fontWeight: "400", fontSize: "16px", lineHeight:"20px"}}>/박</span>
+                                    ₩{state.price}<span style={{fontWeight: "400", fontSize: "16px", lineHeight:"20px"}}>/박</span>
                                 </div>
                             </div>
                             <div className="rmctt3r-f1ff">
                                 <span className="rmctt3r-f11">
                                     <Star style={{width:"12px", height:"12px"}}/>
                                 </span>
-                                <span className="rmctt3r-f12">4.87 ·</span>
+                                <span className="rmctt3r-f12">{state.star} ·</span>
                                 <button className="rmctt3r-f13">후기 143개</button>
                             </div>
                             
@@ -69,9 +72,9 @@ export default function InfoNav({price}) {
                         <section>
                             <div className="rmctt3r-ef">
                                 <div className="rmctt3r-ef1">
-                                    <div className="rmctt3r-eff">₩{price} x 2박</div>
+                                    <div className="rmctt3r-eff">₩{state.price} x 2박</div>
                                     <div className="rmctt3r-efs">
-                                        ₩{price}
+                                        ₩123,456
                                     </div>
                                 </div>
                                 <div className="rmctt3r-ef2">

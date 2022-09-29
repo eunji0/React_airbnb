@@ -1,12 +1,13 @@
 import React from 'react';
 import { ReactComponent as Down } from '../images/Down.svg';
+import { Link } from "react-router-dom";
 import { ReactComponent as Facebook2 } from '../images/Facebook2.svg';
 import { ReactComponent as Google } from '../images/Google.svg';
 import { ReactComponent as Apple } from '../images/Apple.svg';
 import { ReactComponent as Email } from '../images/Email.svg';
 import { useState, useEffect, useRef } from "react";
 import { ReactComponent as Closelogin } from '../images/Closelogin.svg';
-// import { ReactComponent as Error } from '../images/Error.svg';
+import { ReactComponent as Error } from '../images/Error.svg';
 
 
 const ModalSign = (props) => {
@@ -15,7 +16,7 @@ const ModalSign = (props) => {
   const [loginOpen, setLoginOpen] = useState(false); //모달사인
   const [inputOn, setInputOn] = useState(false);//전화번호 입력 밖 터치
   const [phoneNum, setphoneNum] = useState("");//전화번호 입력
-  const [isConfirm, setisConfirm] = useState(false);
+  const [isConfirm, setisConfirm] = useState(false);//전화번호 확인
   const outSection = useRef(null);
   const inputNumber = useRef(null);
 
@@ -45,14 +46,28 @@ const ModalSign = (props) => {
   }, [inputNumber]);
 
   //  전화번호 공란
-
   useEffect(()=>{
-    if(phoneNum){
+      if(phoneNum.length<1){
+        setisConfirm(true);
+        setInputOn(true)
+        return
+      }
+        setisConfirm(false);
+        return
+  })
+
+  function click(){
+    if(phoneNum.length<1){
       setisConfirm(true);
+      setInputOn(true)
       return
     }
-    setisConfirm(false);
-  }, [phoneNum])
+      setisConfirm(false);
+      setInputOn(false);
+      return
+  }
+    
+
   return (
     // 모달이 열릴때 openModal 클래스가 생성된다.
     <div className={open ? 'openModal modal' : 'modal'}>
@@ -150,10 +165,10 @@ const ModalSign = (props) => {
                           <div className="_e296pg" ref={inputNumber} onClick={() => setInputOn(true)} style={{ flex: "2 1 0%", zIndex: inputOn === false ? "" : "1" }}>
                             <div role="presentation" className="_sbmagf" style={{ borderRadius: "0px 0px 8px 8px", inset: "0px 0px -1px" }}>
                             </div>
-                            <div className={`${inputOn === false ? "_tddesd" : "_wbq"}`}>
+                            <div className={`${inputOn === false ? "_tddesd" : "_wbq"}`} style={{border: inputOn === true && isConfirm ? "3px solid #c13515" : "3px solid #222222"}}>
                               <label className="_1yw7hpv" for="phoneInputphoneNumber" >
                                 <div className={`${inputOn === false ? "_1jn0ze9" : "lm222"}`}>
-                                  <div className="_11hx67x">전화번호</div>
+                                  <div className="_11hx67x" style={{color: isConfirm ? "#c13515":"#222222"}}>전화번호</div>
                                 </div>
                                 <div dir="ltr">
                                   <div className={`${inputOn === false ? "_js9i23" : "_fywymp7"}`}>
@@ -166,15 +181,16 @@ const ModalSign = (props) => {
 
                             <div className="_t26glb" style={{ inset: "0px 0px -1px", borderRadius: "0px 0px 8px 8px", borderTopColor: "#DDDDDD", borderRightColor: "#DDDDDD", borderBottomColor: "#DDDDDD", borderLeftColor: "#DDDDDD", borderWidth: "1px", zIndex: "0" }}></div></div></div>
                         <div className="_166d2jm1" >
-                          <span id="phone-number-help-text-phoneNumber">
-                            <div className="txtxxx" > 전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.</div>
-                            <a target="_blank" href="/terms/privacy_policy?source=signup" className="_1sikdxcl">개인정보 처리방침</a>
+                          <span className='few23' style={{flexDirection: isConfirm ? "row":"column"}} id="phone-number-help-text-phoneNumber">
+                            <div style={{opacity: isConfirm ? "1":"0", height: isConfirm ? "16px": "1px", marginRight: isConfirm ? "5px" : "0px"}}><Error/></div>
+                            <div className="txtxxx" style={{color: isConfirm ? "#c13515":"#222222"}}> {isConfirm ? "전화번호는 필수 항목입니다.":"전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다."}</div>
+                            <Link to="/" style={{opacity: isConfirm ? "0":"1"}} target="_blank" className="_1sikdxcl">개인정보 처리방침</Link>
                           </span>
                           
                         </div>
                       
                         <div className="lm2-btn">
-                          <div className="lm2btn">
+                          <div className="lm2btn" onClick={click}>
                             <span className="lm2span">
                               <span class="_kaq6tx" ></span>
                             </span>

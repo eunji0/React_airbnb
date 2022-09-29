@@ -4,6 +4,7 @@ import { dummy } from "../airbnbDummy"
 
 
 export default function Home() {
+
     return (
         <div>
             <main className="site-content">
@@ -21,6 +22,7 @@ export default function Home() {
                                                 km={item.km}
                                                 day={item.day}
                                                 price={item.price}
+                                                star={item.star}
                                                 img_path={item.img_path}
                                                 />
                                             )

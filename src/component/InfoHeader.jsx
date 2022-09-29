@@ -50,11 +50,6 @@ export default function InfoHeader() {
     }, [outSection2]);
 
 
-
-    // console.log(modalOpen);
-    console.log(loginOpen);
-
-
     return (
         <header className="room_header">
             <div className="room_header_inner" >

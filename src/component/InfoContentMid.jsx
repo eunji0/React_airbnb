@@ -27,7 +27,6 @@ import { ReactComponent as Smork } from '../images/Smork.svg';
 import { ReactComponent as Pet } from '../images/Pet.svg';
 import { ReactComponent as Party } from '../images/Party.svg';
 import { ReactComponent as More } from '../images/More.svg';
-import { dummy } from "../airbnbDummy";
 
 export default function InfoContentMid() {
     return (
@@ -308,7 +307,8 @@ export default function InfoContentMid() {
                     </div>
 
                 </div>
-                {
+                <InfoNav />
+                {/* {
                     dummy.results.map((item) => {
                         return (
                             <InfoNav 
@@ -316,7 +316,7 @@ export default function InfoContentMid() {
                             />
                         )
                     })
-                }
+                } */}
                 
             </div>
             <div className="rmctt3-inner2">

@@ -47,16 +47,15 @@ export default function Header() {
 
     // 로그인 모달
     useEffect(() => {
-
-        function handleClickOutsid(e) {
+        function handleClickOutside(e) {
             if (outSection2.current && !outSection2.current.contains(e.target)) {
                 setLoginOpen(false);
                 return
             }
         }
-        document.addEventListener('mousedown', handleClickOutsid);
+        document.addEventListener('mousedown', handleClickOutside);
         return () => {
-            document.removeEventListener('mousedown', handleClickOutsid);
+            document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [outSection2]);
 
@@ -70,7 +69,6 @@ export default function Header() {
     // }, [modalOpen, loginOpen]);
     // console.log(modalOpen);
 
-    console.log(search)
 
     return (
         <>
@@ -124,10 +122,12 @@ export default function Header() {
                                                 <div className="momo">
                                                     <div className="modalhome-btn">
                                                         <div className="modalhome-btn2">
-                                                            <div type="button" className="modalhome-signup" onClick={()=>setLoginOpen(true)} ref={outSection2} >회원 가입
+                                                            <div type="button" className="modalhome-signup" onClick={()=>setLoginOpen(true)} >회원 가입
                                                                 <ModalSign open={loginOpen}></ModalSign>
                                                             </div>
-                                                            <div type="button" className="modalhome-login">로그인</div>
+                                                            <div type="button" className="modalhome-login" onClick={()=>setLoginOpen(true)} >로그인
+                                                            <ModalSign open={loginOpen}></ModalSign>
+                                                            </div>
                                                         </div>
                                                         <div className="modalhome-btn3">
                                                             <div type="button" className="modalhome-host">숙소 호스트 되기</div>
@@ -147,9 +147,11 @@ export default function Header() {
                                                 <div className="momo">
                                                     <div className="modalhome-btn">
                                                         <div className="modalhome-btn2" >
-                                                            <div type="button" className="modalhome-signup" onClick={()=>setLoginOpen(true)} ref={outSection2}>회원 가입</div>
+                                                            <div type="button" className="modalhome-signup" onClick={()=>setLoginOpen(true)} >회원 가입</div>
                                                             <ModalSign open={loginOpen}></ModalSign>
-                                                            <div type="button" className="modalhome-login">로그인</div>
+                                                            <div type="button" className="modalhome-login" onClick={()=>setLoginOpen(true)}>로그인
+                                                            <ModalSign open={loginOpen}></ModalSign>
+                                                            </div>
                                                         </div>
                                                         <div className="modalhome-btn3">
                                                             <div type="button" className="modalhome-host">숙소 호스트 되기</div>
