@@ -45,9 +45,9 @@ const ModalSign = (props) => {
     };
   }, [inputNumber]);
 
-  //  전화번호 공란
+  // 전화번호 공란
   useEffect(()=>{
-      if(phoneNum.length<1){
+      if(isConfirm===true&&phoneNum.length<1){
         setisConfirm(true);
         setInputOn(true)
         return
@@ -56,17 +56,17 @@ const ModalSign = (props) => {
         return
   })
 
-  function click(){
-    if(phoneNum.length<1){
+  function click() {
+    if (phoneNum.length < 1) {
       setisConfirm(true);
       setInputOn(true)
       return
     }
-      setisConfirm(false);
-      setInputOn(false);
-      return
+    setisConfirm(false);
+    setInputOn(false);
+    return
   }
-    
+
 
   return (
     // 모달이 열릴때 openModal 클래스가 생성된다.
