@@ -27,7 +27,7 @@ export default function InfoNav() {
                             </div>
                             <div className="rmctt3r-f1ff">
                                 <span className="rmctt3r-f11">
-                                    <Star style={{width:"12px", height:"12px"}}/>
+                                    <Star/>
                                 </span>
                                 <span className="rmctt3r-f12">{state.star} ·</span>
                                 <button className="rmctt3r-f13">후기 143개</button>

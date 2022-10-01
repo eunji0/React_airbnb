@@ -73,7 +73,7 @@ export default function Header() {
     return (
         <>
             <header className='main_header' >
-                <div className="qweds">
+                <div className={search ? "qweds" : "puio"}>
                     <div className={search ? 'main_header_inner2' : 'main_header_inner'} ref={outSection}>
                         <div className="main_header_front">
                             <div className="main_front_logo">
@@ -122,11 +122,11 @@ export default function Header() {
                                                 <div className="momo">
                                                     <div className="modalhome-btn">
                                                         <div className="modalhome-btn2">
-                                                            <div type="button" className="modalhome-signup" onClick={()=>setLoginOpen(true)} >회원 가입
+                                                            <div type="button" className="modalhome-signup" onClick={() => setLoginOpen(true)} >회원 가입
                                                                 <ModalSign open={loginOpen}></ModalSign>
                                                             </div>
-                                                            <div type="button" className="modalhome-login" onClick={()=>setLoginOpen(true)} >로그인
-                                                            <ModalSign open={loginOpen}></ModalSign>
+                                                            <div type="button" className="modalhome-login" onClick={() => setLoginOpen(true)} >로그인
+                                                                <ModalSign open={loginOpen}></ModalSign>
                                                             </div>
                                                         </div>
                                                         <div className="modalhome-btn3">
@@ -147,10 +147,10 @@ export default function Header() {
                                                 <div className="momo">
                                                     <div className="modalhome-btn">
                                                         <div className="modalhome-btn2" >
-                                                            <div type="button" className="modalhome-signup" onClick={()=>setLoginOpen(true)} >회원 가입</div>
+                                                            <div type="button" className="modalhome-signup" onClick={() => setLoginOpen(true)} >회원 가입</div>
                                                             <ModalSign open={loginOpen}></ModalSign>
-                                                            <div type="button" className="modalhome-login" onClick={()=>setLoginOpen(true)}>로그인
-                                                            <ModalSign open={loginOpen}></ModalSign>
+                                                            <div type="button" className="modalhome-login" onClick={() => setLoginOpen(true)}>로그인
+                                                                <ModalSign open={loginOpen}></ModalSign>
                                                             </div>
                                                         </div>
                                                         <div className="modalhome-btn3">
@@ -169,8 +169,68 @@ export default function Header() {
                             </nav>
                         </div>
                     </div>
-                    
+                    <div className="dgfd" style={{ opacity: search ? "1" : "0" }}>
+                        <div className="pokmlm">
+                            <div className="pokmfle">
+                                <div className="p11">
+                                    <div className="c11we">
+                                        <label className="in3kizz i9jpnbz i1mixo1 dir dir-ltr" for="bigsearch-query-location-input">
+                                            <div className="c1gxtg0q dir dir-ltr">
+                                                <div className="i1kt4qwh dir dir-ltr">여행지</div>
+                                                <input className="ivycze5 dir dir-ltr" aria-autocomplete="none" autocomplete="off" autocorrect="off" spellcheck="false" id="bigsearch-query-location-input" name="query" aria-describedby="bigsearch-query-location-description" placeholder="여행지 검색" data-testid="structured-search-input-field-query" />
+
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div className="sv3mkdx dir dir-ltr"></div>
+                                <div className="p22">
+                                    <div className="p22sd">
+                                        <div className="b192dx2b b174x59c dir dir-ltr" role="button" tabindex="0" aria-expanded="false" data-testid="structured-search-input-field-split-dates-0">
+                                            <div className="c11if3v5 dir dir-ltr">
+                                                <div className="l1vto4to dir dir-ltr">체크인</div>
+                                                <div className="p1kudodg dir dir-ltr">날짜 입력</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sv3mkdx dir dir-ltr"></div>
+                                    <div className="p22sd">
+                                        <div className="b192dx2b b174x59c dir dir-ltr" role="button" tabindex="0" aria-expanded="false" data-testid="structured-search-input-field-split-dates-0">
+                                            <div className="c11if3v5 dir dir-ltr">
+                                                <div className="l1vto4to dir dir-ltr">체크아웃</div>
+                                                <div className="p1kudodg dir dir-ltr">날짜 입력</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="sv3mkdx dir dir-ltr"></div>
+                                <div className="p33">
+                                    <div className="p22sd">
+                                        <div className="b192dx2b b174x59c dir dir-ltr" role="button" tabindex="0" aria-expanded="false" data-testid="structured-search-input-field-split-dates-0">
+                                            <div className="c11if3v5 dir dir-ltr">
+                                                <div className="l1vto4to dir dir-ltr">여행자</div>
+                                                <div className="p1kudodg dir dir-ltr">게스트 추가</div>
+                                            </div>
+                                        </div>
+                                        <div className="btnweq">
+                                            <button className="bbtnasd">
+                                            <span className="_tcp689">
+                                                <div className="c8th90 dir dir-ltr">
+                                                    <div className=" dir dir-ltr">
+                                                        <Search className="starss"/>
+                                                    </div>
+                                                    <div className="l1huikbk l123k1u5 dir dir-ltr">검색</div>
+                                                </div>
+                                            </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </header>
         </>
     )
