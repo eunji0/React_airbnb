@@ -209,6 +209,7 @@ body {
   line-height: 20px;
   margin: 10px 16px;
   height: 30px;
+  color: #222222;
 }
 
 .main_header_mid_frt_txt2:hover {
@@ -4227,6 +4228,42 @@ section {
   min-width: 0;
 }
 
+
+.i18pj64x[class][class]:hover {
+  margin-right: -4px;
+  background-color: #EBEBEB;
+}
+
+.kerfd:hover {
+  border: 1px solid transparent;
+  border-radius: 32px;
+  margin-right: -4px;
+  margin-left: -4px;
+  background-color: #EBEBEB;
+}
+
+.b1234x59c {
+  background-color: #FFFFFF;
+  width: 131.6px;
+  /* padding: -4px; */
+  border-radius: 32px;
+  border: 1px solid transparent;
+  margin-left: -2px;
+  margin-right: -2px;
+  box-shadow: 1px 1px 3px 3px #DDDDDD;
+}
+
+.b1234x59c1 {
+  background-color: #FFFFFF;
+  width: 131.6px;
+  padding: -4px;
+  border-radius: 32px;
+  border: 1px solid transparent;
+  margin-left: -2px;
+  margin-right: 40px;
+  box-shadow: 1px 1px 3px 3px #DDDDDD;
+}
+
 .p22 {
   display: flex;
   flex: 1 0 0%;
@@ -4282,11 +4319,12 @@ section {
 }
 
 .dir.ivycze5[class][class] {
-  border: 0;
+  border: none;
   margin: 0;
   padding: 0;
   background: none;
 }
+
 .ivycze5[class][class] {
   display: block;
   width: 100%;
@@ -4295,6 +4333,7 @@ section {
   font-weight:600;
   color: #222222;
   text-overflow: ellipsis;
+  outline: none;
 }
 
 .ivycze5[class][class]::placeholder {
@@ -4302,7 +4341,14 @@ section {
   font-weight: 400;
   color: #222222;
   opacity: 0.7;
+  
 }
+
+/* border: none;
+border-left: 0px;
+border-bottom: 0px;
+border-top: 0px;
+border-right: 0px; */
 
 .dir-ltr.i1mixo1[class][class]::before {
   border-left: 0;
@@ -4512,7 +4558,8 @@ section {
 }
 
 .bbtnasd {
-  background-color: #FF385C;
+  border-color: #FF385C;
+    background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%) !important;
   width: 92px;
   height: 48px;
     border: 0;
@@ -4551,9 +4598,31 @@ section {
 .starss {
   width: 16px !important;
   height: 16px !important;
+  stroke-width: 4 !important;
 }
 
 .dir-ltr.l1huikbk[class][class] {
   padding-left: 8px;
   padding-right: 4px;
+}
+
+.bbtnlhk {
+  background-color: #FF385C;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border-radius: 24px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    height: 48px;
+    line-height: 16px;
+    max-width: 48px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    z-index: 0;
+    float: right;
 }

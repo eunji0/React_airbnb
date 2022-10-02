@@ -54,7 +54,7 @@ const ModalSign = (props) => {
       }
         setisConfirm(false);
         return
-  })
+  }, [isConfirm, phoneNum.length])
 
   function click() {
     if (phoneNum.length < 1) {
