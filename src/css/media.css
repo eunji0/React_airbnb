@@ -1,0 +1,49 @@
+@media (min-width: 950px) {
+    .main_header_front {
+        flex: 1 0 140px;
+    }
+
+    .main_header_mid {
+        text-align: center;
+    }
+
+    .main_header_last {
+        flex: 1 0 140px;
+    }
+}
+
+@media (min-width: 1128px) {
+    .logoqwe {
+        display: block;
+    }
+
+    .logodfh {
+        display: none;
+    }
+
+    .main_content_ctt {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+}
+
+@media (max-width: 1128px) {
+    .logoqwe {
+        display: none;
+    }
+
+    .logodfh {
+        display: block;
+    }
+
+    .main_header_inner {
+        padding-inline-start: 40px;
+        padding-inline-end: 40px;
+    }
+
+    .main_content_ctt {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}

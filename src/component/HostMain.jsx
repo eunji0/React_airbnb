@@ -9,7 +9,7 @@ import { ReactComponent as Next } from '../images/Next.svg';
 import { ReactComponent as Plus } from '../images/Plus.svg';
 import { ReactComponent as Minus } from '../images/Minus.svg';
 import { ReactComponent as Previous } from '../images/Previous.svg';
-
+import styled from "styled-components";
 
 export default function HostMain() {
     const outSection = useRef(null);
@@ -52,13 +52,13 @@ export default function HostMain() {
                             </div>
                         </h1>
                         <div className="hml-inner">
-                            <div className="hostheader-right2" ref={outSection} onClick={() => setLoginOpen(true)} type="button">
+                            <Button className="hostheader-right2" ref={outSection} onClick={() => setLoginOpen(true)} type="button">
                                 <span className="hostheader-right2txt">
                                     호스팅 시작하기
                                     <ModalSign open={loginOpen} >
                                     </ModalSign>
                                 </span>
-                            </div>
+                            </Button>
                         </div>
                     </div>
                 </div>
@@ -163,9 +163,9 @@ export default function HostMain() {
                                                                             <button className="_b2fxuo" data-index="2" type="button">
                                                                                 <span className="a8jt5op dir dir-ltr">게스트</span>
                                                                                 <div className="_1g5ss3l">게스트 4명</div>
-                                                                                <div className="_o5ir51" data-icon="true">
+                                                                                <Button className="_o5ir51" data-icon="true">
                                                                                     <Hostsearch />
-                                                                                </div>
+                                                                                </Button>
                                                                             </button>
                                                                         </div>
                                                                     </div>
@@ -397,3 +397,31 @@ export default function HostMain() {
         </main>
     );
 }
+
+const Button = styled.button`
+  cursor: pointer !important;
+  display: inline-block !important;
+  margin: 0 !important;
+  position: relative !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  width: auto !important;
+  touch-action: manipulation !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  outline: none !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  border: none;
+  border-color: #FF385C;
+  background: -webkit-linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%) !important;
+  background: -moz-linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%) !important;
+  background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%) !important;
+
+`;

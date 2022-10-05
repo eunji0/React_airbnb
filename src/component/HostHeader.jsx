@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as HostLogo } from '../images/HostLogo.svg';
 import { useState, useEffect, useRef } from "react";
+import styled from "styled-components";
 
 export default function HostHeader() {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -51,6 +52,7 @@ export default function HostHeader() {
                         슈퍼호스트에게 물어보기
                     </Link>
                 </div>
+                <Button>
                 <Link to="/" className="hostheader-right2">
                     <span className="hostheader-right2span">
 
@@ -59,8 +61,37 @@ export default function HostHeader() {
                         호스팅 시작하기
                         </span>
                 </Link>
+                </Button>
             </div>
         </div>
 
     );
 }
+
+const Button = styled.button`
+  cursor: pointer !important;
+  display: inline-block !important;
+  margin: 0 !important;
+  position: relative !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  width: auto !important;
+  touch-action: manipulation !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  outline: none !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  border: none;
+  border-color: #FF385C;
+  background: -webkit-linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%) !important;
+  background: -moz-linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%) !important;
+  background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%) !important;
+
+`;

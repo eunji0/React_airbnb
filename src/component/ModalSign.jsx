@@ -78,6 +78,7 @@ const ModalSign = (props) => {
           </header>
           <main>
             {/* {props.children} */}
+            <div className="Modalll">
             <div className="loginModal">
               <div className="login-modal">
                 <div className="loginHeader">
@@ -263,6 +264,7 @@ const ModalSign = (props) => {
                   </div>
                 </div>
               </div>
+            </div>
             </div>
           </main>
         </section>
