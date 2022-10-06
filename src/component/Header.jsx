@@ -24,6 +24,8 @@ export default function Header() {
     const [checkout, setCheckout] = useState(false);//체크아웃
     const [traveler, setTraveler] = useState(false);//여행자
 
+    
+
     //스크롤
     const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -207,6 +209,89 @@ export default function Header() {
 
                                             </div>
                                         </label>
+                                        <div className="mdlpok">
+                                            <div className="mdlkjjf">
+                                                <section>
+                                                    <div>
+                                                        <div className="v786cx">
+                                                            <div className="w9cvjkj">
+                                                            <div className="l5mmcz9 dir dir-ltr" id="locationInspirationTitleID">지역으로 검색하기</div>
+                                                            <div>
+                                                                <div className="grid9sd">
+                                                                    <div className="sd9fds">
+                                                                        <div className="kljf976">
+                                                                            <button className="btn098fds">
+                                                                            <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg"/>
+                                                                            <div className="ioa2q3t dir dir-ltr"></div>
+                                                                            <span className="a8jt5op dir dir-ltr">유연한 검색</span>
+
+                                                                            </button>
+                                                                            <div><div className="o11dhjqa dir dir-ltr">유연한 검색</div></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="sd9fds">
+                                                                        <div className="kljf976">
+                                                                            <button className="btn098fds">
+                                                                            <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg"/>
+                                                                            <div className="ioa2q3t dir dir-ltr"></div>
+                                                                            <span className="a8jt5op dir dir-ltr">유럽</span>
+
+                                                                            </button>
+                                                                            <div><div className="o11dhjqa dir dir-ltr">유럽</div></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="sd9fds">
+                                                                        <div className="kljf976">
+                                                                            <button className="btn098fds">
+                                                                            <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg"/>
+                                                                            <div className="ioa2q3t dir dir-ltr"></div>
+                                                                            <span className="a8jt5op dir dir-ltr">프랑스</span>
+
+                                                                            </button>
+                                                                            <div><div className="o11dhjqa dir dir-ltr">프랑스</div></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="sd9fds">
+                                                                        <div className="kljf976">
+                                                                            <button className="btn098fds">
+                                                                            <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg"/>
+                                                                            <div className="ioa2q3t dir dir-ltr"></div>
+                                                                            <span className="a8jt5op dir dir-ltr">동남아시아</span>
+
+                                                                            </button>
+                                                                            <div><div className="o11dhjqa dir dir-ltr">동남아시아</div></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="sd9fds">
+                                                                        <div className="kljf976">
+                                                                            <button className="btn098fds">
+                                                                            <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg"/>
+                                                                            <div className="ioa2q3t dir dir-ltr"></div>
+                                                                            <span className="a8jt5op dir dir-ltr">이탈리아</span>
+
+                                                                            </button>
+                                                                            <div><div className="o11dhjqa dir dir-ltr">이탈리아</div></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="sd9fds">
+                                                                        <div className="kljf976">
+                                                                            <button className="btn098fds">
+                                                                            <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg"/>
+                                                                            <div className="ioa2q3t dir dir-ltr"></div>
+                                                                            <span className="a8jt5op dir dir-ltr">미국</span>
+
+                                                                            </button>
+                                                                            <div><div className="o11dhjqa dir dir-ltr">미국</div></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="sv3mkdx dir dir-ltr"></div>
