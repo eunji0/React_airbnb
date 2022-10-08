@@ -7,14 +7,11 @@ export default function Menu1({ place, img_path, km, day, price, star }) {
 
     return (
 
-        <div>
+        <div className="main_rd">
 
             <div className="main_ctt_crd">
                 <Link to="/menuinfo"  state={{place, star, price}} className="main_ctt_crd1">
-                    <div className="main_ctt_crd1_link">
-                        {/* <Link to="/menuinfo" state={{place, star, price}} class="main_info_link"></Link> */}
-                        
-                    </div>
+                    
                     <div className="main_ctt_crd1_grid">
                         <img className="main_ctt_crd1_img" src={img_path} aria-hidden="true" alt="Image 1" elementtiming="LCP-target" fetchpriority="high" id="FMP-target" loading="eager" data-original-uri="https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=720" style={{ objectFit: "cover", verticalAlign: "bottom" }} />
 
@@ -26,7 +23,7 @@ export default function Menu1({ place, img_path, km, day, price, star }) {
                             </button>
                         </div>
                     </div>
-                    <div className="main_ctt_crd1_grid2">
+                    {/* <div className="main_ctt_crd1_grid2">
                             <div className="ctt_crd1_grid2_txt">{place}</div>
 
                             <div className="ctt_crd1_grid2_txt-ltr">
@@ -57,7 +54,7 @@ export default function Menu1({ place, img_path, km, day, price, star }) {
                                 </span>
                                 <span aria-hidden="true" className="ru0q88m dir dir-ltr">{star}</span>
                             </span>
-                    </div>
+                    </div> */}
                 </Link>
             </div>
 

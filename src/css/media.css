@@ -3,13 +3,6 @@
         padding-left: 40px;
         padding-right: 40px;
     }
-    .main_ctt_crd1 {
-        grid-template-rows: 375.8px 100px;
-    }
-
-    .main_ctt_crd1_img {
-        height: 375.81px;
-    }
 
     .main_front_logo {
         width: 30.08px;
@@ -30,13 +23,6 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    .main_ctt_crd1 {
-        grid-template-rows: 314.8px 100px;
-    }
-
-    .main_ctt_crd1_img {
-        height: 314.81px;
-    }
 }
 
 @media (min-width: 744px) {
@@ -79,13 +65,6 @@
         padding-left: 40px;
         padding-right: 40px;
     }
-    .main_ctt_crd1 {
-        grid-template-rows: 305.8px 100px;
-    }
-
-    .main_ctt_crd1_img {
-        height: 305.81px;
-    }
     
 }
 
@@ -116,13 +95,6 @@
     .main_scd_header_inner {
         padding-left: 80px;
         padding-right: 80px;
-    }
-    .main_ctt_crd1 {
-        grid-template-rows: 305.8px 100px;
-    }
-
-    .main_ctt_crd1_img {
-        height: 100%;
     }
 
     .main_header_inner {
@@ -167,10 +139,4 @@
         padding-right: 80px;
     }
 
-    .main_ctt_crd1 {
-        grid-template-rows: 305.7px 100px;
-    }
-    .main_ctt_crd1_img {
-        height: 305.81px;
-    }
 }
