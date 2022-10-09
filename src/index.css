@@ -669,6 +669,7 @@ body {
   grid-template-columns: 86.56px repeat(54, 56px);
   grid-template-rows: 78px;
   z-index: 2;
+  max-width: 1120px;
 }
 
 .scd_hdr_in_btn {
@@ -857,12 +858,12 @@ body {
   margin-left: 0px !important;
   margin-right: 0px !important;
   padding-bottom: 80px;
+
 }
 
 .main_content_mdl {
   margin-left: auto;
   margin-right: auto;
-  height: 100%;
   width: 100%;
 }
 
@@ -876,18 +877,18 @@ body {
 }
 
 .main_rd {
-  width: 100%;
-  /* height: 100%; */
+  display: grid;
+  height: 100%;
+  /* grid-template-columns: 100% 100%; */
 }
 
 .main_ctt_crd {
-  /* display: grid;
-  grid-template-columns: 100%;
   margin: 0;
   grid-auto-flow: column;
-  justify-content: flex-start; */
+  justify-content: flex-start;
   width: 100%;
-  /* height: 100%; */
+  grid-template-rows: 100%;
+  height: 100%;
 }
 
 .main_ctt_crd1 {
@@ -897,8 +898,9 @@ body {
   grid-template-areas:
     'top'
     'bottom';
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: 58% 30%;
 }
 
 .main_ctt_crd1_link {
@@ -911,7 +913,6 @@ body {
 .main_info_link {
   display: block;
   width: 100%;
-  height: 100%;
   outline: none;
 }
 
@@ -923,14 +924,12 @@ body {
 
 
 .main_ctt_crd1_img {
-  /* width: 100%;
   height: 100%;
-  object-fit: cover;
-  vertical-align: bottom;*/
   border-radius: 15px;
   border: 1px solid transparent;
   width: 100%;
-  height: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
 }
 
 .main_info_like {
@@ -970,14 +969,14 @@ body {
   margin-top: 10px;
   display: grid;
   grid-area: bottom;
-  grid-template-rows: 19px 19px 19px 19px;
-  grid-template-columns: 80% 15%;
   column-gap: 8px;
   row-gap: 2px;
   grid-auto-rows: minmax(0, 1fr);
   font-size: 15px;
   line-height: 19px;
-  height: 50%;
+  height: 100%;
+  grid-template-rows: repeat(4, 15%);
+  grid-template-columns: 80% 15%;
 }
 
 
@@ -988,7 +987,6 @@ body {
 
 .ctt_crd1_grid2_txt-ltr {
   color: #717171;
-  margin-top: 4px;
   grid-column: 1 / -1;
 }
 
@@ -997,7 +995,6 @@ body {
 }
 
 .ctt_crd1_grid2_txt3 {
-  padding-top: 6px;
   grid-column: 1 / -1;
   font-size: 15px;
   line-height: 19px;
@@ -1057,13 +1054,10 @@ body {
   height: 100% !important;
   position: relative !important;
   z-index: 1 !important;
-  margin: 0 auto;
-  margin-left: 119.6px;
-  margin-right: 119.6px;
-}
-
-.room_header-front {
-  flex: 1 0 140px !important;
+  margin-top: 0;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .room_header-middle {
@@ -1086,6 +1080,7 @@ body {
   vertical-align: middle !important;
   z-index: 1 !important;
   color: #FF385C !important;
+ 
 }
 
 .room_header-logo {
@@ -1352,8 +1347,6 @@ body {
 }
 
 .rmctt-hdr {
-  padding-left: 80px;
-  padding-right: 80px;
   display: flex;
   align-items: stretch !important;
   justify-content: flex-start !important;
@@ -1366,8 +1359,9 @@ body {
 .rmctt-hdr-inner {
   width: 100%;
   height: 100%;
-  margin-left: 119.6px;
-  margin-right: 119.6px;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .rmctt-hdr-in {
@@ -1617,10 +1611,9 @@ section {
 메인 content-inner */
 /* 메인 하단 */
 .rmctt3-inner {
-  margin-left: 119.6px;
-  margin-right: 119.6px;
-  padding-left: 80px;
-  padding-right: 80px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   align-items: stretch !important;
   justify-content: flex-start !important;
@@ -2356,10 +2349,12 @@ section {
   color: #717171;
 }
 
+/* .rmctt2 {
+  height: 378.55px;
+} */
 
 .rmctt2-inner {
-  padding-left: 80px;
-  padding-right: 80px;
+  height: 100%;
 }
 
 .rmctt2-in {
@@ -2367,13 +2362,13 @@ section {
   margin-left: auto;
   margin-right: auto;
   padding-top: 24px;
-  height: 388.15px;
+  height: 100%;
+  position: relative;
 }
 
 .rmctt2-inin {
   height: 100%;
 }
-
 
 .rmctt2-inin2 {
   display: block;
@@ -2381,15 +2376,15 @@ section {
   min-height: 300px !important;
   overflow-y: hidden !important;
   position: relative !important;
-  height: 364.15px;
+  /* height: 100%; */
 }
 
 .rmctt2-inin3 {
-  height: 0 !important;
   min-height: 100% !important;
   min-width: 100% !important;
   position: relative !important;
-  padding-top: 50% !important;
+  /* padding-top: 35% !important; */
+  height: 358.55px;
 }
 
 .rmctt2-inin4 {
@@ -2444,29 +2439,12 @@ section {
 
 ._6tbg2q1 {
   width: 100%;
-  height: 364.15px;
+  height: 100%;
 }
 
 ._6tbg2q {
   width: 100%;
   height: 100%;
-}
-
-._1xh26pm2 {
-  text-decoration: underline !important;
-  appearance: none !important;
-  background: transparent !important;
-  border: 0px !important;
-  cursor: pointer !important;
-  margin: 0px !important;
-  padding: 0px !important;
-  user-select: auto !important;
-  display: block !important;
-  height: 100% !important;
-  position: relative !important;
-  width: 100% !important;
-  outline: none !important;
-  text-align: left !important;
 }
 
 ._15p4g025 {
@@ -2488,12 +2466,12 @@ section {
 }
 
 .rmctt2-in211 {
-  height: 182.075px !important;
+  height: 50%;
 }
 
 .rmctt2-in212 {
-  height: 174.075px !important;
   margin-top: 10px !important;
+  height: 50%;
 }
 
 ._100fji8 {
@@ -2535,11 +2513,10 @@ section {
 }
 
 .rmctt-pic {
-  position: relative !important;
+  position: absolute !important;
   z-index: 3 !important;
-  bottom: 60px;
-  left: 950px;
-  width: 150px;
+  bottom: 24px !important;
+  right: 24px;
 }
 
 .rmctt-pic-btn {
@@ -3248,16 +3225,15 @@ section {
 /* room content */
 
 .rmctt3-a {
-  padding-left: 80px;
-  padding-right: 80px;
   display: flex;
   width: 100%;
 }
 
 .rmctt3-ain {
   width: 100%;
-  margin-left: 119.6px;
-  margin-right: 119.6px;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
   border-top: 1px solid rgb(221, 221, 221);
 }
 
@@ -3268,7 +3244,6 @@ section {
 
 .rmctt3-in2 {
   max-width: 1120px;
-  width: 1120px;
 }
 
 .rmctt3in {
@@ -3445,13 +3420,8 @@ section {
   line-height: 20px;
 }
 
-.rmctt3in4 {
-  padding-left: 80px;
-  padding-right: 80px;
-}
-
 .rmctt3in4-inner {
-  width: 1120px;
+  max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
   border-top: 1px solid rgb(221, 221, 221);
@@ -3755,12 +3725,12 @@ section {
   border-top: 1px solid rgb(221, 221, 221);
 }
 
-.rmctt3-ainn {
-  width: 1120px;
-  margin-left: 119.6px;
-  margin-right: 119.6px;
+/* .rmctt3-ainn {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
-}
+} */
 
 .rmctt3inner6-f {
   padding-bottom: 16px;
@@ -3815,6 +3785,7 @@ section {
   margin-right: -12px;
   display: flex;
   flex-direction: row;
+  max-width: 1120px;
 }
 
 .rmctt3-intop-section {
@@ -3834,10 +3805,7 @@ section {
 }
 
 .rmctt3-intop-div2 {
-  margin-top: 16px !important;
-  padding-left: 0px !important;
-  padding-right: 0px !important;
-  margin-top: 16px !important;
+  margin-top: 25px !important;
   padding-left: 0px !important;
   padding-right: 0px !important;
   font-size: 14px;
@@ -3848,8 +3816,7 @@ section {
   display: block;
   padding-top: 24px !important;
   padding-bottom: 24px !important;
-  border-top: 1px solid rgb(221, 221, 221) !important;
-  width: 1120px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -3857,6 +3824,8 @@ section {
 .rmctt3-ainn2-top {
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid rgb(221, 221, 221) !important;
+  padding-top: 20px;
 }
 
 ._wjo0ey {
@@ -3978,8 +3947,6 @@ section {
 
 .rmctt3-a2 {
   padding-top: 48px;
-  padding-left: 80px;
-  padding-right: 80px;
   display: flex;
   width: 100%;
   padding-bottom: 48px;
@@ -3997,27 +3964,30 @@ section {
   animation-name: keyframe_1b8bzh6 !important;
   animation-duration: 100ms !important;
   height: 80px;
+
 }
 
 .rmzii {
-  max-width: none !important;
   display: flex;
   align-items: stretch;
   flex-wrap: wrap !important;
   width: 100% !important;
   margin-right: 0px;
   margin-left: 0px;
-  justify-content: flex-start !important;
-  padding-left: 80px;
-  padding-right: 80px;
+  justify-content: center !important;
 }
 
 .rmzzi {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1120px;
   height: 100%;
   width: 100%;
+}
+
+.rmctt3-ainn {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .rmzzi2 {

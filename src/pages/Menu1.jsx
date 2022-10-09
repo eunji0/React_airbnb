@@ -23,15 +23,15 @@ export default function Menu1({ place, img_path, km, day, price, star }) {
                             </button>
                         </div>
                     </div>
-                    {/* <div className="main_ctt_crd1_grid2">
-                            <div className="ctt_crd1_grid2_txt">{place}</div>
-
+                    
+                    <div className="main_ctt_crd1_grid2">
+                         <div className="ctt_crd1_grid2_txt">{place}</div>
                             <div className="ctt_crd1_grid2_txt-ltr">
                                 <span aria-label="5,275km">
                                     <span className="ctt_crd1_grid2_txt-ltr-ltr">{km}</span>
                                 </span>
                             </div>
-                            <div className="ctt_crd1_grid2_txt2">
+                             <div className="ctt_crd1_grid2_txt2">
                                 <span aria-label="8월 12일~17일">
                                     <span className="ctt_crd1_grid2_txt2-ltr">{day}</span>
                                 </span>
@@ -54,7 +54,7 @@ export default function Menu1({ place, img_path, km, day, price, star }) {
                                 </span>
                                 <span aria-hidden="true" className="ru0q88m dir dir-ltr">{star}</span>
                             </span>
-                    </div> */}
+                    </div>
                 </Link>
             </div>
 

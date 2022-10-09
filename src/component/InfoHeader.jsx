@@ -9,6 +9,8 @@ import { useState, useRef } from 'react';
 import ModalLogin from './ModalLogin';
 import { useEffect } from "react";
 import ModalSign from "./ModalSign";
+import { ReactComponent as HomeLogo } from '../images/HomeLogo.svg';
+
 
 export default function InfoHeader() {
     const [modalOpen, setModalOpen] = useState(false);
@@ -16,7 +18,7 @@ export default function InfoHeader() {
     const outSection2 = useRef(null);
     const [loginOpen, setLoginOpen] = useState(false); //모달사인
 
-    
+
 
     // 메뉴모달 밖
     useEffect(() => {
@@ -53,12 +55,17 @@ export default function InfoHeader() {
     return (
         <header className="room_header">
             <div className="room_header_inner" >
-                <div className="room_header-front">
+                <div className="main_header_front">
                     <Link to="/" className="room_header-front-link" aria-label="에어비앤비 홈페이지">
-                        <div className="room_header-logo">
+                        {/* <div className="room_header-logo">
                             <Logo />
+                        </div> */}
+                        <div className="logoqwe">
+                                        <Logo className="header_front_logo" />
+                                    </div>
+                        <div className="logodfh">
+                            <HomeLogo />
                         </div>
-
                     </Link>
                 </div>
                 <div className="room_header-middle">
@@ -155,7 +162,7 @@ export default function InfoHeader() {
             </div>
 
         </header>
-        
+
 
     );
 }

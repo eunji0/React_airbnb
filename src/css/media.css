@@ -35,15 +35,20 @@
         right: 200px;
         justify-content: flex-end;
     }
+}
 
-    
+@media (max-width: 807px) {
+    .rmctt2 {
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 950px) {
     .hostmain-left {
         display: none;
     }
-    .hostmain-logo  {
+
+    .hostmain-logo {
         display: none;
     }
 }
@@ -65,7 +70,17 @@
         padding-left: 40px;
         padding-right: 40px;
     }
-    
+
+    .rmctt3-inner {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .rmctt3-a {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
 }
 
 
@@ -101,8 +116,49 @@
         padding-left: 80px;
         padding-right: 80px;
     }
+
     .main_front_logo {
         width: 102px;
+    }
+
+    .rmctt2-inner {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .rmctt-hdr {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .rmctt3-inner {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .rmctt3-a {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .rmctt3in4 {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .rmctt3-ainn2 {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .rmzii {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .rmctt3-a2 {
+        padding-left: 80px;
+        padding-right: 80px;
     }
 }
 
@@ -121,7 +177,42 @@
         display: block;
     }
 
+    .rmctt2-inner {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .rmctt3-inner {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .rmctt3-a {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .rmctt3in4 {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .rmzii {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
     .main_header_inner {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .rmctt3-ainn2 {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .rmctt3-a2 {
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -130,7 +221,14 @@
         padding-left: 40px;
         padding-right: 40px;
     }
-  
+
+    .rmctt-hdr {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+
+
 }
 
 @media screen and (min-width: 1440px) {

@@ -9,7 +9,7 @@
   background-color: #fff;
   left: 0;
   height: 72px;
-
+  max-width: 1120px;
   transition: opacity 0.13s ease-in-out, visibility 0.13s ease-in-out;
 }
 

@@ -586,7 +586,7 @@ export default function InfoContentTop(props) {
                                         <div className="rmctt2-inin3">
                                             <div className="rmctt2-inin4">
                                                 <div className="rmctt2-inin5">
-                                                    <div className="rmctt2-in1">
+                                                   <div className="rmctt2-in1">
                                                         <div className="rmctt2-in11">
                                                             <button aria-label="숙소 이미지 1, 사진 모두 보기" type="button" className="_1xh26pm2">
                                                                 <div className="_1h6n1zu" style={{ display: "inline-block", verticalAlign: "bottom", height: "100%", width: "100%", minHeight: "1px" }}>
