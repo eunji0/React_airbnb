@@ -35,6 +35,10 @@
         right: 200px;
         justify-content: flex-end;
     }
+
+    .scd_header_inner_menu {
+        flex: 1;
+    }
 }
 
 @media (max-width: 807px) {
@@ -54,6 +58,10 @@
 }
 
 @media (min-width: 950px) {
+
+    .main-calander {
+        max-height: calc(100vh - 150px);
+    }
     .main_header_front {
         flex: 1 0 140px;
     }

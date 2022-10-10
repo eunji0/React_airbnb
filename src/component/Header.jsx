@@ -24,7 +24,7 @@ export default function Header() {
     const [checkout, setCheckout] = useState(false);//체크아웃
     const [traveler, setTraveler] = useState(false);//여행자
 
-    
+
 
     //스크롤
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -209,83 +209,83 @@ export default function Header() {
 
                                             </div>
                                         </label>
-                                        <div className="mdlpok">
+                                        <div className="mdlpok" style={{ display: headerout ? "none" : "block" }}>
                                             <div className="mdlkjjf">
                                                 <section>
                                                     <div>
                                                         <div className="v786cx">
                                                             <div className="w9cvjkj">
-                                                            <div className="l5mmcz9 dir dir-ltr" id="locationInspirationTitleID">지역으로 검색하기</div>
-                                                            <div>
-                                                                <div className="grid9sd">
-                                                                    <div className="sd9fds">
-                                                                        <div className="kljf976">
-                                                                            <button className="btn098fds">
-                                                                            <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg"/>
-                                                                            <div className="ioa2q3t dir dir-ltr"></div>
-                                                                            <span className="a8jt5op dir dir-ltr">유연한 검색</span>
+                                                                <div className="l5mmcz9 dir dir-ltr" id="locationInspirationTitleID">지역으로 검색하기</div>
+                                                                <div>
+                                                                    <div className="grid9sd">
+                                                                        <div className="sd9fds">
+                                                                            <div className="kljf976">
+                                                                                <button className="btn098fds">
+                                                                                    <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg" />
+                                                                                    <div className="ioa2q3t dir dir-ltr"></div>
+                                                                                    <span className="a8jt5op dir dir-ltr">유연한 검색</span>
 
-                                                                            </button>
-                                                                            <div><div className="o11dhjqa dir dir-ltr">유연한 검색</div></div>
+                                                                                </button>
+                                                                                <div><div className="o11dhjqa dir dir-ltr">유연한 검색</div></div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div className="sd9fds">
-                                                                        <div className="kljf976">
-                                                                            <button className="btn098fds">
-                                                                            <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg"/>
-                                                                            <div className="ioa2q3t dir dir-ltr"></div>
-                                                                            <span className="a8jt5op dir dir-ltr">유럽</span>
+                                                                        <div className="sd9fds">
+                                                                            <div className="kljf976">
+                                                                                <button className="btn098fds">
+                                                                                    <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg" />
+                                                                                    <div className="ioa2q3t dir dir-ltr"></div>
+                                                                                    <span className="a8jt5op dir dir-ltr">유럽</span>
 
-                                                                            </button>
-                                                                            <div><div className="o11dhjqa dir dir-ltr">유럽</div></div>
+                                                                                </button>
+                                                                                <div><div className="o11dhjqa dir dir-ltr">유럽</div></div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div className="sd9fds">
-                                                                        <div className="kljf976">
-                                                                            <button className="btn098fds">
-                                                                            <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg"/>
-                                                                            <div className="ioa2q3t dir dir-ltr"></div>
-                                                                            <span className="a8jt5op dir dir-ltr">프랑스</span>
+                                                                        <div className="sd9fds">
+                                                                            <div className="kljf976">
+                                                                                <button className="btn098fds">
+                                                                                    <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg" />
+                                                                                    <div className="ioa2q3t dir dir-ltr"></div>
+                                                                                    <span className="a8jt5op dir dir-ltr">프랑스</span>
 
-                                                                            </button>
-                                                                            <div><div className="o11dhjqa dir dir-ltr">프랑스</div></div>
+                                                                                </button>
+                                                                                <div><div className="o11dhjqa dir dir-ltr">프랑스</div></div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div className="sd9fds">
-                                                                        <div className="kljf976">
-                                                                            <button className="btn098fds">
-                                                                            <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg"/>
-                                                                            <div className="ioa2q3t dir dir-ltr"></div>
-                                                                            <span className="a8jt5op dir dir-ltr">동남아시아</span>
+                                                                        <div className="sd9fds">
+                                                                            <div className="kljf976">
+                                                                                <button className="btn098fds">
+                                                                                    <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg" />
+                                                                                    <div className="ioa2q3t dir dir-ltr"></div>
+                                                                                    <span className="a8jt5op dir dir-ltr">동남아시아</span>
 
-                                                                            </button>
-                                                                            <div><div className="o11dhjqa dir dir-ltr">동남아시아</div></div>
+                                                                                </button>
+                                                                                <div><div className="o11dhjqa dir dir-ltr">동남아시아</div></div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div className="sd9fds">
-                                                                        <div className="kljf976">
-                                                                            <button className="btn098fds">
-                                                                            <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg"/>
-                                                                            <div className="ioa2q3t dir dir-ltr"></div>
-                                                                            <span className="a8jt5op dir dir-ltr">이탈리아</span>
+                                                                        <div className="sd9fds">
+                                                                            <div className="kljf976">
+                                                                                <button className="btn098fds">
+                                                                                    <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg" />
+                                                                                    <div className="ioa2q3t dir dir-ltr"></div>
+                                                                                    <span className="a8jt5op dir dir-ltr">이탈리아</span>
 
-                                                                            </button>
-                                                                            <div><div className="o11dhjqa dir dir-ltr">이탈리아</div></div>
+                                                                                </button>
+                                                                                <div><div className="o11dhjqa dir dir-ltr">이탈리아</div></div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div className="sd9fds">
-                                                                        <div className="kljf976">
-                                                                            <button className="btn098fds">
-                                                                            <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg"/>
-                                                                            <div className="ioa2q3t dir dir-ltr"></div>
-                                                                            <span className="a8jt5op dir dir-ltr">미국</span>
+                                                                        <div className="sd9fds">
+                                                                            <div className="kljf976">
+                                                                                <button className="btn098fds">
+                                                                                    <img className="i17d61fu dir dir-ltr" alt="" src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg" />
+                                                                                    <div className="ioa2q3t dir dir-ltr"></div>
+                                                                                    <span className="a8jt5op dir dir-ltr">미국</span>
 
-                                                                            </button>
-                                                                            <div><div className="o11dhjqa dir dir-ltr">미국</div></div>
+                                                                                </button>
+                                                                                <div><div className="o11dhjqa dir dir-ltr">미국</div></div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -304,6 +304,42 @@ export default function Header() {
                                             </div>
                                         </div>
                                     </div>
+                                    <div style={{display: checkin ? "block":"none"}}>
+                                            <div className="main-calander">
+                                                <section>
+                                                    <div>
+                                                        <div className="mn-cdr">
+                                                            <div className="mncdr">
+                                                                <div>
+                                                                    <div className="mncdr-in">
+                                                                        <div className="mncdr-in2">
+                                                                            <div className="mncdrin">
+                                                                            <div className="_1rzjy36" role="tablist">
+                                                                                <button type="button" id="tab--tabs--0" aria-controls="panel--tabs--0" aria-selected="true" className="_d09hfbg" role="tab">날짜 선택</button>
+                                                                                <button type="button" id="tab--tabs--1" aria-controls="panel--tabs--1" aria-selected="false" className="_19471dk" role="tab" tabindex="-1">유연한 일정</button>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div>
+                                                                            <div>
+                                                                                <div className="mncdr-a">
+
+                                                                                </div>
+                                                                                <div className="mncdr-b">
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
                                     <div class="sv3mkdx dir dir-ltr"></div>
                                     <div className="p22sd kerfd" onClick={() => setCheckout(true)}>
                                         <div className={checkout ? "b1234x59c dir dir-ltr" : "b192dx2b b174x59c dir dir-ltr"} role="button" tabindex="0" aria-expanded="false" data-testid="structured-search-input-field-split-dates-0">
@@ -313,6 +349,42 @@ export default function Header() {
                                             </div>
                                         </div>
                                     </div>
+                                    <div style={{display: checkout ? "block":"none"}}>
+                                            <div className="main-calander">
+                                                <section>
+                                                    <div>
+                                                        <div className="mn-cdr">
+                                                            <div className="mncdr">
+                                                                <div>
+                                                                    <div className="mncdr-in">
+                                                                        <div className="mncdr-in2">
+                                                                            <div className="mncdrin">
+                                                                            <div className="_1rzjy36" role="tablist">
+                                                                                <button type="button" id="tab--tabs--0" aria-controls="panel--tabs--0" aria-selected="true" className="_d09hfbg" role="tab">날짜 선택</button>
+                                                                                <button type="button" id="tab--tabs--1" aria-controls="panel--tabs--1" aria-selected="false" className="_19471dk" role="tab" tabindex="-1">유연한 일정</button>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div>
+                                                                            <div>
+                                                                                <div className="mncdr-a">
+
+                                                                                </div>
+                                                                                <div className="mncdr-b">
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
                                 </div>
                                 <div className="sv3mkdx dir dir-ltr"></div>
                                 <div className="p33" onClick={() => setTraveler(true)}>
