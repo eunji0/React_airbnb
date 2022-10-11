@@ -10,7 +10,8 @@ import ModalLogin from './ModalLogin';
 import { useEffect } from "react";
 import ModalSign from "./ModalSign";
 import { ReactComponent as HomeLogo } from '../images/HomeLogo.svg';
-// import { ReactComponent as Closelogin } from '../images/Closelogin.svg';
+import { ReactComponent as Minus2 } from '../images/Minus2.svg';
+import { ReactComponent as Plus2 } from '../images/Plus2.svg';
 
 export default function Header() {
     const [modalOpen, setModalOpen] = useState(false);//메뉴모달
@@ -304,32 +305,31 @@ export default function Header() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div style={{display: checkin ? "block":"none"}}>
-                                            <div className="main-calander">
-                                                <section>
-                                                    <div>
-                                                        <div className="mn-cdr">
-                                                            <div className="mncdr">
-                                                                <div>
-                                                                    <div className="mncdr-in">
-                                                                        <div className="mncdr-in2">
-                                                                            <div className="mncdrin">
+                                    <div style={{ display: checkin ? "block" : "none" }}>
+                                        <div className="main-calander">
+                                            <section>
+                                                <div>
+                                                    <div className="mn-cdr">
+                                                        <div className="mncdr">
+                                                            <div>
+                                                                <div className="mncdr-in">
+                                                                    <div className="mncdr-in2">
+                                                                        <div className="mncdrin">
                                                                             <div className="_1rzjy36" role="tablist">
                                                                                 <button type="button" id="tab--tabs--0" aria-controls="panel--tabs--0" aria-selected="true" className="_d09hfbg" role="tab">날짜 선택</button>
                                                                                 <button type="button" id="tab--tabs--1" aria-controls="panel--tabs--1" aria-selected="false" className="_19471dk" role="tab" tabindex="-1">유연한 일정</button>
                                                                             </div>
-                                                                            </div>
                                                                         </div>
                                                                     </div>
+                                                                </div>
+                                                                <div>
                                                                     <div>
                                                                         <div>
-                                                                            <div>
-                                                                                <div className="mncdr-a">
+                                                                            <div className="mncdr-a">
 
-                                                                                </div>
-                                                                                <div className="mncdr-b">
+                                                                            </div>
+                                                                            <div className="mncdr-b">
 
-                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -337,9 +337,10 @@ export default function Header() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </section>
-                                            </div>
+                                                </div>
+                                            </section>
                                         </div>
+                                    </div>
                                     <div class="sv3mkdx dir dir-ltr"></div>
                                     <div className="p22sd kerfd" onClick={() => setCheckout(true)}>
                                         <div className={checkout ? "b1234x59c dir dir-ltr" : "b192dx2b b174x59c dir dir-ltr"} role="button" tabindex="0" aria-expanded="false" data-testid="structured-search-input-field-split-dates-0">
@@ -349,32 +350,31 @@ export default function Header() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div style={{display: checkout ? "block":"none"}}>
-                                            <div className="main-calander">
-                                                <section>
-                                                    <div>
-                                                        <div className="mn-cdr">
-                                                            <div className="mncdr">
-                                                                <div>
-                                                                    <div className="mncdr-in">
-                                                                        <div className="mncdr-in2">
-                                                                            <div className="mncdrin">
+                                    <div style={{ display: checkout ? "block" : "none" }}>
+                                        <div className="main-calander">
+                                            <section>
+                                                <div>
+                                                    <div className="mn-cdr">
+                                                        <div className="mncdr">
+                                                            <div>
+                                                                <div className="mncdr-in">
+                                                                    <div className="mncdr-in2">
+                                                                        <div className="mncdrin">
                                                                             <div className="_1rzjy36" role="tablist">
                                                                                 <button type="button" id="tab--tabs--0" aria-controls="panel--tabs--0" aria-selected="true" className="_d09hfbg" role="tab">날짜 선택</button>
                                                                                 <button type="button" id="tab--tabs--1" aria-controls="panel--tabs--1" aria-selected="false" className="_19471dk" role="tab" tabindex="-1">유연한 일정</button>
                                                                             </div>
-                                                                            </div>
                                                                         </div>
                                                                     </div>
+                                                                </div>
+                                                                <div>
                                                                     <div>
                                                                         <div>
-                                                                            <div>
-                                                                                <div className="mncdr-a">
+                                                                            <div className="mncdr-a">
 
-                                                                                </div>
-                                                                                <div className="mncdr-b">
+                                                                            </div>
+                                                                            <div className="mncdr-b">
 
-                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -382,9 +382,10 @@ export default function Header() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </section>
-                                            </div>
+                                                </div>
+                                            </section>
                                         </div>
+                                    </div>
                                 </div>
                                 <div className="sv3mkdx dir dir-ltr"></div>
                                 <div className="p33" onClick={() => setTraveler(true)}>
@@ -408,7 +409,118 @@ export default function Header() {
                                             </button>
                                         </div>
                                     </div>
+                                    <div style={{ display: traveler ? "block" : "none" }}>
+                                        <div>
+                                            <div className="iuyjc">
+                                                <section>
+                                                    <div>
+                                                        <div className="jhrgfsad">
+                                                            <div>
+                                                                <div className="erbnvcd">
+                                                                <div className="_1hhulki">
+                                                                    <div className="_rtmzs6z" id="searchFlow-title-label-stepper-adults">성인</div>
+                                                                    <div className="_ebqknn" id="searchFlow-subtitle-label-stepper-adults">만 13세 이상</div>
+                                                                </div>
+                                                                <div className="_ojavom">
+                                                                    <div className="_3zlfom" id="stepper-adults">
+                                                                        <button className="_ul9u8c" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
+                                                                            <span className="_8ovatg">
+                                                                                <Minus2/>
+                                                                            </span>
+                                                                        </button>
+                                                                        <div className="_1665lvv">
+                                                                            <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
+                                                                            <span className="_25sktq" data-testid="stepper-adults-a11y-value-label">0 성인</span>
+                                                                        </div>
+                                                                        <button className="_ul9u8c" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
+                                                                            <span className="_8ovatg">
+                                                                                <Plus2/>
+                                                                            </span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+                                                                <div className="erbnvcd">
+                                                                <div className="_1hhulki">
+                                                                    <div className="_rtmzs6z" id="searchFlow-title-label-stepper-adults">어린이</div>
+                                                                    <div className="_ebqknn" id="searchFlow-subtitle-label-stepper-adults">만 2~12세</div>
+                                                                </div>
+                                                                <div className="_ojavom">
+                                                                    <div className="_3zlfom" id="stepper-adults">
+                                                                        <button className="_ul9u8c" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
+                                                                            <span className="_8ovatg">
+                                                                                <Minus2/>
+                                                                            </span>
+                                                                        </button>
+                                                                        <div className="_1665lvv">
+                                                                            <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
+                                                                            <span className="_25sktq" data-testid="stepper-adults-a11y-value-label">0 어린이</span>
+                                                                        </div>
+                                                                        <button className="_ul9u8c" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
+                                                                            <span className="_8ovatg">
+                                                                                <Plus2/>
+                                                                            </span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+                                                                <div className="erbnvcd">
+                                                                <div className="_1hhulki">
+                                                                    <div className="_rtmzs6z" id="searchFlow-title-label-stepper-adults">유아</div>
+                                                                    <div className="_ebqknn" id="searchFlow-subtitle-label-stepper-adults">만 2세 미만</div>
+                                                                </div>
+                                                                <div className="_ojavom">
+                                                                    <div className="_3zlfom" id="stepper-adults">
+                                                                        <button className="_ul9u8c" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
+                                                                            <span className="_8ovatg">
+                                                                                <Minus2/>
+                                                                            </span>
+                                                                        </button>
+                                                                        <div className="_1665lvv">
+                                                                            <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
+                                                                            <span className="_25sktq" data-testid="stepper-adults-a11y-value-label">0 유아</span>
+                                                                        </div>
+                                                                        <button className="_ul9u8c" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
+                                                                            <span className="_8ovatg">
+                                                                                <Plus2/>
+                                                                            </span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+                                                                <div className="erbnvcd">
+                                                                <div className="_1hhulki">
+                                                                    <div className="_rtmzs6z" id="searchFlow-title-label-stepper-adults">반려동물</div>
+                                                                    <div className="_ebqknn" id="searchFlow-subtitle-label-stepper-adults">보조동물을 동반하시나요?</div>
+                                                                </div>
+                                                                <div className="_ojavom">
+                                                                    <div className="_3zlfom" id="stepper-adults">
+                                                                        <button className="_ul9u8c" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
+                                                                            <span className="_8ovatg">
+                                                                                <Minus2/>
+                                                                            </span>
+                                                                        </button>
+                                                                        <div className="_1665lvv">
+                                                                            <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
+                                                                            <span className="_25sktq" data-testid="stepper-adults-a11y-value-label">0 성인</span>
+                                                                        </div>
+                                                                        <button className="_ul9u8c" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
+                                                                            <span className="_8ovatg">
+                                                                                <Plus2/>
+                                                                            </span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>

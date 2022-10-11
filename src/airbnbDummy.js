@@ -22,7 +22,7 @@ export const dummy = {
             day: "10월 3일~8일",
             price:"108,598",
             star: 4.12,
-            img_path:"https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=720"
+            img_path:"	https://a0.muscache.com/im/pictures/3648aed7-f383-4b74-ab5d-f444e20a85f2.jpg?im_w=720"
         },
         {
             place: "Tambon Nong Kae, 태국",
@@ -30,7 +30,7 @@ export const dummy = {
             day: "10월 4일~9일",
             price:"165,463",
             star: 3.38,
-            img_path:"https://a0.muscache.com/im/pictures/448bee34-7416-4262-a02f-b39e29d7ce4f.jpg?im_w=720"
+            img_path:"https://a0.muscache.com/im/pictures/60d4058e-98a8-4f30-ba8a-93b101a31c47.jpg?im_w=720"
         },
         {
             place: "Selat, 인도네시아",

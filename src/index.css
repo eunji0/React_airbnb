@@ -857,29 +857,29 @@ body {
   width: 100% !important;
   margin-left: 0px !important;
   margin-right: 0px !important;
-  padding-bottom: 80px;
-
+  margin-bottom: 80px;
+  padding-bottom: 250px;
+  /* height: 100%; */
 }
 
 .main_content_mdl {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  /* height: 100%; */
 }
 
 
 .main_ctt_mdl {
   display: grid;
-  margin-block: 8px 32px;
+  /* margin-block: 8px 32px; */
   column-gap: 24px;
-  row-gap: 40px;
+  /* row-gap: 0px; */
   grid-auto-rows: minmax(0, 1fr);
 }
 
 .main_rd {
   display: grid;
-  height: 100%;
-  /* grid-template-columns: 100% 100%; */
 }
 
 .main_ctt_crd {
@@ -887,7 +887,6 @@ body {
   grid-auto-flow: column;
   justify-content: flex-start;
   width: 100%;
-  grid-template-rows: 100%;
   height: 100%;
 }
 
@@ -900,7 +899,7 @@ body {
     'bottom';
   width: 100%;
   height: 100%;
-  grid-template-rows: 58% 30%;
+  grid-template-rows: 70% 30%;
 }
 
 .main_ctt_crd1_link {
@@ -921,7 +920,6 @@ body {
   width: 100%;
   height: 100%;
 }
-
 
 .main_ctt_crd1_img {
   height: 100%;
@@ -966,17 +964,17 @@ body {
 }
 
 .main_ctt_crd1_grid2 {
-  margin-top: 10px;
+  padding-top: 10px;
   display: grid;
   grid-area: bottom;
   column-gap: 8px;
-  row-gap: 2px;
+  row-gap: 5px;
   grid-auto-rows: minmax(0, 1fr);
   font-size: 15px;
   line-height: 19px;
-  height: 100%;
   grid-template-rows: repeat(4, 15%);
   grid-template-columns: 80% 15%;
+  height: 100%;
 }
 
 
@@ -4732,28 +4730,28 @@ border-right: 0px; */
 
 .main-calander {
   border-radius: 32px;
-    box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 8px 16px rgb(0 0 0 / 15%);
-    margin-top: 12px;
-    padding: 16px 32px;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    position: absolute;
-    top: 100%;
-    z-index: 1;
-    overflow-x: hidden;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    width: 57%;
-    margin-left: auto;
-    margin-right: auto;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 8px 16px rgb(0 0 0 / 15%);
+  margin-top: 12px;
+  padding: 16px 32px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  width: 57%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mn-cdr {
   padding: 18px 28px 10px 28px;
   display: flex;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .mncdr {
@@ -4766,10 +4764,10 @@ border-right: 0px; */
   padding-bottom: 6px !important;
 }
 
-.mncdr-in2{
+.mncdr-in2 {
   display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .mncdrin {
@@ -4813,6 +4811,7 @@ border-right: 0px; */
 ._19471dk:last-child {
   margin-right: 0px !important;
 }
+
 ._19471dk {
   border-radius: 100px !important;
   font-size: 14px !important;
@@ -4835,5 +4834,134 @@ border-right: 0px; */
 .mncdr-a {
   height: 100%;
   min-height: 353px;
+}
+
+.iuyjc {
+  border-radius: 32px;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 8px 16px rgb(0 0 0 / 15%);
+    margin-top: 12px;
+    padding: 16px 32px;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    max-height: calc(100vh - 150px);
+    right: 330px;
+    background-color: #FFFFFF;
+}
+
+.jhrgfsad {
+  padding: 0 6px;
+  width: 342px;
+}
+
+.erbnvcd {
+  color: rgb(34, 34, 34) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+  padding-right: 4px !important;
+}
+
+.erbnvcd:not(:last-child) {
+  border-bottom: 1px solid rgb(235, 235, 235) !important;
+}
+
+._1hhulki {
+  margin-right: 5px !important;
+}
+
+._rtmzs6z {
+  font-size: 16px !important;
+  line-height: 20px !important;
+  font-weight: 600 !important;
+  padding-bottom: 6px !important;
+}
+
+._ebqknn {
+  font-size: 14px !important;
+  line-height: 18px !important;
+  font-weight: 400 !important;
+  color: rgb(113, 113, 113) !important;
+}
+
+._ojavom {
+  min-width: 104px !important;
+  margin-left: 5px !important;
+}
+
+._3zlfom {
+  -webkit-box-pack: justify !important;
+  -webkit-box-align: center !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 104px !important;
+  height: 32px !important;
+  color: rgb(34, 34, 34) !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+}
+
+._ul9u8c:disabled {
+  cursor: not-allowed !important;
+  color: rgb(235, 235, 235) !important;
+  border-color: rgb(235, 235, 235) !important;
+  background: rgb(255, 255, 255) !important;
+}
+._ul9u8c {
+  -webkit-box-pack: center !important;
+  -webkit-box-align: center !important;
+  -webkit-box-flex: 0 !important;
+  width: 32px !important;
+  height: 32px !important;
+  flex-grow: 0 !important;
+  flex-shrink: 0 !important;
+  display: inline-flex !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  outline: none !important;
+  touch-action: manipulation !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  border-color: rgb(176, 176, 176) !important;
+    color: rgb(113, 113, 113) !important;
+}
+
+._8ovatg {
+  height: 22px !important;
+  width: 22px !important;
+  padding: 5px !important;
+}
+
+._1665lvv {
+  position: relative !important;
+  color: inherit !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+._25sktq {
+  left: 0px !important;
+  border: 0px !important;
+  clip: rect(0px, 0px, 0px, 0px) !important;
+  clip-path: inset(100%) !important;
+  height: 1px !important;
+  overflow: clip !important;
+  padding: 0px !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
 }
 
