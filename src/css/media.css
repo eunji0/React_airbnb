@@ -37,8 +37,9 @@
     }
 
     .scd_header_scroll_next2 {
-        right: 200px;
+        right: -12px;
         justify-content: flex-end;
+        background-color: white;
     }
 
     .scd_header_inner_menu {
@@ -106,8 +107,10 @@
 @media screen and (min-width: 1128px) {
 
     .main_ctt_mdl {
-        height: 110%;
+        height: 120%;
         row-gap: 20px;
+        margin-top: 10px;
+        margin-bottom: 32px;
     }
 
     .logoqwe {
@@ -119,8 +122,8 @@
     }
 
     .main_content_ctt {
-        padding-left: 80px;
-        padding-right: 80px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     .main_ctt_mdl {
@@ -267,6 +270,11 @@
     }
 
     .room_header_inner {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .main_content_ctt {
         padding-left: 80px;
         padding-right: 80px;
     }

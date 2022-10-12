@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Like } from '../images/Like.svg';
 import { ReactComponent as Star } from '../images/Star.svg';
+import { ReactComponent as Next } from '../images/Next.svg';
 
 export default function Menu1({ place, img_path, km, day, price, star }) {
 
@@ -23,7 +24,13 @@ export default function Menu1({ place, img_path, km, day, price, star }) {
                             </button>
                         </div>
                     </div>
-                    
+                    {/* <div className="main_info_next">
+                        <div className="main_info_next_div">
+                            <button aria-label="목록에 숙소 추가하기" type="button" className="main_info_next_btn">
+                                <Next />
+                            </button>
+                        </div>
+                    </div> */}
                     <div className="main_ctt_crd1_grid2">
                          <div className="ctt_crd1_grid2_txt">{place}</div>
                             <div className="ctt_crd1_grid2_txt-ltr">
