@@ -54,7 +54,7 @@ export default function Header() {
     useEffect(() => {
         function handleClickOutside(e) {
             if (outSection.current && !outSection.current.contains(e.target)) {
-                setSearch(false);;
+                setSearch(false);
 
             }
             setHeaderout(true);

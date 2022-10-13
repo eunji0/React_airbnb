@@ -986,6 +986,30 @@ body {
   top: 0;
 }
 
+.qweds2 {
+  height: 162px;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 3 !important;
+  position: absolute !important;
+  top: 0;
+  background-color: #fff;
+}
+
+.room_header_inner2 {
+  height: 82px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  padding-left: 80px;
+  padding-right: 80px;
+  align-items: flex-start;
+  display: flex;
+  max-width: 1280px;
+  background-color: #fff;
+  height: 82px;
+  border: none !important;
+}
 
 .room_header_inner {
   justify-content: space-between !important;
