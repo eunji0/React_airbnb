@@ -636,7 +636,7 @@ body {
 }
 
 
- .scd_hdr_in_grid {
+.scd_hdr_in_grid {
   display: grid;
   margin: 0;
   grid-auto-flow: column;
@@ -661,8 +661,8 @@ body {
 
 .main_info_next {
   justify-self: flex-end;
-    grid-area: top;
-    background-color: transparent;
+  grid-area: top;
+  background-color: transparent;
 }
 
 .main_info_next_div {
@@ -699,7 +699,7 @@ body {
   border-bottom: 3px solid #DDDDDD;
 }
 
-.scdbtn:checked  {
+.scdbtn:checked {
   border-bottom: 3px solid #222222;
 }
 

@@ -7,10 +7,10 @@ import { RecoilRoot } from 'recoil';
 
 // const store = createStore();
 
-const container=document.getElementById("root");
+const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 root.render(
     <RecoilRoot>
-        <App/>
+        <App />
     </RecoilRoot>
 );
