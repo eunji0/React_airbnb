@@ -28,7 +28,6 @@ const ModalSign = (props) => {
   const phnum = useRecoilValue(phoneNumberState);
   const [phoneNumberAtomstate, setphoneNumberAtomstate]
   =useRecoilState(phoneNumberState)
-  // const [phoneNumber, setphoneNumber] = useState("");
 
   useEffect(() => {
     function handleClickOutside(e) {
@@ -192,8 +191,7 @@ const ModalSign = (props) => {
                                   <div dir="ltr">
                                     <div className={`${inputOn === false ? "_js9i23" : "_fywymp7"}`}>
                                       <div className="_1dnryfrb">+1</div>
-                                      {/* <input name="phoneInputphoneNumber" value={phoneNumber} onChange={(e) => setphoneNumber(e.target.value)} aria-required="true" data-testid="login-signup-phonenumber" className="_c5rhl5" id="phoneInputphoneNumber" autocomplete="tel-national" inputmode="tel" type="tel" aria-describedby="phone-number-help-text-phoneNumber airlock-inline-container" />
-                                     */}
+                                      
                                      <input name="phoneInputphoneNumber" onChange={(e)=>setphoneNum(e.target.value)} aria-required="true" data-testid="login-signup-phonenumber" className="_c5rhl5" id="phoneInputphoneNumber" autocomplete="tel-national" inputmode="tel" type="tel" aria-describedby="phone-number-help-text-phoneNumber airlock-inline-container" value={phoneNum} />
                                   
                                     </div>
