@@ -25,9 +25,6 @@ const ModalLogin = (props) => {
      <div className={open ? 'openModal modal' : 'modal'}>
       {open ? (
         <section>
-          <header>
-            {header}
-          </header>
           <main>{props.children}</main>
         </section>
       ) : close}

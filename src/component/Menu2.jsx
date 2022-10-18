@@ -22,6 +22,7 @@ export default function Menu2() {
                                                 day={item.day}
                                                 price={item.price}
                                                 img_path={item.img_path}
+                                                star={item.star}
                                                 />
                                             )
                                         })

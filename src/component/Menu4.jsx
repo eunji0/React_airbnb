@@ -21,6 +21,7 @@ export default function Menu4() {
                                                 km={item.km}
                                                 day={item.day}
                                                 price={item.price}
+                                                star={item.star}
                                                 img_path={item.img_path}
                                                 />
                                             )

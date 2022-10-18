@@ -12,7 +12,6 @@ import { ReactComponent as Previous } from '../images/Previous.svg';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { phoneNumberState } from '../recoil/User';
 
-
 const ModalSign = (props) => {
   // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
   const { open, close, header } = props;
@@ -70,6 +69,7 @@ const ModalSign = (props) => {
 
   // }
 
+
   function click() {
     if (phoneNum.length < 1) {
       setisConfirm(true);
@@ -90,9 +90,6 @@ const ModalSign = (props) => {
     <div className={open ? 'openModal modal' : 'modal'}>
       {open ? (
         <section>
-          <header>
-            {header}
-          </header>
           <main>
             {/* {props.children} */}
             <div className="Modalll">
@@ -100,7 +97,7 @@ const ModalSign = (props) => {
                 <div className="login-modal">
                   <div className="loginHeader">
 
-                    <div type="button" className="closelogin" onClick={() => setLoginOpen(!loginOpen)}>
+                    <div type="button" className="closelogin" onClick={close}>
                       <Closelogin />
                     </div>
                     <div className="loginheadertxt">로그인 또는 회원가입</div>
@@ -311,7 +308,7 @@ const ModalSign = (props) => {
                             <label className="_1yw7hpv" for="phone-verification-code-form__code-input">
                               <div dir="ltr">
                                 <div className="_slsckq">
-                                  <input aria-label="입력된 코드: " placeholder="------" maxlength="6" className="_xr1n8d" id="phone-verification-code-form__code-input" autocomplete="one-time-code" inputmode="numeric" type="tel" aria-describedby="" value="" />
+                                  <input aria-label="입력된 코드: " placeholder="------" maxlength="6" className="_xr1n8d" id="phone-verification-code-form__code-input" autocomplete="one-time-code" inputmode="numeric" type="tel" aria-describedby="" />
                                 </div>
                               </div>
                             </label>
@@ -333,7 +330,7 @@ const ModalSign = (props) => {
 
           </main>
         </section>
-      ) : close}
+      ) : null}
     </div>
   );
 };

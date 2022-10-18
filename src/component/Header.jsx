@@ -17,8 +17,7 @@ export default function Header() {
     const [modalOpen, setModalOpen] = useState(false);//메뉴모달
     const outSection = useRef(null);
     const outSection2 = useRef(null);
-    const outSection3 = useRef(null);
-    const [loginOpen, setLoginOpen] = useState(false); //모달로그인
+    const [signOpen, setSignOpen] = useState(false); //모달로그인
     const [search, setSearch] = useState(false);//검색창 누르면 헤더 변경
     const [headerout, setHeaderout] = useState(false);//여행지
     const [checkin, setCheckin] = useState(false);//체크인
@@ -26,6 +25,13 @@ export default function Header() {
     const [traveler, setTraveler] = useState(false);//여행자
 
 
+    const openSign = () => {
+        setSignOpen(true);
+    }
+
+    const closeSign = () => {
+        setSignOpen(false);
+    }
 
     //스크롤
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -37,11 +43,12 @@ export default function Header() {
         window.addEventListener('scroll', updateScroll);
     });
 
+    console.log(outSection2.current);
     useEffect(() => {
         function handleClickOutside(e) {
             if (outSection.current && !outSection.current.contains(e.target)) {
                 setModalOpen(false);
-                setLoginOpen(false);
+                setSignOpen(false);
             }
         }
         document.addEventListener('mousedown', handleClickOutside);
@@ -72,7 +79,7 @@ export default function Header() {
     useEffect(() => {
         function handleClickOutside(e) {
             if (outSection2.current && !outSection2.current.contains(e.target)) {
-                setLoginOpen(false);
+                setSignOpen(false);
                 return
             }
         }
@@ -150,15 +157,14 @@ export default function Header() {
                                                 <div className="momo">
                                                     <div className="modalhome-btn">
                                                         <div className="modalhome-btn2">
-                                                            <div type="button" className="modalhome-signup" onClick={() => setLoginOpen(true)} >회원 가입
-                                                                <ModalSign open={loginOpen}></ModalSign>
-                                                            </div>
-                                                            <div type="button" className="modalhome-login" onClick={() => setLoginOpen(true)} >로그인
-                                                                <ModalSign open={loginOpen}></ModalSign>
-                                                            </div>
+                                                            <div type="button" className="modalhome-signup" onClick={openSign}>회원 가입</div>
+                                                            <ModalSign open={signOpen} close={closeSign}></ModalSign>
+                                                            <div type="button" className="modalhome-login" onClick={openSign}>로그인</div>
+                                                            <ModalSign open={signOpen} close={closeSign}></ModalSign>
                                                         </div>
                                                         <div className="modalhome-btn3">
-                                                            <div type="button" className="modalhome-host">숙소 호스트 되기</div>
+                                                            <div type="button" className="modalhome-host" >숙소 호스트 되기</div>
+
                                                             <div type="button" className="modalhome-hosting">체험 호스팅하기</div>
                                                             <div type="button" className="modalhome-help">도움말</div>
                                                         </div>
@@ -175,14 +181,14 @@ export default function Header() {
                                                 <div className="momo">
                                                     <div className="modalhome-btn">
                                                         <div className="modalhome-btn2" >
-                                                            <div type="button" className="modalhome-signup" onClick={() => setLoginOpen(true)} >회원 가입</div>
-                                                            <ModalSign open={loginOpen}></ModalSign>
-                                                            <div type="button" className="modalhome-login" onClick={() => setLoginOpen(true)}>로그인
-                                                                <ModalSign open={loginOpen}></ModalSign>
-                                                            </div>
+                                                            <div type="button" className="modalhome-signup" onClick={openSign}>회원 가입</div>
+                                                            <ModalSign open={signOpen} close={closeSign}></ModalSign>
+                                                            <div type="button" className="modalhome-login" onClick={openSign}>로그인</div>
+                                                            <ModalSign open={signOpen} close={closeSign}></ModalSign>
                                                         </div>
                                                         <div className="modalhome-btn3">
-                                                            <div type="button" className="modalhome-host">숙소 호스트 되기</div>
+                                                            <div type="button" className="modalhome-host" >숙소 호스트 되기</div>
+
                                                             <div type="button" className="modalhome-hosting">체험 호스팅하기</div>
                                                             <div type="button" className="modalhome-help">도움말</div>
                                                         </div>
@@ -417,100 +423,100 @@ export default function Header() {
                                                         <div className="jhrgfsad">
                                                             <div>
                                                                 <div className="erbnvcd">
-                                                                <div className="_1hhulki">
-                                                                    <div className="_rtmzs6z" id="searchFlow-title-label-stepper-adults">성인</div>
-                                                                    <div className="_ebqknn" id="searchFlow-subtitle-label-stepper-adults">만 13세 이상</div>
-                                                                </div>
-                                                                <div className="_ojavom">
-                                                                    <div className="_3zlfom" id="stepper-adults">
-                                                                        <button className="_ul9u8c" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
-                                                                            <span className="_8ovatg">
-                                                                                <Minus2/>
-                                                                            </span>
-                                                                        </button>
-                                                                        <div className="_1665lvv">
-                                                                            <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
-                                                                            <span className="_25sktq" data-testid="stepper-adults-a11y-value-label">0 성인</span>
-                                                                        </div>
-                                                                        <button className="_ul9u8c" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
-                                                                            <span className="_8ovatg">
-                                                                                <Plus2/>
-                                                                            </span>
-                                                                        </button>
+                                                                    <div className="_1hhulki">
+                                                                        <div className="_rtmzs6z" id="searchFlow-title-label-stepper-adults">성인</div>
+                                                                        <div className="_ebqknn" id="searchFlow-subtitle-label-stepper-adults">만 13세 이상</div>
                                                                     </div>
-                                                                </div>
+                                                                    <div className="_ojavom">
+                                                                        <div className="_3zlfom" id="stepper-adults">
+                                                                            <button className="_ul9u8c" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
+                                                                                <span className="_8ovatg">
+                                                                                    <Minus2 />
+                                                                                </span>
+                                                                            </button>
+                                                                            <div className="_1665lvv">
+                                                                                <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
+                                                                                <span className="_25sktq" data-testid="stepper-adults-a11y-value-label">0 성인</span>
+                                                                            </div>
+                                                                            <button className="_ul9u8c" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
+                                                                                <span className="_8ovatg">
+                                                                                    <Plus2 />
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                                 <div className="erbnvcd">
-                                                                <div className="_1hhulki">
-                                                                    <div className="_rtmzs6z" id="searchFlow-title-label-stepper-adults">어린이</div>
-                                                                    <div className="_ebqknn" id="searchFlow-subtitle-label-stepper-adults">만 2~12세</div>
-                                                                </div>
-                                                                <div className="_ojavom">
-                                                                    <div className="_3zlfom" id="stepper-adults">
-                                                                        <button className="_ul9u8c" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
-                                                                            <span className="_8ovatg">
-                                                                                <Minus2/>
-                                                                            </span>
-                                                                        </button>
-                                                                        <div className="_1665lvv">
-                                                                            <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
-                                                                            <span className="_25sktq" data-testid="stepper-adults-a11y-value-label">0 어린이</span>
-                                                                        </div>
-                                                                        <button className="_ul9u8c" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
-                                                                            <span className="_8ovatg">
-                                                                                <Plus2/>
-                                                                            </span>
-                                                                        </button>
+                                                                    <div className="_1hhulki">
+                                                                        <div className="_rtmzs6z" id="searchFlow-title-label-stepper-adults">어린이</div>
+                                                                        <div className="_ebqknn" id="searchFlow-subtitle-label-stepper-adults">만 2~12세</div>
                                                                     </div>
-                                                                </div>
+                                                                    <div className="_ojavom">
+                                                                        <div className="_3zlfom" id="stepper-adults">
+                                                                            <button className="_ul9u8c" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
+                                                                                <span className="_8ovatg">
+                                                                                    <Minus2 />
+                                                                                </span>
+                                                                            </button>
+                                                                            <div className="_1665lvv">
+                                                                                <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
+                                                                                <span className="_25sktq" data-testid="stepper-adults-a11y-value-label">0 어린이</span>
+                                                                            </div>
+                                                                            <button className="_ul9u8c" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
+                                                                                <span className="_8ovatg">
+                                                                                    <Plus2 />
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                                 <div className="erbnvcd">
-                                                                <div className="_1hhulki">
-                                                                    <div className="_rtmzs6z" id="searchFlow-title-label-stepper-adults">유아</div>
-                                                                    <div className="_ebqknn" id="searchFlow-subtitle-label-stepper-adults">만 2세 미만</div>
-                                                                </div>
-                                                                <div className="_ojavom">
-                                                                    <div className="_3zlfom" id="stepper-adults">
-                                                                        <button className="_ul9u8c" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
-                                                                            <span className="_8ovatg">
-                                                                                <Minus2/>
-                                                                            </span>
-                                                                        </button>
-                                                                        <div className="_1665lvv">
-                                                                            <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
-                                                                            <span className="_25sktq" data-testid="stepper-adults-a11y-value-label">0 유아</span>
-                                                                        </div>
-                                                                        <button className="_ul9u8c" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
-                                                                            <span className="_8ovatg">
-                                                                                <Plus2/>
-                                                                            </span>
-                                                                        </button>
+                                                                    <div className="_1hhulki">
+                                                                        <div className="_rtmzs6z" id="searchFlow-title-label-stepper-adults">유아</div>
+                                                                        <div className="_ebqknn" id="searchFlow-subtitle-label-stepper-adults">만 2세 미만</div>
                                                                     </div>
-                                                                </div>
+                                                                    <div className="_ojavom">
+                                                                        <div className="_3zlfom" id="stepper-adults">
+                                                                            <button className="_ul9u8c" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
+                                                                                <span className="_8ovatg">
+                                                                                    <Minus2 />
+                                                                                </span>
+                                                                            </button>
+                                                                            <div className="_1665lvv">
+                                                                                <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
+                                                                                <span className="_25sktq" data-testid="stepper-adults-a11y-value-label">0 유아</span>
+                                                                            </div>
+                                                                            <button className="_ul9u8c" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
+                                                                                <span className="_8ovatg">
+                                                                                    <Plus2 />
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                                 <div className="erbnvcd">
-                                                                <div className="_1hhulki">
-                                                                    <div className="_rtmzs6z" id="searchFlow-title-label-stepper-adults">반려동물</div>
-                                                                    <div className="_ebqknn" id="searchFlow-subtitle-label-stepper-adults">보조동물을 동반하시나요?</div>
-                                                                </div>
-                                                                <div className="_ojavom">
-                                                                    <div className="_3zlfom" id="stepper-adults">
-                                                                        <button className="_ul9u8c" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
-                                                                            <span className="_8ovatg">
-                                                                                <Minus2/>
-                                                                            </span>
-                                                                        </button>
-                                                                        <div className="_1665lvv">
-                                                                            <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
-                                                                            <span className="_25sktq" data-testid="stepper-adults-a11y-value-label">0 성인</span>
-                                                                        </div>
-                                                                        <button className="_ul9u8c" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
-                                                                            <span className="_8ovatg">
-                                                                                <Plus2/>
-                                                                            </span>
-                                                                        </button>
+                                                                    <div className="_1hhulki">
+                                                                        <div className="_rtmzs6z" id="searchFlow-title-label-stepper-adults">반려동물</div>
+                                                                        <div className="_ebqknn" id="searchFlow-subtitle-label-stepper-adults">보조동물을 동반하시나요?</div>
                                                                     </div>
-                                                                </div>
+                                                                    <div className="_ojavom">
+                                                                        <div className="_3zlfom" id="stepper-adults">
+                                                                            <button className="_ul9u8c" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
+                                                                                <span className="_8ovatg">
+                                                                                    <Minus2 />
+                                                                                </span>
+                                                                            </button>
+                                                                            <div className="_1665lvv">
+                                                                                <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
+                                                                                <span className="_25sktq" data-testid="stepper-adults-a11y-value-label">0 성인</span>
+                                                                            </div>
+                                                                            <button className="_ul9u8c" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
+                                                                                <span className="_8ovatg">
+                                                                                    <Plus2 />
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
