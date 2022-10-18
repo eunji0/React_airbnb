@@ -6,6 +6,7 @@ export const dummy = {
             day: "4월 18일~23일",
             price:"484,649",
             star: 4.88,
+            // img_path:["https://a0.muscache.com/im/pictures/d0e3bb05-a96a-45cf-af92-980269168096.jpg?im_w=720","https://a0.muscache.com/im/pictures/c2120b84-291d-4738-a911-97672d2ab3f2.jpg?im_w=720","https://a0.muscache.com/im/pictures/8db2283f-9f6c-4160-afb4-6f23b06c4217.jpg?im_w=720"]
             img_path:"https://a0.muscache.com/im/pictures/d0e3bb05-a96a-45cf-af92-980269168096.jpg?im_w=720"
         },
         {
@@ -55,6 +56,14 @@ export const dummy = {
             price:"202,502",
             star: 4.88,
             img_path:"https://a0.muscache.com/im/pictures/3648aed7-f383-4b74-ab5d-f444e20a85f2.jpg?im_w=720"
+        },
+        {
+            place: "Thành phố Nha Trang, 베트남",
+            km: "3,329km",
+            day: "10월 18일~28일",
+            price:"1,646,983",
+            star: 4.86,
+            img_path:"https://a0.muscache.com/im/pictures/610236d1-a9e3-40cf-86a6-65616e8e6b80.jpg?im_w=720"
         },
         {
             place: "Thành phố Nha Trang, 베트남",

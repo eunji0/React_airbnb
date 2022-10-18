@@ -32,7 +32,7 @@
     }
     
     .main_ctt_mdl {
-        height: 130%;
+        height: 200%;
     }
 
     .room_header_inner {
@@ -76,7 +76,7 @@
 @media (min-width: 950px) {
 
     .main_ctt_mdl {
-        height: 120%;
+        height: 135%;
         row-gap: 20px;
     }
 
@@ -118,7 +118,7 @@
 @media screen and (min-width: 1128px) {
 
     .main_ctt_mdl {
-        height: 120%;
+        height: 125%;
         row-gap: 20px;
         margin-top: 10px;
         margin-bottom: 32px;
@@ -275,7 +275,7 @@
 @media screen and (min-width: 1440px) {
 
     .main_ctt_mdl {
-        height: 145%;
+        height: 150%;
         margin-top: 8px;
         margin-bottom: 32px;
     }

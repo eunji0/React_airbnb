@@ -27,7 +27,7 @@ const ModalSign = (props) => {
   // recoil
   const phnum = useRecoilValue(phoneNumberState);
   const [phoneNumberAtomstate, setphoneNumberAtomstate]
-  =useRecoilState(phoneNumberState)
+    = useRecoilState(phoneNumberState)
 
   useEffect(() => {
     function handleClickOutside(e) {
@@ -67,10 +67,10 @@ const ModalSign = (props) => {
   }, [isConfirm, phoneNum.length])
 
   // const click = async () => {
-    
+
   // }
 
-  function click(){
+  function click() {
     if (phoneNum.length < 1) {
       setisConfirm(true);
       setInputOn(true);
@@ -100,7 +100,7 @@ const ModalSign = (props) => {
                 <div className="login-modal">
                   <div className="loginHeader">
 
-                    <div type="button" className="closelogin" onClick={()=>setLoginOpen(!loginOpen)}>
+                    <div type="button" className="closelogin" onClick={() => setLoginOpen(!loginOpen)}>
                       <Closelogin />
                     </div>
                     <div className="loginheadertxt">로그인 또는 회원가입</div>
@@ -191,9 +191,9 @@ const ModalSign = (props) => {
                                   <div dir="ltr">
                                     <div className={`${inputOn === false ? "_js9i23" : "_fywymp7"}`}>
                                       <div className="_1dnryfrb">+1</div>
-                                      
-                                     <input name="phoneInputphoneNumber" onChange={(e)=>setphoneNum(e.target.value)} aria-required="true" data-testid="login-signup-phonenumber" className="_c5rhl5" id="phoneInputphoneNumber" autocomplete="tel-national" inputmode="tel" type="tel" aria-describedby="phone-number-help-text-phoneNumber airlock-inline-container" value={phoneNum} />
-                                  
+
+                                      <input name="phoneInputphoneNumber" onChange={(e) => setphoneNum(e.target.value)} aria-required="true" data-testid="login-signup-phonenumber" className="_c5rhl5" id="phoneInputphoneNumber" autocomplete="tel-national" inputmode="tel" type="tel" aria-describedby="phone-number-help-text-phoneNumber airlock-inline-container" value={phoneNum} />
+
                                     </div>
                                   </div>
                                 </label>
@@ -284,10 +284,10 @@ const ModalSign = (props) => {
                   </div>
                 </div>
               </div>
-              <div className={nextmodal ? 'nextmodal':"nonemodal"}>
+              <div className={nextmodal ? 'nextmodal' : "nonemodal"}>
                 <div className='nmmodal'>
                   <div className="_pa35zs">
-                    <button aria-label="닫기" type="button" className="_oda838" onClick={()=>setnextmodal(!nextmodal)}>
+                    <button aria-label="닫기" type="button" className="_oda838" onClick={() => setnextmodal(!nextmodal)}>
                       <span className="_e296pg">
                         <Previous />
                       </span>
@@ -306,14 +306,14 @@ const ModalSign = (props) => {
                     <div data-testid="login-pane">
                       <h2 className="_wtixm2">+82 {phnum}번으로 보내드린 인증 코드를 입력하세요.</h2>
                       <div>
-                        <div style={{maxWidth: "183px"}}>
+                        <div style={{ maxWidth: "183px" }}>
                           <div className="_p4w1xj">
                             <label className="_1yw7hpv" for="phone-verification-code-form__code-input">
                               <div dir="ltr">
                                 <div className="_slsckq">
-                                  <input aria-label="입력된 코드: " placeholder="------" maxlength="6" className="_xr1n8d" id="phone-verification-code-form__code-input" autocomplete="one-time-code" inputmode="numeric" type="tel" aria-describedby="" value=""/>
+                                  <input aria-label="입력된 코드: " placeholder="------" maxlength="6" className="_xr1n8d" id="phone-verification-code-form__code-input" autocomplete="one-time-code" inputmode="numeric" type="tel" aria-describedby="" value="" />
                                 </div>
-                              </div> 
+                              </div>
                             </label>
                           </div>
                         </div>
@@ -325,8 +325,8 @@ const ModalSign = (props) => {
                         <button type="button" className="_za4ekfm">옵션 더 보기</button>
                         <button type="button" className="_1ku51f04">계속</button>
                       </div>
-                      </div>
-                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
