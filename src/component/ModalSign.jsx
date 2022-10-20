@@ -82,12 +82,12 @@ const closeNext = () => {
     setInputOn(false);
     setnextmodal(true);
     setphoneNumberAtomstate(phoneNum);
-    return
   }
 
 
   return (
     // 모달이 열릴때 openModal 클래스가 생성된다.
+    <div>
     <div className={open ? 'openModal modal' : 'modal'}>
       {open ? (
         <section>
@@ -207,7 +207,7 @@ const closeNext = () => {
                           </div>
 
                           <div className="lm2-btn">
-                            <div className="lm2btn" onClick={click}>
+                            <div className="lm2btn" onClick={click} onKeyDown={close}>
                               <span className="lm2span">
                                 <span class="_kaq6tx" ></span>
                               </span>
@@ -215,7 +215,7 @@ const closeNext = () => {
                                 계속
                               </span>
                             </div>
-                            <ModalNext open={nextmodal} close={closeNext}></ModalNext>
+                           
                           </div>
                         </div>
                       </form>
@@ -288,6 +288,9 @@ const closeNext = () => {
           </main>
         </section>
       ) : null}
+     
+    </div>
+    <ModalNext open={nextmodal} close={closeNext}></ModalNext>
     </div>
   );
 };
