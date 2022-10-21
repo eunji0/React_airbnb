@@ -1,4 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
+import styled from "styled-components";
+/*global kakao*/
 import { ReactComponent as Etc } from '../images/Etc.svg';
 import { ReactComponent as Designer } from '../images/Designer.svg';
 import { ReactComponent as Calendar } from '../images/Calendar.svg';
@@ -29,6 +31,24 @@ import { ReactComponent as Party } from '../images/Party.svg';
 import { ReactComponent as More } from '../images/More.svg';
 
 export default function InfoContentMid() {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://dapi.kakao.com/v2/maps/sdk.js?appkey=3dd5404de1cc92bf47d78700b1c56113&autoload=false";
+    document.head.appendChild(script);
+
+    script.onload = () => {
+        kakao.maps.load(() => {
+            let container = document.getElementById("Mymap");
+            let options = {
+                center: new kakao.maps.LatLng(37.506502, 127.053617),
+                level: 7
+            };
+
+            const map = new window.kakao.maps.Map(container, options);
+
+        });
+    }
+
     return (
         <div>
             <div className="rmctt3-inner">
@@ -308,16 +328,7 @@ export default function InfoContentMid() {
 
                 </div>
                 <InfoNav />
-                {/* {
-                    dummy.results.map((item) => {
-                        return (
-                            <InfoNav 
-                            price={item.price}
-                            />
-                        )
-                    })
-                } */}
-                
+
             </div>
             <div className="rmctt3-inner2">
                 <div className="rmctt3-a">
@@ -326,7 +337,7 @@ export default function InfoContentMid() {
                             <section>
                                 <div className="rmctt3in">
                                     <span style={{ display: "inline", marginRight: "8px", width: "16px", height: "16px" }}>
-                                        <Star style={{width:"16px", height:"16px"}}/>
+                                        <Star style={{ width: "16px", height: "16px" }} />
                                     </span>
                                     <span style={{ display: "inline" }}>
                                         4.87 · 후기 143개
@@ -633,33 +644,34 @@ export default function InfoContentMid() {
                                         <h2 className="rmctt3in4-in3-title2">호스팅 지역</h2>
                                     </div>
                                     <div className="rmctt3in4-in31">
-                                        <div className="rmctt3in4-in31f"></div>
-                                        <div className="rmctt3in4-in31s">
-                                            <div className="sarm123" style={{ display: "flex", flexDirection: "row" }}>
-                                                <div className="rmctt3in4-in31sf">
-                                                    <input type="checkbox" className="rmctt3in4-in31sfin" />
+                                        <MapContents id="Mymap">
+                                            <div className="rmctt3in4-in31s">
+                                                <div className="sarm123" style={{ display: "flex", flexDirection: "row" }}>
+                                                    <div className="rmctt3in4-in31sf">
+                                                        <input type="checkbox" className="rmctt3in4-in31sfin" />
 
-                                                </div>
-                                                <span className="rmctt3in4-in31sftxt">대중교통</span>
-                                            </div>
-                                        </div>
-                                        <div className="rmctt3in4-in31t">
-                                            <div className="rmctt3in4-in31tinf">
-                                                <div style={{
-                                                    display: "flex", flexDirection: "column", width: "40px", backgroundColor: "#fff", boxShadow: "0px 6px 16px rbga(0,0,0,0.12)",
-                                                    borderRadius: "8px"
-                                                }}>
-                                                    <button className="rmctt3in4-in31tinf-btn">
-                                                        <Plus />
-                                                    </button>
-                                                    <div className="c1fisx1o dir dir-ltr"></div>
-                                                    <button className="rmctt3in4-in31tinf-btn2">
-                                                        <Minus />
-                                                    </button>
+                                                    </div>
+                                                    <span className="rmctt3in4-in31sftxt">대중교통</span>
                                                 </div>
                                             </div>
-                                            <div className="rmctt3in4-in31tins"></div>
-                                        </div>
+                                            <div className="rmctt3in4-in31t">
+                                                <div className="rmctt3in4-in31tinf">
+                                                    <div style={{
+                                                        display: "flex", flexDirection: "column", width: "40px", backgroundColor: "#fff", boxShadow: "0px 6px 16px rbga(0,0,0,0.12)",
+                                                        borderRadius: "8px"
+                                                    }}>
+                                                        <button className="rmctt3in4-in31tinf-btn">
+                                                            <Plus />
+                                                        </button>
+                                                        <div className="c1fisx1o dir dir-ltr"></div>
+                                                        <button className="rmctt3in4-in31tinf-btn2">
+                                                            <Minus />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div className="rmctt3in4-in31tins"></div>
+                                            </div>
+                                        </MapContents>
                                     </div>
                                     <div className="rmc3-in7">
                                         <div className="rmc3in7">
@@ -912,3 +924,8 @@ export default function InfoContentMid() {
         </div>
     )
 }
+
+const MapContents = styled.div`
+  width: 100%;
+  height: 100%;
+`;

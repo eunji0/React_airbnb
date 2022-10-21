@@ -207,7 +207,7 @@ const closeNext = () => {
                           </div>
 
                           <div className="lm2-btn">
-                            <div className="lm2btn" onClick={click} onKeyDown={close}>
+                            <div className="lm2btn" onClick={click}>
                               <span className="lm2span">
                                 <span class="_kaq6tx" ></span>
                               </span>
