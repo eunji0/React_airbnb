@@ -830,6 +830,7 @@ option {
     z-index: 15;
     padding-top: 12px;
     max-height: 398.4px;
+    margin-top: 70px;
 }
 
 .nmmodal {
@@ -844,6 +845,7 @@ option {
     display: flex !important;
     flex-direction: column !important;
     box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px !important;
+    
 }
 
 ._pa35zs {

@@ -1,4 +1,5 @@
 import React from "react";
+/*global kakao*/
 import { Link } from "react-router-dom";
 import { ReactComponent as HostLogo2 } from '../images/HostLogo2.svg';
 import { ReactComponent as Play } from '../images/Play.svg';
@@ -32,6 +33,23 @@ export default function HostMain() {
         };
     }, [outSection]);
 
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://dapi.kakao.com/v2/maps/sdk.js?appkey=3dd5404de1cc92bf47d78700b1c56113&autoload=false";
+    document.head.appendChild(script);
+
+    script.onload = () => {
+        kakao.maps.load(() => {
+            let container = document.getElementById("Mymap");
+            let options = {
+                center: new kakao.maps.LatLng(37.506502, 127.053617),
+                level: 7
+            };
+
+            const map = new window.kakao.maps.Map(container, options);
+
+        });
+    }
 
     return (
         
@@ -140,7 +158,8 @@ export default function HostMain() {
                                             <h3 className="_m37l9b">숙소를 소개해주세요</h3>
                                             <div className="hm-map">
                                                 <div aria-hidden="false" style={{ position: "relative", width: "100%", height: "100%" }}>
-                                                    <div className="hmmapd1">
+                                                   
+                                                    <MapContents id="Mymap" className="hmmapd1" >
                                                         <div className="hmmapd2">
                                                             <div className="hmmapdd">
                                                                 <div className="hmmapds">
@@ -218,7 +237,7 @@ export default function HostMain() {
                                                             </div>
 
                                                         </div>
-                                                    </div>
+                                                        </MapContents>
                                                     <div className="_pawvzww">
                                                         <div className=" dir dir-ltr" aria-hidden="false" style={{ whiteSpace: "nowrap", position: "absolute", marginLeft: "24px", marginTop: "24px", top: "0px", left: "0px", zIndex: "1", transition: "transform 850ms cubic-bezier(0.25, 1, 0.5, 1) 0s" }}>
                                                             <div className="c15e4bhw ctbkggg dir dir-ltr" style={{ height: "40px", flexDirection: "row" }}>
@@ -397,6 +416,11 @@ export default function HostMain() {
         </main>
     );
 }
+
+const MapContents = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
 const Button = styled.button`
   cursor: pointer !important;

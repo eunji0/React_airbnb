@@ -92,7 +92,8 @@ const closeNext = () => {
       {open ? (
         <section>
           <main>
-            <div className="Modalll">
+          {props.children}
+            {/* <div className="Modalll">
               <div className="loginModal2">
                 <div className="login-modal">
                   <div className="loginHeader">
@@ -283,7 +284,7 @@ const closeNext = () => {
                 </div>
               </div>
             
-            </div>
+            </div> */}
 
           </main>
         </section>

@@ -4826,6 +4826,22 @@ border-right: 0px; */
   cursor: default !important;
 }
 
+.mncdr-cdr {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.mncdr-cdrl {
+  background-color: yellow;
+  width: 50%;
+}
+
+.mncdr-cdrr{
+  background-color: olive;
+  width: 50%;
+}
+
 ._19471dk:last-child {
   margin-right: 0px !important;
 }
@@ -4847,11 +4863,6 @@ border-right: 0px; */
   margin-right: 0px !important;
   position: relative !important;
   outline: none !important;
-}
-
-.mncdr-a {
-  height: 100%;
-  min-height: 353px;
 }
 
 .iuyjc {

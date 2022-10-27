@@ -422,7 +422,6 @@
 .hmmapd1 {
   white-space: nowrap;
   position: absolute;
-  margin-top: 24px;
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
@@ -455,8 +454,8 @@
   position: absolute !important;
   text-align: left !important;
   width: 100% !important;
-  /* z-index: 2 !important; */
-  top: 0px !important;
+  z-index: 2 !important;
+  top: 20px !important;
   transform-origin: 50% 0% !important;
   pointer-events: none !important;
 }
