@@ -14,6 +14,11 @@ import { ReactComponent as Minus2 } from '../images/Minus2.svg';
 import { ReactComponent as Plus2 } from '../images/Plus2.svg';
 import ModalNext from './ModalNext';
 import Calendar from 'react-calendar';
+import moment from "moment/moment";
+import { DateRangePicker } from 'react-date-range';
+import { addDays } from "date-fns"
+import ko from 'date-fns/locale/ko';
+
 
 //모달사인
 import { ReactComponent as Down } from '../images/Down.svg';
@@ -30,7 +35,6 @@ import { phoneNumberState } from '../recoil/User';
 export default function Header() {
     const [modalOpen, setModalOpen] = useState(false);//메뉴모달
     const outSection = useRef(null);
-    const outSection2 = useRef(null);
     const [signOpen, setSignOpen] = useState(false); //모달로그인
     const [search, setSearch] = useState(false);//검색창 누르면 헤더 변경
     const [headerout, setHeaderout] = useState(false);//여행지
@@ -38,7 +42,18 @@ export default function Header() {
     const [checkout, setCheckout] = useState(false);//체크아웃
     const [traveler, setTraveler] = useState(false);//여행자
     const [value, onChange] = useState(new Date());
+    const [ddd, setddd] = useState(false);
 
+    //달력
+    const [state, setState] = useState([
+        {
+          startDate: new Date(),
+          endDate: addDays(new Date(), 1),
+          key: "selection",
+        },
+      ])
+
+      //모달
     const openSign = () => {
         setSignOpen(true);
     }
@@ -101,19 +116,6 @@ export default function Header() {
         };
     }, [outSection]);
 
-    // 로그인 모달
-    useEffect(() => {
-        function handleClickOutside(e) {
-            if (outSection2.current && !outSection2.current.contains(e.target)) {
-                setSignOpen(false);
-                return
-            }
-        }
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, [outSection2]);
 
     //스크롤을 내렸다 올리면 원래헤더로
     useEffect(() => {
@@ -195,6 +197,8 @@ export default function Header() {
         setphoneNumberAtomstate(phoneNum);
         setSignOpen(false);
     }
+
+    
 
     return (
         <>
@@ -788,16 +792,16 @@ export default function Header() {
                                 </div>
                                 <div className="sv3mkdx dir dir-ltr"></div>
                                 <div className="p22">
-                                    <div className="p22sd kerfd" onClick={() => setCheckin(true)}>
+                                    <div className="p22sd kerfd" onClick={()=>setCheckin(true)}>
                                         <div className={checkin ? "b1234x59c dir dir-ltr" : "b192dx2b b174x59c dir dir-ltr"} role="button" tabindex="0" aria-expanded="false" data-testid="structured-search-input-field-split-dates-0">
                                             <div className="c11if3v5 dir dir-ltr">
                                                 <div className="l1vto4to dir dir-ltr">체크인</div>
-                                                <div className="p1kudodg dir dir-ltr">날짜 입력</div>
+                                                <div className="p1kudodg dir dir-ltr" style={{color: ddd === false ? "#717171":"#222222", fontWeight: ddd === false ? "400":"600"}}>{ddd === false ? "날짜입력" : moment(value).format("MM월 DD일")}</div>
                                             </div>
                                         </div>
                                     </div>
-                                    {/* {{ display: checkin ? "block" : "none" }} */}
-                                    <div style={{ display: checkin ? "block" : "none" }}>
+                                    {/* style={{ display: checkin ? "block" : "none" }} */}
+                                    <div style={{ display: "block"}} >
                                         <div className="main-calander">
                                             <section>
                                                 <div>
@@ -819,22 +823,40 @@ export default function Header() {
                                                     </div>
                                                     <div className="mncdr-cdr">
                                                         <div className="mncdr-cdrl">
-                                                            <div className="_ytfarf" data-visible="true" style={{padding: "0px 27px"}}>
-                                                                <Calendar
-                                                                onChange={onChange}
-                                                                value={value}
-                                                            />
+                                                            <div className="_ytfarf" data-visible="true" style={{padding: "0px 27px"}} onClick={()=>setddd(true)}>
+                                                                {/* <DateRangePicker
+                                                                    onChange={item => setState([item.selection])}
+                                                                    showSelectionPreview={true}
+                                                                    moveRangeOnFirstSelection={false}
+                                                                    formatDay={(locale, date)=> moment(date).format("DD")}
+                                                                    months={2}
+                                                                    ranges={state}
+                                                                    locale={ko} 
+                                                                /> */}
+                                                                <DateRangePicker
+                                                                    editableDateInputs={true}
+                                                                    onChange={(item) => setState([item.selection])}
+                                                                    moveRangeOnFirstSelection={false}
+                                                                    ranges={state}
+                                                                    months={2}
+                                                                    locale={ko} 
+                                                                    direction="horizontal"
+                                                                   
+                                                                />
                                                             </div>
                                                                
                                                         </div>
-                                                        <div className="mncdr-cdrr">
+                                                        {/* <div className="mncdr-cdrr">
                                                         <div className="_ytfarf" data-visible="true" style={{padding: "0px 27px"}}>
-                                                                {/* <Calendar
+                                                                <Calendar
                                                                 onChange={onChange}
                                                                 value={value}
-                                                            /> */}
+                                                                formatDay={(locale, date)=> moment(date).format("DD")}
+                                                                showNeighboringMonth={false}   //  이전, 이후 달의 날짜는 보이지 않도록 설정
+                                                                
+                                                            />
                                                             </div>
-                                                        </div>
+                                                        </div> */}
                                                     </div>
                                                 </div>
                                             </section>

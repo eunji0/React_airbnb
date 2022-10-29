@@ -1,0 +1,110 @@
+._ytfarf {
+    min-height: 400px;
+}
+
+.react-calendar{
+    display: flex;
+    flex-direction: column;
+}
+
+.react-calendar__navigation {
+   align-self: center;
+}
+
+.rdrDefinedRangesWrapper {
+    display: none;
+}
+
+.rdrDateDisplayWrapper {
+    display: none;
+}
+
+.rdrMonthsVertical {
+    display: flex;
+    flex-direction: row;
+}
+
+.rdrMonthAndYearWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rdrMonthAndYearPickers {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+.rdrNextPrevButton {
+    width: 20px;
+    height: 20px;
+}
+
+.rdrMonthsHorizontal {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.rdrMonth {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rdrMonthName {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+.rdrWeekDays {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #717171;
+    width: 90%;
+    margin-left: 10px;
+}
+
+.rdrDays {
+    white-space: wrap;
+}
+
+.rdrDay{
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #222222;
+    height: 46px;
+    width: 46px;
+    color: #222222;
+}
+
+.rdrDayNumber {
+    color: #222222;
+}
+
+.rdrDay:hover{
+    border: 1px solid #222222;
+    border-radius: 50%;
+
+}
+
+.rdrDay:focus-within {
+    background-color: #222222;
+    border: 2px solid #222222;
+    border-radius: 50%;
+}

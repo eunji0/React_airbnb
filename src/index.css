@@ -2,6 +2,7 @@
 @import './css/host.css';
 @import './css/modallogin.css';
 @import './css/media.css';
+@import './css/calender.css';
 
 .root-wrap,
 body {
@@ -4452,8 +4453,8 @@ border-right: 0px; */
 .p1kudodg[class][class] {
   font-size: 14px;
   line-height: 18px;
-  color: #717171;
-  font-weight: 400;
+  /* color: #717171;
+  font-weight: 400; */
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100;
@@ -4761,6 +4762,8 @@ border-right: 0px; */
   overflow-y: auto;
   overscroll-behavior: contain;
   width: 57%;
+  height: 200%;
+  /* max-height: 540px; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -4833,8 +4836,7 @@ border-right: 0px; */
 }
 
 .mncdr-cdrl {
-  background-color: yellow;
-  width: 50%;
+  width: 100%;
 }
 
 .mncdr-cdrr{
