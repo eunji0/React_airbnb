@@ -48,7 +48,7 @@ export default function Header() {
     const [state, setState] = useState([
         {
           startDate: new Date(),
-          endDate: addDays(new Date(), 1),
+          endDate: addDays(new Date(), 7),
           key: "selection",
         },
       ])
