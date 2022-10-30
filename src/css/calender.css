@@ -1,5 +1,6 @@
 ._ytfarf {
     min-height: 400px;
+    margin-top: 10px;
 }
 
 .react-calendar{
@@ -118,8 +119,8 @@
 
 }
 
-.rdrDay:focus-within {
+/* .rdrDay:focus-within {
     background-color: #222222;
     border: 2px solid #222222;
     border-radius: 50%;
-}
+} */

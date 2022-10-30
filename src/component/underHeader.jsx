@@ -3,8 +3,35 @@ import { ReactComponent as Previous } from '../images/Previous.svg';
 import { ReactComponent as Next } from '../images/Next.svg';
 import { ReactComponent as Filter } from '../images/Filter.svg';
 import { Link } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
 
 export default function UnderHeader() {
+    // const images = useRef([{ src: "https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg" }, { src: "https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg" }, { src: "https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg" }
+    // , { src: "https://a0.muscache.com/pictures/8e507f16-4943-4be9-b707-59bd38d56309.jpg" }, { src: "https://a0.muscache.com/pictures/10ce1091-c854-40f3-a2fb-defc2995bcaf.jpg" }, { src: "https://a0.muscache.com/pictures/35919456-df89-4024-ad50-5fcb7a472df9.jpg" }
+    // , { src: "https://a0.muscache.com/pictures/50861fca-582c-4bcc-89d3-857fb7ca6528.jpg" }, { src: "https://a0.muscache.com/pictures/ca25c7f3-0d1f-432b-9efa-b9f5dc6d8770.jpg" }, { src: "https://a0.muscache.com/pictures/1d477273-96d6-4819-9bda-9085f809dad3.jpg" }
+    // , { src: "https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg" }, { src: "https://a0.muscache.com/pictures/8b44f770-7156-4c7b-b4d3-d92549c8652f.jpg" }, { src: "https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg" }
+    // , { src: "https://a0.muscache.com/pictures/4221e293-4770-4ea8-a4fa-9972158d4004.jpg" }, { src: "https://a0.muscache.com/pictures/957f8022-dfd7-426c-99fd-77ed792f6d7a.jpg" }, { src: "https://a0.muscache.com/pictures/35919456-df89-4024-ad50-5fcb7a472df9.jpg" }
+    // ]);
+
+    // //캐러셀
+    // const [current, setCurrent] = useState(0);
+    // const [style, setStyle] = useState({
+    //   marginLeft: `-${current}00%`
+    // });
+    // const imgSize = useRef(images.current.length);
+  
+    // const moveSlide = (i) => {
+    //   let nextIndex = current + i;
+      
+    //   if (nextIndex < 0) nextIndex = imgSize.current - 1;
+    //   else if (nextIndex >= imgSize.current) nextIndex = 0;
+  
+    //   setCurrent(nextIndex);
+    // };
+  
+    // useEffect(() => {
+    //     setStyle({ marginLeft: `-${current}00%` });
+    // }, [current]);
     
     return (
         <div className="main_scd_header">
@@ -13,6 +40,7 @@ export default function UnderHeader() {
                     <div className="scd_header_inner_menu">
                         <div className="scd_header_inner_scroll">
                             <div className="scd_header_scroll">
+                            {/* onClick={() => { moveSlide(-14);}} */}
                                 <button type="button" className="scd_header_btn">
                                     <span className="scd_header_btn_span">
                                         <Previous />
@@ -28,12 +56,21 @@ export default function UnderHeader() {
                             </div>
                         </div>
                         <div className="scd_hdr_in">
-                            <div className="scd_hdr_in_grid">
+                            <div className="scd_hdr_in_grid" >
                                 <Link to="/" className="scdbtn">
                                 <button aria-hidden="false" className="scd_hdr_in_btn" role="radio" aria-checked="true" type="button">
                                     <div className="scd_hdr_in_div">
-                                        <span className="scd_hdr_in_div_span">
-                                            <img className="scd_hdr_in_div_img2" src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg" alt="" width="24" height="24"/>
+                                    {/* style={style} */}
+                                        <span className="scd_hdr_in_div_span" >
+                                                {/* {images.current.map((img, i) => (
+                                                    <div
+                                                        key={i}
+                                                        className="scd_hdr_in_div_img2"
+                                                        style={{ backgroundImage: `url(${img.src})` }}
+                                                    ></div>
+                                                ))} */}
+                                                 <img className="scd_hdr_in_div_img2" src="https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg" alt="" width="24" height="24"/>
+                                            
                                             <div className="scd_hdr_in_div_txt">
                                                 <span className="scd_hdr_in_txt">기상천외한 숙소</span>
                                             </div>

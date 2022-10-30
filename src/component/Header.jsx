@@ -5,19 +5,18 @@ import { ReactComponent as Search } from '../images/Search.svg';
 import { ReactComponent as Earth } from '../images/Earth.svg';
 import { ReactComponent as Menu } from '../images/Menu.svg';
 import { ReactComponent as My } from '../images/My.svg';
-import { useState, useRef } from 'react';
 import ModalLogin from './ModalLogin';
-import { useEffect } from "react";
+import {useState,useEffect, useRef } from "react";
 import ModalSign from "./ModalSign";
 import { ReactComponent as HomeLogo } from '../images/HomeLogo.svg';
 import { ReactComponent as Minus2 } from '../images/Minus2.svg';
 import { ReactComponent as Plus2 } from '../images/Plus2.svg';
 import ModalNext from './ModalNext';
-import Calendar from 'react-calendar';
 import moment from "moment/moment";
 import { DateRangePicker } from 'react-date-range';
 import { addDays } from "date-fns"
 import ko from 'date-fns/locale/ko';
+import FacebookLogin from "react-facebook-login";
 
 
 //모달사인
@@ -44,14 +43,20 @@ export default function Header() {
     const [value, onChange] = useState(new Date());
     const [ddd, setddd] = useState(false);
 
+
+    //페이스북
+    const responseFacebook = (response) => {
+        console.log(response);
+      }
+
     //달력
     const [state, setState] = useState([
         {
           startDate: new Date(),
           endDate: addDays(new Date(), 7),
-          key: "selection",
-        },
-      ])
+          key: 'selection'
+        }
+      ]);
 
       //모달
     const openSign = () => {
@@ -801,7 +806,7 @@ export default function Header() {
                                         </div>
                                     </div>
                                     {/* style={{ display: checkin ? "block" : "none" }} */}
-                                    <div style={{ display: "block"}} >
+                                    <div style={{ display: checkin ? "block" : "none" }} >
                                         <div className="main-calander">
                                             <section>
                                                 <div>
@@ -824,39 +829,23 @@ export default function Header() {
                                                     <div className="mncdr-cdr">
                                                         <div className="mncdr-cdrl">
                                                             <div className="_ytfarf" data-visible="true" style={{padding: "0px 27px"}} onClick={()=>setddd(true)}>
-                                                                {/* <DateRangePicker
-                                                                    onChange={item => setState([item.selection])}
-                                                                    showSelectionPreview={true}
-                                                                    moveRangeOnFirstSelection={false}
-                                                                    formatDay={(locale, date)=> moment(date).format("DD")}
-                                                                    months={2}
-                                                                    ranges={state}
-                                                                    locale={ko} 
-                                                                /> */}
+                                                                
                                                                 <DateRangePicker
                                                                     editableDateInputs={true}
                                                                     onChange={(item) => setState([item.selection])}
+                                                                    showSelectionPreview={true}
                                                                     moveRangeOnFirstSelection={false}
                                                                     ranges={state}
                                                                     months={2}
                                                                     locale={ko} 
                                                                     direction="horizontal"
-                                                                   
-                                                                />
+                                                                >
+                                                                </DateRangePicker>
+
                                                             </div>
                                                                
                                                         </div>
-                                                        {/* <div className="mncdr-cdrr">
-                                                        <div className="_ytfarf" data-visible="true" style={{padding: "0px 27px"}}>
-                                                                <Calendar
-                                                                onChange={onChange}
-                                                                value={value}
-                                                                formatDay={(locale, date)=> moment(date).format("DD")}
-                                                                showNeighboringMonth={false}   //  이전, 이후 달의 날짜는 보이지 않도록 설정
-                                                                
-                                                            />
-                                                            </div>
-                                                        </div> */}
+                                                    
                                                     </div>
                                                 </div>
                                             </section>
@@ -888,20 +877,29 @@ export default function Header() {
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div>
-                                                                    <div>
-                                                                        <div>
-                                                                            <div className="mncdr-a">
-
-                                                                            </div>
-                                                                            <div className="mncdr-b">
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                    <div className="mncdr-cdr">
+                                                        <div className="mncdr-cdrl">
+                                                            <div className="_ytfarf" data-visible="true" style={{padding: "0px 27px"}} onClick={()=>setddd(true)}>
+                                                                
+                                                                <DateRangePicker
+                                                                    editableDateInputs={true}
+                                                                    onChange={(item) => setState([item.selection])}
+                                                                    showSelectionPreview={true}
+                                                                    moveRangeOnFirstSelection={false}
+                                                                    ranges={state}
+                                                                    months={2}
+                                                                    locale={ko} 
+                                                                    direction="horizontal"
+                                                                >
+                                                                </DateRangePicker>
+
+                                                            </div>
+                                                               
+                                                        </div>
+                                                    
                                                     </div>
                                                 </div>
                                             </section>

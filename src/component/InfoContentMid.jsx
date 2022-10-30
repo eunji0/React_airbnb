@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 /*global kakao*/
 import { ReactComponent as Etc } from '../images/Etc.svg';
@@ -29,6 +29,11 @@ import { ReactComponent as Smork } from '../images/Smork.svg';
 import { ReactComponent as Pet } from '../images/Pet.svg';
 import { ReactComponent as Party } from '../images/Party.svg';
 import { ReactComponent as More } from '../images/More.svg';
+import { DateRangePicker } from 'react-date-range';
+import { addDays } from "date-fns"
+import ko from 'date-fns/locale/ko';
+
+
 
 export default function InfoContentMid() {
     const script = document.createElement("script");
@@ -48,6 +53,15 @@ export default function InfoContentMid() {
 
         });
     }
+
+    //달력
+    const [state, setState] = useState([
+        {
+          startDate: new Date(),
+          endDate: addDays(new Date(), 7),
+          key: 'selection'
+        }
+      ]);
 
     return (
         <div>
@@ -316,7 +330,17 @@ export default function InfoContentMid() {
                             <div className="rmctt3-in8-inner2">
                                 <div className="rmctt3-in8-inner2-in">
                                     <div className="rmctt3-in8-in2-in">
-                                        달력
+                                        <DateRangePicker
+                                            editableDateInputs={true}
+                                            onChange={(item) => setState([item.selection])}
+                                            showSelectionPreview={true}
+                                            moveRangeOnFirstSelection={false}
+                                            ranges={state}
+                                            months={2}
+                                            locale={ko}
+                                            direction="horizontal"
+                                        >
+                                        </DateRangePicker>
                                     </div>
                                     <div className="rmctt3-in8-in2-in2">
 

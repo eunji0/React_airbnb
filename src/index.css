@@ -1998,7 +1998,7 @@ section {
 }
 
 .rmctt3-in8-inner2-in {
-  margin-top: -12px;
+  margin-top: 30px;
   margin-left: -24px;
 }
 
@@ -4762,7 +4762,7 @@ border-right: 0px; */
   overflow-y: auto;
   overscroll-behavior: contain;
   width: 57%;
-  height: 200%;
+  /* height: 200%; */
   /* max-height: 540px; */
   margin-left: auto;
   margin-right: auto;
@@ -4968,6 +4968,7 @@ border-right: 0px; */
   border-radius: 50% !important;
   border-color: rgb(176, 176, 176) !important;
   color: rgb(113, 113, 113) !important;
+  background-color: #FFFFFF;
 }
 
 ._8ovatg {
