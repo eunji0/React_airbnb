@@ -1,13 +1,13 @@
 import React from 'react';
-import { ReactComponent as Down } from '../images/Down.svg';
-import { Link } from "react-router-dom";
-import { ReactComponent as Facebook2 } from '../images/Facebook2.svg';
-import { ReactComponent as Google } from '../images/Google.svg';
-import { ReactComponent as Apple } from '../images/Apple.svg';
-import { ReactComponent as Email } from '../images/Email.svg';
+// import { ReactComponent as Down } from '../images/Down.svg';
+// import { Link } from "react-router-dom";
+// import { ReactComponent as Facebook2 } from '../images/Facebook2.svg';
+// import { ReactComponent as Google } from '../images/Google.svg';
+// import { ReactComponent as Apple } from '../images/Apple.svg';
+// import { ReactComponent as Email } from '../images/Email.svg';
 import { useState, useEffect, useRef } from "react";
-import { ReactComponent as Closelogin } from '../images/Closelogin.svg';
-import { ReactComponent as Error } from '../images/Error.svg';
+// import { ReactComponent as Closelogin } from '../images/Closelogin.svg';
+// import { ReactComponent as Error } from '../images/Error.svg';
 
 import { useRecoilState} from 'recoil';
 import { phoneNumberState } from '../recoil/User';

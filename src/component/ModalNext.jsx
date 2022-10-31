@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as Previous } from '../images/Previous.svg';
-import { useState, useEffect, useRef } from "react";
+// import { useState, useEffect, useRef } from "react";
 import { useRecoilValue } from "recoil";
 import { phoneNumberState } from '../recoil/User';
 

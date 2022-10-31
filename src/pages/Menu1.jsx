@@ -69,7 +69,7 @@ export default function Menu1({ place, img_path, km, day, price, star }) {
                     </div>
                     <div className="main_info_pre">
                         <div className="main_info_pre_div">
-                            {isHovering==true&&current!==0 ? (
+                            {isHovering === true&&current!==0 ? (
                                 <button onClick={() => { moveSlide(-1); }} aria-label="목록에 숙소 추가하기" type="button" className="main_info_pre_btn">
                                     <Previous2 />
                                 </button>

@@ -3,7 +3,7 @@ import { ReactComponent as Previous } from '../images/Previous.svg';
 import { ReactComponent as Next } from '../images/Next.svg';
 import { ReactComponent as Filter } from '../images/Filter.svg';
 import { Link } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+// import { useState, useEffect, useRef } from "react";
 
 export default function UnderHeader() {
     // const images = useRef([{ src: "https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg" }, { src: "https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg" }, { src: "https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg" }

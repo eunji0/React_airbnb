@@ -16,7 +16,6 @@ import moment from "moment/moment";
 import { DateRangePicker } from 'react-date-range';
 import { addDays } from "date-fns"
 import ko from 'date-fns/locale/ko';
-import FacebookLogin from "react-facebook-login";
 
 
 //모달사인
@@ -30,6 +29,7 @@ import { ReactComponent as Error } from '../images/Error.svg';
 
 import { useRecoilState} from 'recoil';
 import { phoneNumberState } from '../recoil/User';
+import GoogleLoginBtn from "./GoogleLoginBtn";
 
 export default function Header() {
     const [modalOpen, setModalOpen] = useState(false);//메뉴모달
@@ -44,10 +44,6 @@ export default function Header() {
     const [ddd, setddd] = useState(false);
 
 
-    //페이스북
-    const responseFacebook = (response) => {
-        console.log(response);
-      }
 
     //달력
     const [state, setState] = useState([
@@ -419,7 +415,7 @@ export default function Header() {
                                                                                         <div className="lm4div1">
                                                                                             <Facebook2 />
                                                                                         </div>
-                                                                                        <div className="lm4div2">페이스북으로 로그인하기</div>
+                                                                                        <div className="lm4div2" >페이스북으로 로그인하기</div>
                                                                                         <div className="lm4div3"></div>
                                                                                     </div>
                                                                                 </button>
@@ -432,7 +428,9 @@ export default function Header() {
                                                                                         <div className="lm4div1">
                                                                                             <Google />
                                                                                         </div>
-                                                                                        <div className="lm4div2">구글로 로그인하기</div>
+                                                                                        <div className="lm4div2">구글로 로그인하기
+                                                                                     
+                                                                                        </div>
                                                                                         <div className="lm4div3"></div>
                                                                                     </div>
                                                                                 </button>
@@ -646,15 +644,18 @@ export default function Header() {
                                                                         </div>
                                                                         <div className="lm4-in">
                                                                             <form>
-                                                                                <button className="lm4-btn">
+                                                                                <div type="button" className="lm4-btnn">
+                                                                               
                                                                                     <div className="lm4in">
-                                                                                        <div className="lm4div1">
+                                                                                        <div className="lm4div11">
                                                                                             <Google />
                                                                                         </div>
-                                                                                        <div className="lm4div2">구글로 로그인하기</div>
+                                                                                        <div className="lm4div2">
+                                                                                        <GoogleLoginBtn />
+                                                                                        </div>
                                                                                         <div className="lm4div3"></div>
                                                                                     </div>
-                                                                                </button>
+                                                                                </div>
                                                                             </form>
                                                                         </div>
                                                                         <div className="lm4-in">

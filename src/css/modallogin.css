@@ -578,6 +578,29 @@ option {
     width: 100% !important;
 }
 
+.lm4-btnn {
+    padding: 0px !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    margin: 0px !important;
+    position: relative !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    touch-action: manipulation !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    outline: none !important;
+    border-color: #222222 !important;
+    background: #FFFFFF !important;
+    color: #222222 !important;
+    width: 100% !important;
+    height: 48px;
+}
+
 .lm4in {
     display: flex !important;
     align-items: center !important;
@@ -587,6 +610,11 @@ option {
 
 .lm4div1 {
     flex: 0 1 0% !important;
+}
+
+.lm4div11 {
+    position: relative;
+    left: 25px;
 }
 
 .lm4div2 {
