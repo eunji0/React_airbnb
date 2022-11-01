@@ -3,7 +3,8 @@ import { ReactComponent as Previous } from '../images/Previous.svg';
 import { ReactComponent as Next } from '../images/Next.svg';
 import { ReactComponent as Filter } from '../images/Filter.svg';
 import { Link } from "react-router-dom";
-// import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import ModalFilter from "./ModalFilter";
 
 export default function UnderHeader() {
     // const images = useRef([{ src: "https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg" }, { src: "https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg" }, { src: "https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg" }
@@ -32,6 +33,13 @@ export default function UnderHeader() {
     // useEffect(() => {
     //     setStyle({ marginLeft: `-${current}00%` });
     // }, [current]);
+    const [filterOpen, setFilterOpen] = useState(false);//필터모달
+
+    const closeFilter = () => {
+        setFilterOpen(false);
+    }
+
+    console.log(filterOpen);
     
     return (
         <div className="main_scd_header">
@@ -255,12 +263,12 @@ export default function UnderHeader() {
                     <div className="scd_header_inner_filter">
                         <div className="scd_header_filter">
                             <div className="header_filter">
-                                <button className="header_filter_btn">
+                                <button className="header_filter_btn" onClick={()=>setFilterOpen(true)}>
                                     <span className="ic_filter_btn">
                                         <Filter />
                                     <span className="ic_filter_txt">필터</span>
                                     </span>
-                                   
+                                    <ModalFilter open={filterOpen} close={closeFilter}></ModalFilter>
                                 </button>
                             </div>
                         </div>

@@ -698,7 +698,7 @@ export default function Header() {
                             </nav>
                         </div>
                     </div>
-                    <div className="dgfd" style={{ opacity: search === true && scrollPosition < 200 ? "1" : "0" }}>
+                    <div className="dgfd" style={{ opacity: search === true && scrollPosition < 200 ? "1" : "0" , display: search===true?"block":"none"}}>
                         <div className="pokmlm" style={{ backgroundColor: checkin === true || headerout === false || checkout === true || traveler === true ? "#EBEBEB" : "#FFFFFF" }}>
                             <div className="pokmfle">
                                 <div className="p11" >
