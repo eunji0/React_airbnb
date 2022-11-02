@@ -3,6 +3,8 @@
 @import './css/modallogin.css';
 @import './css/media.css';
 @import './css/calender.css';
+@import './css/modalfilter.css';
+
 
 .root-wrap,
 body {

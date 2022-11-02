@@ -39,7 +39,7 @@ export default function UnderHeader() {
         setFilterOpen(false);
     }
 
-    console.log(filterOpen);
+    console.log(filterOpen); 
     
     return (
         <div className="main_scd_header">
