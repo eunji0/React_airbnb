@@ -34,15 +34,29 @@ export default function UnderHeader() {
     //     setStyle({ marginLeft: `-${current}00%` });
     // }, [current]);
     const [filterOpen, setFilterOpen] = useState(false);//필터모달
+    const outSection = useRef(null);
 
     const closeFilter = () => {
         setFilterOpen(false);
     }
 
-    console.log(filterOpen); 
+
+    useEffect(() => {
+        function handleClickOutside(e) {
+            if (outSection.current && !outSection.current.contains(e.target)) {
+           setFilterOpen(false);
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [outSection]);
+
+    console.log(filterOpen);
     
     return (
-        <div className="main_scd_header">
+        <div className="main_scd_header" style={{zIndex: filterOpen ? "2":"1"}}>
             <div className="main_scd_header_inner">
                 <div className="scd_header_inner_in">
                     <div className="scd_header_inner_menu">
@@ -268,8 +282,9 @@ export default function UnderHeader() {
                                         <Filter />
                                     <span className="ic_filter_txt">필터</span>
                                     </span>
-                                    <ModalFilter open={filterOpen} close={closeFilter}></ModalFilter>
+                                    
                                 </button>
+                                <ModalFilter open={filterOpen} close={closeFilter} ref={outSection}></ModalFilter>
                             </div>
                         </div>
                     </div>

@@ -203,7 +203,7 @@ export default function Header() {
 
     return (
         <>
-            <header className='main_header' >
+            <header className='main_header' style={{zIndex: search ? "5":"2"}}>
                 <div className={search === true && scrollPosition < 200 ? "qweds" : "puio"} ref={outSection} >
                     <div className={search === true && scrollPosition < 200 ? 'main_header_inner2' : 'main_header_inner'}>
                         <div className="main_header_front">

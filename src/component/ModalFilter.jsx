@@ -1,14 +1,18 @@
 import React from "react";
 import { ReactComponent as Closelogin } from '../images/Closelogin.svg';
-// import { useState, useEffect, useRef } from "react";
+ import { useState, useEffect, useRef } from "react";
 
 
 const ModalFilter = (props) => {
     // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
     const { open, close } = props;
+    
+    const [countbtn, setcountbtn] = useState(false);
+
+    
 
     return (
-        <div className={open ? 'filtermodal' : "nonemodal"}>
+        <div className={open ? 'filtermodal' : "nonemodal"} >
             {open ? (
                 <div className='ftmodal'>
                     <div className="_pa35zs">
@@ -162,17 +166,774 @@ const ModalFilter = (props) => {
                                                 <div className="_zi86zd8">
                                                     <h2 id="filter-section-heading-id--1297268627847806902" tabindex="-1" className="_14i3z6h1a" elementtiming="LCP-target">침실과 침대</h2>
                                                 </div>
+                                                <div className="bndviu">
+                                                    <div className="wyhmdc">
+                                                        <div style={{ paddingBottom: "16px" }}>
+                                                            <div>
+                                                                <legend className="_173jxq">
+                                                                    <h3 tabindex="-1" elementtiming="LCP-target" className="_14i3z6h">침실</h3>
+                                                                </legend>
+                                                            </div>
+                                                            <div className="vcljsd">
+                                                                <div>
+                                                                    <div className="vcljsd">
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <button className="_11yc859a" aria-pressed="true" type="button">
+                                                                                    <span className="_gjz3kfc" aria-label="상관없음">상관없음</span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy" onClick={() => setcountbtn(true)} style={{ color: countbtn ? "rgb(255, 255, 255)" : "rgb(34, 34, 34)", backgroundColor: countbtn ? "rgb(34, 34, 34)" : "rgb(255, 255, 255)" }}>
+                                                                                    <span className="_v56eio" aria-label="1">1</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">2</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">3</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">4</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">5</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">6</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">7</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">8+</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="wyhmdc">
+                                                        <div style={{ paddingBottom: "16px" }}>
+                                                            <div>
+                                                                <legend className="_173jxq">
+                                                                    <h3 tabindex="-1" elementtiming="LCP-target" className="_14i3z6h">침대</h3>
+                                                                </legend>
+                                                            </div>
+                                                            <div className="vcljsd">
+                                                                <div>
+                                                                    <div className="vcljsd">
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <button className="_11yc859a" aria-pressed="true" type="button">
+                                                                                    <span className="_gjz3kfc" aria-label="상관없음">상관없음</span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">1</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">2</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">3</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">4</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">5</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">6</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">7</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">8+</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="wyhmdc">
+                                                        <div style={{ paddingBottom: "16px" }}>
+                                                            <div>
+                                                                <legend className="_173jxq">
+                                                                    <h3 tabindex="-1" elementtiming="LCP-target" className="_14i3z6h">욕실</h3>
+                                                                </legend>
+                                                            </div>
+                                                            <div className="vcljsd">
+                                                                <div>
+                                                                    <div className="vcljsd">
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <button className="_11yc859a" aria-pressed="true" type="button">
+                                                                                    <span className="_gjz3kfc" aria-label="상관없음">상관없음</span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">1</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">2</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">3</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">4</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">5</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">6</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">7</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
+                                                                                <div className="_1710jwy">
+                                                                                    <span className="_v56eio" aria-label="1">8+</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </section>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            <div>
+                                <div className="filter_inner">
+                                    <div className="ft-inner">
+                                        <div className="_16sjn7m8">
+                                            <div class="_11tsb6x"></div>
+                                            <section>
+                                                <div className="_zi86zd8">
+                                                    <h2 id="filter-section-heading-id--1297268627847806902" tabindex="-1" className="_14i3z6h1a" elementtiming="LCP-target">건물 유형</h2>
+                                                </div>
+                                                <div>
+                                                    <div className="bndviu">
+                                                        <div className="wyhmdc">
+                                                            <div style={{ paddingBottom: "16px" }}>
+                                                                <div>
+                                                                    <div className="_19dpbcv">
+                                                                        <div className="_1doy7q3">
+                                                                            <button className="_1h52lk5">
+                                                                                <div className="_13as0oe">
+                                                                                    <div className="_t7tlos">
+                                                                                        <img className="_9phhti" src="https://a0.muscache.com/pictures/4d7580e1-4ab2-4d26-a3d6-97f9555ba8f9.jpg" alt="" />
+                                                                                        <div className="_3hmsj">
+                                                                                            <div className="_w7zj3g">단독 또는 다세대 주택</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div className="_1doy7q3">
+                                                                            <button className="_1h52lk5">
+                                                                                <div className="_13as0oe">
+                                                                                    <div className="_t7tlos">
+                                                                                        <img className="_9phhti" src="https://a0.muscache.com/pictures/21cfc7c9-5457-494d-9779-7b0c21d81a25.jpg" alt="" />
+                                                                                        <div className="_3hmsj">
+                                                                                            <div className="_w7zj3g">아파트</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div className="_1doy7q3">
+                                                                            <button className="_1h52lk5">
+                                                                                <div className="_13as0oe">
+                                                                                    <div className="_t7tlos">
+                                                                                        <img className="_9phhti" src="https://a0.muscache.com/pictures/6f261426-2e47-4c91-8b1a-7a847da2b21b.jpg" alt="" />
+                                                                                        <div className="_3hmsj">
+                                                                                            <div className="_w7zj3g">게스트용 별채</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div className="_1doy7q3">
+                                                                            <button className="_1h52lk5">
+                                                                                <div className="_13as0oe">
+                                                                                    <div className="_t7tlos">
+                                                                                        <img className="_9phhti" src="https://a0.muscache.com/pictures/64b27fed-56a1-4f03-950a-d8da08efb428.jpg" alt="" />
+                                                                                        <div className="_3hmsj">
+                                                                                            <div className="_w7zj3g">호텔</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="filter_inner">
+                                    <div className="ft-inner">
+                                        <div className="_16sjn7m8">
+                                            <div class="_11tsb6x"></div>
+                                            <section>
+                                                <div className="_zi86zd8">
+                                                    <h2 id="filter-section-heading-id--1297268627847806902" tabindex="-1" className="_14i3z6h1a" elementtiming="LCP-target">편의 시설</h2>
+                                                </div>
+                                                <div>
+                                                    <div className="bndviu3">
+                                                        <div className="wyhmdc">
+                                                            <div>
+                                                                <div className="t2353uq dir dir-ltr">
+                                                                    <h3 tabindex="-1" className="_14i3z6h" elementtiming="LCP-target">필수</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="_q4izx9">
+                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                    <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                        <div className="_jro6t0">
+                                                                            <div className="_7ytxmo">
+                                                                                <span className="_10ndlvp">
+                                                                                    <input name="무선 인터넷" id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className="_41yoza" data-checkbox="true"></span>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div className="_gfomxi">
+                                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">무선 인터넷</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="_q4izx9">
+                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                    <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                        <div className="_jro6t0">
+                                                                            <div className="_7ytxmo">
+                                                                                <span className="_10ndlvp">
+                                                                                    <input name="주방" id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className="_41yoza" data-checkbox="true"></span>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div className="_gfomxi">
+                                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">주방</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="_q4izx9">
+                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                    <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                        <div className="_jro6t0">
+                                                                            <div className="_7ytxmo">
+                                                                                <span className="_10ndlvp">
+                                                                                    <input name="세탁기" id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className="_41yoza" data-checkbox="true"></span>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div className="_gfomxi">
+                                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">세탁기</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="_q4izx9">
+                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                    <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                        <div className="_jro6t0">
+                                                                            <div className="_7ytxmo">
+                                                                                <span className="_10ndlvp">
+                                                                                    <input name="건조기" id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className="_41yoza" data-checkbox="true"></span>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div className="_gfomxi">
+                                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">건조기</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="_q4izx9">
+                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                    <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                        <div className="_jro6t0">
+                                                                            <div className="_7ytxmo">
+                                                                                <span className="_10ndlvp">
+                                                                                    <input name="에어컨" id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className="_41yoza" data-checkbox="true"></span>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div className="_gfomxi">
+                                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">에어컨</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="_q4izx9">
+                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                    <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                        <div className="_jro6t0">
+                                                                            <div className="_7ytxmo">
+                                                                                <span className="_10ndlvp">
+                                                                                    <input name="난방" id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className="_41yoza" data-checkbox="true"></span>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div className="_gfomxi">
+                                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">난방</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="_cfvh61">
+                                                        <div className="l1rjzj3m dir dir-ltr">
+                                                            <button type="button" className="_edqkt1v">
+                                                                <span className="lnq7699 dir dir-ltr">더 표시</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="filter_inner">
+                                    <div className="ft-inner">
+                                        <div className="_16sjn7m8">
+                                            <div class="_11tsb6x"></div>
+                                            <section>
+                                                <div className="_zi86zd8">
+                                                    <h2 id="filter-section-heading-id--1297268627847806902" tabindex="-1" className="_14i3z6h1a" elementtiming="LCP-target">예약 옵션</h2>
+                                                </div>
+                                                <div>
+                                                    <div className="bndviu">
+                                                        <div className="wyhmdc">
+                                                            <div className="_1ubyg61">
+                                                                <div>
+                                                                    <div className="_jro6t0">
+                                                                        <span className="_67jjmd" id="title-label-filterItem-4448503134735162330-switch-ib-true">즉시 예약</span>
+                                                                    </div>
+                                                                    <div className="_6gg9ez" id="subtitle-label-filterItem-4448503134735162330-switch-ib-true">호스트 승인을 기다릴 필요 없이 예약할 수 있는 숙소</div>
+                                                                </div>
+                                                                <div class="_1vmcy00">
+                                                                    <button aria-checked="false" aria-labelledby="title-label-filterItem-4448503134735162330-switch-ib-true" aria-describedby="subtitle-label-filterItem-4448503134735162330-switch-ib-true" id="filterItem-4448503134735162330-switch-ib-true" role="switch" type="button" class="_1hzx1vsg">
+                                                                        <div class="_vr1ztso"></div>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="wyhmdc">
+                                                            <div className="_1ubyg61">
+                                                                <div>
+                                                                    <div className="_jro6t0">
+                                                                        <span className="_67jjmd" id="title-label-filterItem-4448503134735162330-switch-ib-true">셀프 체크인</span>
+                                                                    </div>
+                                                                    <div className="_6gg9ez" id="subtitle-label-filterItem-4448503134735162330-switch-ib-true">숙소에 도착한 후 복잡한 절차 없이 쉽게 입실할 수 있습니다.</div>
+                                                                </div>
+                                                                <div class="_1vmcy00">
+                                                                    <button aria-checked="false" aria-labelledby="title-label-filterItem-4448503134735162330-switch-ib-true" aria-describedby="subtitle-label-filterItem-4448503134735162330-switch-ib-true" id="filterItem-4448503134735162330-switch-ib-true" role="switch" type="button" class="_1hzx1vsg">
+                                                                        <div class="_vr1ztso"></div>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <div className="filter_inner">
+                                    <div className="ft-inner">
+                                        <div className="_16sjn7m8">
+                                            <div class="_11tsb6x"></div>
+                                            <section>
+                                                <div className="_zi86zd81">
+                                                    <h2 id="filter-section-heading-id--1297268627847806902" tabindex="-1" className="_14i3z6h1a1" elementtiming="LCP-target">접근성 편의</h2>
+                                                    <div className="_lrg3eu">호스트가 제공하고 에어비앤비에서 검토한 정보입니다.</div>
+                                                </div>
+                                                <div>
+                                                    <div className="bndviu3">
+                                                        <div className="wyhmdc">
+                                                            <div>
+                                                                <div className="t2353uq dir dir-ltr">
+                                                                    <h3 tabindex="-1" className="_14i3z6h" elementtiming="LCP-target">게스트 출입구 및 주차장</h3>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div className="_q4izx9">
+                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                        <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                            <div className="_jro6t0">
+                                                                                <div className="_7ytxmo">
+                                                                                    <span className="_10ndlvp">
+                                                                                        <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                        <span className="_41yoza" data-checkbox="true"></span>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div className="_gfomxi">
+                                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">게스트 출입구에 계단이나 문턱 없음</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div className="_q4izx9">
+                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                        <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                            <div className="_jro6t0">
+                                                                                <div className="_7ytxmo">
+                                                                                    <span className="_10ndlvp">
+                                                                                        <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                        <span className="_41yoza" data-checkbox="true"></span>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div className="_gfomxi">
+                                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">너비 81cm 이상의 게스트 출입구</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div className="_q4izx9">
+                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                        <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                            <div className="_jro6t0">
+                                                                                <div className="_7ytxmo">
+                                                                                    <span className="_10ndlvp">
+                                                                                        <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                        <span className="_41yoza" data-checkbox="true"></span>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div className="_gfomxi">
+                                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">휠체어 접근 가능 주차 공간</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <div className="_q4izx9">
+                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                        <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                            <div className="_jro6t0">
+                                                                                <div className="_7ytxmo">
+                                                                                    <span className="_10ndlvp">
+                                                                                        <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                        <span className="_41yoza" data-checkbox="true"></span>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div className="_gfomxi">
+                                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">
+                                                                                        게스트 출입구까지 계단이나 문턱 없이 이동 가능</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="_cfvh61">
+                                                        <div className="l1rjzj3m dir dir-ltr">
+                                                            <button type="button" className="_edqkt1v">
+                                                                <span className="lnq7699 dir dir-ltr">더 표시</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="filter_inner">
+                                    <div className="ft-inner">
+                                        <div className="_16sjn7m8">
+                                            <div class="_11tsb6x"></div>
+                                            <section>
+                                                <div className="_zi86zd8">
+                                                    <h2 id="filter-section-heading-id--1297268627847806902" tabindex="-1" className="_14i3z6h1a" elementtiming="LCP-target">최고 수준의 숙소</h2>
+                                                </div>
+                                                <div>
+                                                    <div className="bndviu">
+                                                        <div className="wyhmdc">
+                                                            <div className="_1ubyg61">
+                                                                <div>
+                                                                    <div className="_jro6t0">
+                                                                        <span className="_67jjmd" id="title-label-filterItem-4448503134735162330-switch-ib-true">슈퍼호스트</span>
+                                                                    </div>
+                                                                    <div className="_6gg9ez" id="subtitle-label-filterItem-4448503134735162330-switch-ib-true">슈퍼호스트의 숙소에 머물러보세요</div>
+                                                                    <div className="_2lqt1m">
+                                                                        <div className="_1sikdxcl">더 알아보기</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="_1vmcy00">
+                                                                    <button aria-checked="false" aria-labelledby="title-label-filterItem-4448503134735162330-switch-ib-true" aria-describedby="subtitle-label-filterItem-4448503134735162330-switch-ib-true" id="filterItem-4448503134735162330-switch-ib-true" role="switch" type="button" class="_1hzx1vsg">
+                                                                        <div class="_vr1ztso"></div>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                            <div className="filter_inner">
+                                    <div className="ft-inner">
+                                        <div className="_16sjn7m8">
+                                            <div class="_11tsb6x"></div>
+                                            <section>
+                                                <div className="_zi86zd81">
+                                                    <h2 id="filter-section-heading-id--1297268627847806902" tabindex="-1" className="_14i3z6h1a1" elementtiming="LCP-target">호스트 언어</h2>
+                                                </div>
+                                                <div>
+                                                    <div className="bndviu3">
+                                                            <div>
+                                                                <div className="_q4izx9">
+                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                        <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                            <div className="_jro6t0">
+                                                                                <div className="_7ytxmo">
+                                                                                    <span className="_10ndlvp">
+                                                                                        <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                        <span className="_41yoza" data-checkbox="true"></span>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div className="_gfomxi">
+                                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">영어</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div className="_q4izx9">
+                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                        <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                            <div className="_jro6t0">
+                                                                                <div className="_7ytxmo">
+                                                                                    <span className="_10ndlvp">
+                                                                                        <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                        <span className="_41yoza" data-checkbox="true"></span>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div className="_gfomxi">
+                                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">프랑스어</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div className="_q4izx9">
+                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                        <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                            <div className="_jro6t0">
+                                                                                <div className="_7ytxmo">
+                                                                                    <span className="_10ndlvp">
+                                                                                        <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                        <span className="_41yoza" data-checkbox="true"></span>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div className="_gfomxi">
+                                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">독일어</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div className="_q4izx9">
+                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                        <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                            <div className="_jro6t0">
+                                                                                <div className="_7ytxmo">
+                                                                                    <span className="_10ndlvp">
+                                                                                        <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                        <span className="_41yoza" data-checkbox="true"></span>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div className="_gfomxi">
+                                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">일본어</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div className="_cfvh61">
+                                                        <div className="l1rjzj3m dir dir-ltr">
+                                                            <button type="button" className="_edqkt1v">
+                                                                <span className="lnq7699 dir dir-ltr">더 표시</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </main>
                     </div>
                     <footer>
