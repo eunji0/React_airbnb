@@ -8,9 +8,144 @@ const ModalFilter = (props) => {
     const { open, close } = props;
     
     const [countbtn, setcountbtn] = useState(false);
+    const [countbtn1, setcountbtn1] = useState(false);
+    const [countbtn2, setcountbtn2] = useState(false);
+    const [countbtn3, setcountbtn3] = useState(false);
+    const [countbtn4, setcountbtn4] = useState(false);
+    const [countbtn5, setcountbtn5] = useState(false);
+    const [countbtn6, setcountbtn6] = useState(false);
+    const [countbtn7, setcountbtn7] = useState(false);
+    const [countbtn8, setcountbtn8] = useState(false);
 
-    
+    function ctbtn(){
+        setcountbtn(!countbtn);
+        if(countbtn===true){
+            setcountbtn1(false);
+            setcountbtn2(false);
+            setcountbtn3(false);
+            setcountbtn4(false);
+            setcountbtn5(false);
+            setcountbtn6(false);
+            setcountbtn7(false);
+            setcountbtn8(false);
+            return
+        }
+    }
 
+    function ctbtn1(){
+        setcountbtn1(!countbtn1);
+        if(countbtn1===false){
+            setcountbtn(true);
+            setcountbtn2(false);
+            setcountbtn3(false);
+            setcountbtn4(false);
+            setcountbtn5(false);
+            setcountbtn6(false);
+            setcountbtn7(false);
+            setcountbtn8(false);
+            return
+        }
+    }
+
+    function ctbtn2(){
+        setcountbtn2(!countbtn2);
+        if(countbtn2===false){
+            setcountbtn(true);
+            setcountbtn1(false);
+            setcountbtn3(false);
+            setcountbtn4(false);
+            setcountbtn5(false);
+            setcountbtn6(false);
+            setcountbtn7(false);
+            setcountbtn8(false);
+            return
+        }
+    }
+
+    function ctbtn3(){
+        setcountbtn3(!countbtn3);
+        if(countbtn3===false){
+            setcountbtn(true);
+            setcountbtn1(false);
+            setcountbtn2(false);
+            setcountbtn4(false);
+            setcountbtn5(false);
+            setcountbtn6(false);
+            setcountbtn7(false);
+            setcountbtn8(false);
+            return
+        }
+    }
+    function ctbtn4(){
+        setcountbtn4(!countbtn4);
+        if(countbtn4===false){
+            setcountbtn(true);
+            setcountbtn1(false);
+            setcountbtn3(false);
+            setcountbtn2(false);
+            setcountbtn5(false);
+            setcountbtn6(false);
+            setcountbtn7(false);
+            setcountbtn8(false);
+            return
+        }
+    }
+    function ctbtn5(){
+        setcountbtn5(!countbtn5);
+        if(countbtn5===false){
+            setcountbtn(true);
+            setcountbtn1(false);
+            setcountbtn3(false);
+            setcountbtn4(false);
+            setcountbtn2(false);
+            setcountbtn6(false);
+            setcountbtn7(false);
+            setcountbtn8(false);
+            return
+        }
+    }
+    function ctbtn6(){
+        setcountbtn6(!countbtn6);
+        if(countbtn6===false){
+            setcountbtn(true);
+            setcountbtn1(false);
+            setcountbtn3(false);
+            setcountbtn4(false);
+            setcountbtn5(false);
+            setcountbtn2(false);
+            setcountbtn7(false);
+            setcountbtn8(false);
+            return
+        }
+    }
+    function ctbtn7(){
+        setcountbtn7(!countbtn7);
+        if(countbtn7===false){
+            setcountbtn(true);
+            setcountbtn1(false);
+            setcountbtn3(false);
+            setcountbtn4(false);
+            setcountbtn5(false);
+            setcountbtn6(false);
+            setcountbtn2(false);
+            setcountbtn8(false);
+            return
+        }
+    }
+    function ctbtn8(){
+        setcountbtn8(!countbtn8);
+        if(countbtn8===false){
+            setcountbtn(true);
+            setcountbtn1(false);
+            setcountbtn3(false);
+            setcountbtn4(false);
+            setcountbtn5(false);
+            setcountbtn6(false);
+            setcountbtn7(false);
+            setcountbtn2(false);
+            return
+        }
+    }
     return (
         <div className={open ? 'filtermodal' : "nonemodal"} >
             {open ? (
@@ -106,7 +241,7 @@ const ModalFilter = (props) => {
                                                 </div>
                                                 <div className="dfsfdf">
                                                     <div>
-                                                        <div className="_q4izx9">
+                                                        <div className="_q4izx9" >
                                                             <div style={{ paddingTop: "0px", paddingBottom: "0px", borderRadius: "1px" }}>
                                                                 <label style={{ cursor: "pointer" }}>
                                                                     <div className="_jro6t01">
@@ -139,8 +274,30 @@ const ModalFilter = (props) => {
                                                                             </span>
                                                                         </div>
                                                                         <div className="_gfomxi">
-                                                                            <div id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-title" className="_gw4xx4">집 전체</div>
-                                                                            <div id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" className="_hi9sy">단독으로 사용하는 공간 전체</div>
+                                                                            <div id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-title" className="_gw4xx4">개인실</div>
+                                                                            <div id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" className="_hi9sy">집 또는 호텔의 개인실과 일부 공용 공간</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </label>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div className="_q4izx9">
+                                                            <div style={{ paddingTop: "0px", paddingBottom: "0px", borderRadius: "1px" }}>
+                                                                <label style={{ cursor: "pointer" }}>
+                                                                    <div className="_jro6t01">
+                                                                        <div className="_7ytxmo">
+                                                                            <span className="_10ndlvp">
+                                                                                <input name="집 전체" aria-describedby="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                <span className="_41yoza" data-checkbox="true"></span>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div className="_gfomxi">
+                                                                            <div id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-title" className="_gw4xx4">다인실</div>
+                                                                            <div id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" className="_hi9sy">다른 사람들과 함께 사용하는 다인실 및 공용 공간</div>
                                                                         </div>
                                                                     </div>
                                                                 </label>
@@ -179,63 +336,63 @@ const ModalFilter = (props) => {
                                                                     <div className="vcljsd">
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <button className="_11yc859a" aria-pressed="true" type="button">
+                                                                                <button className="_11yc859a" aria-pressed="true" type="button" onClick={ctbtn} style={{ color: countbtn===false ? "rgb(255, 255, 255)" : "rgb(34, 34, 34)", backgroundColor: countbtn===false ? "rgb(34, 34, 34)" : "rgb(255, 255, 255)" }}>
                                                                                     <span className="_gjz3kfc" aria-label="상관없음">상관없음</span>
                                                                                 </button>
                                                                             </div>
                                                                         </div>
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <div className="_1710jwy" onClick={() => setcountbtn(true)} style={{ color: countbtn ? "rgb(255, 255, 255)" : "rgb(34, 34, 34)", backgroundColor: countbtn ? "rgb(34, 34, 34)" : "rgb(255, 255, 255)" }}>
+                                                                                <div className="_1710jwy" onClick={ctbtn1} style={{ color: countbtn1 ? "rgb(255, 255, 255)" : "rgb(34, 34, 34)", backgroundColor: countbtn1 ? "rgb(34, 34, 34)" : "rgb(255, 255, 255)" }}>
                                                                                     <span className="_v56eio" aria-label="1">1</span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <div className="_1710jwy">
+                                                                                <div className="_1710jwy" onClick={ctbtn2} style={{ color: countbtn2 ? "rgb(255, 255, 255)" : "rgb(34, 34, 34)", backgroundColor: countbtn2 ? "rgb(34, 34, 34)" : "rgb(255, 255, 255)" }}>
                                                                                     <span className="_v56eio" aria-label="1">2</span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <div className="_1710jwy">
+                                                                                <div className="_1710jwy" onClick={ctbtn3} style={{ color: countbtn3 ? "rgb(255, 255, 255)" : "rgb(34, 34, 34)", backgroundColor: countbtn3 ? "rgb(34, 34, 34)" : "rgb(255, 255, 255)" }}>
                                                                                     <span className="_v56eio" aria-label="1">3</span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <div className="_1710jwy">
+                                                                                <div className="_1710jwy" onClick={ctbtn4} style={{ color: countbtn4 ? "rgb(255, 255, 255)" : "rgb(34, 34, 34)", backgroundColor: countbtn4 ? "rgb(34, 34, 34)" : "rgb(255, 255, 255)" }}>
                                                                                     <span className="_v56eio" aria-label="1">4</span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <div className="_1710jwy">
+                                                                                <div className="_1710jwy" onClick={ctbtn5} style={{ color: countbtn5 ? "rgb(255, 255, 255)" : "rgb(34, 34, 34)", backgroundColor: countbtn5 ? "rgb(34, 34, 34)" : "rgb(255, 255, 255)" }}>
                                                                                     <span className="_v56eio" aria-label="1">5</span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <div className="_1710jwy">
+                                                                                <div className="_1710jwy" onClick={ctbtn6} style={{ color: countbtn6 ? "rgb(255, 255, 255)" : "rgb(34, 34, 34)", backgroundColor: countbtn6 ? "rgb(34, 34, 34)" : "rgb(255, 255, 255)" }}>
                                                                                     <span className="_v56eio" aria-label="1">6</span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <div className="_1710jwy">
+                                                                                <div className="_1710jwy" onClick={ctbtn7} style={{ color: countbtn7 ? "rgb(255, 255, 255)" : "rgb(34, 34, 34)", backgroundColor: countbtn7 ? "rgb(34, 34, 34)" : "rgb(255, 255, 255)" }}>
                                                                                     <span className="_v56eio" aria-label="1">7</span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <div className="_1710jwy">
+                                                                                <div className="_1710jwy" onClick={ctbtn8} style={{ color: countbtn8 ? "rgb(255, 255, 255)" : "rgb(34, 34, 34)", backgroundColor: countbtn8 ? "rgb(34, 34, 34)" : "rgb(255, 255, 255)" }}>
                                                                                     <span className="_v56eio" aria-label="1">8+</span>
                                                                                 </div>
                                                                             </div>
@@ -257,7 +414,7 @@ const ModalFilter = (props) => {
                                                                     <div className="vcljsd">
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <button className="_11yc859a" aria-pressed="true" type="button">
+                                                                                <button className="_11yc859a" aria-pressed="true" type="button" style={{color:"#fff", backgroundColor:"#222"}}>
                                                                                     <span className="_gjz3kfc" aria-label="상관없음">상관없음</span>
                                                                                 </button>
                                                                             </div>
@@ -335,7 +492,7 @@ const ModalFilter = (props) => {
                                                                     <div className="vcljsd">
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <button className="_11yc859a" aria-pressed="true" type="button">
+                                                                                <button className="_11yc859a" aria-pressed="true" type="button" style={{color:"#fff", backgroundColor:"#222"}}>
                                                                                     <span className="_gjz3kfc" aria-label="상관없음">상관없음</span>
                                                                                 </button>
                                                                             </div>

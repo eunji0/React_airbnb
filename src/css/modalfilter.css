@@ -431,8 +431,8 @@
     min-width: 59px !important;
     font-size: 12px !important;
     line-height: 16px !important;
-    background-color: rgb(34, 34, 34) !important;
-    color: rgb(255, 255, 255) !important;
+    /* background-color: rgb(34, 34, 34) !important;
+    color: rgb(255, 255, 255) !important; */
     font-weight: 800 !important;
 }
 
@@ -721,4 +721,9 @@ width: 100%;
 ._2lqt1m {
     padding-top: 5px !important;
     padding-bottom: 4px !important;
+}
+
+._smt4n2a {
+    position: absolute !important;
+    opacity: 0 !important;
 }
