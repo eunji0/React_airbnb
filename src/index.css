@@ -592,7 +592,7 @@ body {
   border: 0.5px solid rgb(0 0 0 / 0.3);
   border-radius: 50%;
   cursor: pointer;
-  margin: 0;
+  margin-top: 20px;
   padding: 0;
   background-clip: padding-box;
   background-color: #FFFFFF;
@@ -620,7 +620,7 @@ body {
   border: 0.5px solid rgb(0 0 0 / 0.3);
   border-radius: 50%;
   cursor: pointer;
-  margin: 0;
+  margin-top: 20px;
   padding: 0;
   background-clip: padding-box;
   background-color: var(--f-mkcy-f);
@@ -634,9 +634,54 @@ body {
 }
 
 .scd_hdr_in {
-
   height: 100%;
   min-width: 0;
+}
+
+.boxss {
+  width: 300px;
+  height: 80px;
+  background-color: olive;
+  margin-left: 100px;
+}
+
+.boxzzz {
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.slick-prev {
+  z-index: 3;
+  background-color: #FFFFFF;
+}
+.slick-next {
+  position: relative;
+  right: 60px;
+  z-index: 3;
+  background-color: #FFFFFF;
+}
+
+.slick-list {
+  height: 80px;
+  width: 100%;
+  /* width: 4000px !important; */
+}
+
+.slick-track {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: 300px;
+  width: 6000px !important;
+  overflow: hidden;
+}
+
+.slick-slide {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 
