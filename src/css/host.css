@@ -948,6 +948,7 @@
 
 .hmmain2-in {
   position: relative;
+  height: 750px;
 }
 
 .hmmain2-btn {
@@ -1033,6 +1034,84 @@
   margin-top: 24px !important;
 }
 
+@media (min-width: 1440px){
+.hmmain2-img {
+    margin: 64px auto 0 !important;
+}
+}
+
+@media (min-width: 744px){
+.hmmain2-img {
+    padding-top: 0px !important;
+}
+}
+
+.hmmain2-img {
+  height: 100%;
+    overflow-x: auto !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    padding-top: 16px !important;
+    position: relative !important;
+}
+
+.slick-initialized {
+  overflow: hidden;
+}
+
+.hmmain2-img .slick-initialized .slick-arrow{
+  align-self: flex-end;
+}
+
+.hmmain2-img .slick-initialized .slick-prev{
+  position: relative;
+  left: 950px;
+  margin-bottom: 20px;
+}
+
+.hmmain2-img .slick-initialized .slick-next{
+  position: relative;
+  right: 490px;
+  margin-bottom: 20px;
+}
+
+.hmmain2-img .slick-initialized {
+  display: flex;
+}
+
+/* .hmmain2-img .slick-initialized .slick-list {
+  height: 464.81px;
+  
+} */
+
+.hmmain2-img .slick-initialized .slick-list .slick-track {
+  /* width: 1471.2px !important; */
+  width: 8347px !important;
+}
+
+.hmmain2-img .slick-initialized .slick-list .slick-track .slick-slide {
+  height: 464.81px;
+  width: 464.81px !important;
+  margin-right: 20px !important;
+}
+
+.htdummyimg {
+  height: 464.81px;
+  width: 464.81px !important;
+  border-radius: 5px;
+}
+
+.htdmytxt {
+  z-index: 3;
+  color: #222222 !important;
+  font-size: 26px !important;
+  line-height: 30px !important;
+  margin-bottom: 34px !important;
+
+}
 ._17atahn {
   cursor: pointer !important;
   display: inline-block !important;
@@ -1143,14 +1222,6 @@
   position: relative !important;
 }
 
-.hmmain2-img {
-  margin: 64px auto 0 !important;
-  padding-top: 0px;
-  scroll-snap-type: x mandatory !important;
-  overflow-x: auto !important;
-  display: flex;
-  position: relative;
-}
 
 .hmmain2-flex {
   flex: 1 0 calc(32.75% + 1px) !important;

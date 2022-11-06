@@ -11,6 +11,8 @@ import { ReactComponent as Plus } from '../images/Plus.svg';
 import { ReactComponent as Minus } from '../images/Minus.svg';
 import { ReactComponent as Previous } from '../images/Previous.svg';
 import styled from "styled-components";
+import Slider from "react-slick";
+import { hostdummy } from "../hostdummy";
 
 export default function HostMain() {
     const outSection = useRef(null);
@@ -51,8 +53,36 @@ export default function HostMain() {
         });
     }
 
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: (
+            <span className="_17x243d">
+                <button aria-label="이전" data-testid="prev-host-profile-button" type="button" className="_16wu1yq">
+                    <span className="_e296pg">
+                        <Previous />
+                    </span>
+                </button>
+            </span>
+
+        ),
+        nextArrow: (
+            <span className="_17x243d">
+                <button aria-label="다음" data-testid="next-host-profile-button" type="button" className="_16wu1yq">
+                    <span className="_e296pg">
+                        <Next />
+                    </span>
+                </button>
+            </span>
+        ),
+    };
+
     return (
-        
+
         <main>
             <div className="hostmain">
                 <div className="hostmain-logo">
@@ -82,10 +112,10 @@ export default function HostMain() {
                 </div>
                 <div className="hostmain-right">
                     <div className="hmr-inner">
-                    <video className="_e2l2kr" autoplay="" aria-label="필라델피아의 호스트 첼시님이 미소를 지으며 문을 엽니다. 뭄바이에서 호스팅하는 소라야님이 미소를 지으며 옆에 있는 다른 사람과 함께 현관문을 엽니다. 요하네스버그의 호스트 모하메드님이 미소를 지으며 문을 엽니다. 멕시코시티의 호스트 마리아님이 고개를 끄덕이고 미소를 지으며 식물을 옮깁니다." crossorigin="anonymous" playsinline="" preload="auto" style={{objectFit: "cover", objectPosition: "center top"}}>
-                        <source src="https://a0.muscache.com/v/a9/a7/a9a7873c-95de-5e37-8995-a5abb5b6b02f/a9a7873c95de5e378995a5abb5b6b02f_4000k_1.mp4?imformat=h265" type="video/mp4; codecs=hevc"/>
-                        <source src="https://a0.muscache.com/v/a9/a7/a9a7873c-95de-5e37-8995-a5abb5b6b02f/a9a7873c95de5e378995a5abb5b6b02f_4000k_1.mp4" type="video/mp4"/>
-                    </video>
+                        <video className="_e2l2kr" autoplay="" aria-label="필라델피아의 호스트 첼시님이 미소를 지으며 문을 엽니다. 뭄바이에서 호스팅하는 소라야님이 미소를 지으며 옆에 있는 다른 사람과 함께 현관문을 엽니다. 요하네스버그의 호스트 모하메드님이 미소를 지으며 문을 엽니다. 멕시코시티의 호스트 마리아님이 고개를 끄덕이고 미소를 지으며 식물을 옮깁니다." crossorigin="anonymous" playsinline="" preload="auto" style={{ objectFit: "cover", objectPosition: "center top" }}>
+                            <source src="https://a0.muscache.com/v/a9/a7/a9a7873c-95de-5e37-8995-a5abb5b6b02f/a9a7873c95de5e378995a5abb5b6b02f_4000k_1.mp4?imformat=h265" type="video/mp4; codecs=hevc" />
+                            <source src="https://a0.muscache.com/v/a9/a7/a9a7873c-95de-5e37-8995-a5abb5b6b02f/a9a7873c95de5e378995a5abb5b6b02f_4000k_1.mp4" type="video/mp4" />
+                        </video>
                         <div className="hmr-in1"></div>
                         <div className="hmr-in2">
                             <div className="hmr-in21">
@@ -158,7 +188,7 @@ export default function HostMain() {
                                             <h3 className="_m37l9b">숙소를 소개해주세요</h3>
                                             <div className="hm-map">
                                                 <div aria-hidden="false" style={{ position: "relative", width: "100%", height: "100%" }}>
-                                                   
+
                                                     <MapContents id="Mymap" className="hmmapd1" >
                                                         <div className="hmmapd2">
                                                             <div className="hmmapdd">
@@ -237,7 +267,7 @@ export default function HostMain() {
                                                             </div>
 
                                                         </div>
-                                                        </MapContents>
+                                                    </MapContents>
                                                     <div className="_pawvzww">
                                                         <div className=" dir dir-ltr" aria-hidden="false" style={{ whiteSpace: "nowrap", position: "absolute", marginLeft: "24px", marginTop: "24px", top: "0px", left: "0px", zIndex: "1", transition: "transform 850ms cubic-bezier(0.25, 1, 0.5, 1) 0s" }}>
                                                             <div className="c15e4bhw ctbkggg dir dir-ltr" style={{ height: "40px", flexDirection: "row" }}>
@@ -292,27 +322,18 @@ export default function HostMain() {
                         언제 어디서든 <br />호스팅하실 수 있습니다
                     </h2>
                     <div className="hmmain2-in">
-                        <div className="hmmain2-btn">
-                            <span className="_17x243d">
-                                <button aria-label="이전" data-testid="prev-host-profile-button" type="button" className="_16wu1yq">
-                                    <span className="_e296pg">
-                                        <Previous />
-                                    </span>
-                                </button>
-                            </span>
-                            <span className="_17x243d">
-                                <button aria-label="다음" data-testid="next-host-profile-button" type="button" className="_16wu1yq">
-                                    <span className="_e296pg">
-                                        <Next />
-                                    </span>
-                                </button>
-                            </span>
-                        </div>
                         <div className="hmmain2-img">
-                            <div class="_1oqtnba"></div>
-                            <div className="hmmain2-flex" aria-hidden="false">
-
-                            </div>
+                            <Slider {...settings}>
+                                <div class="_1oqtnba"></div>
+                                {
+                                    hostdummy.results.map(item => (
+                                        <div><img className="htdummyimg" src={item.imgpath} />
+                                        <div className="htdmytxt">{item.text}</div>
+                                        </div>
+                                    ))
+                                }
+                                
+                            </Slider>
                         </div>
                     </div>
                 </div>
@@ -388,7 +409,7 @@ export default function HostMain() {
                         <div className="_1j4bomsw">
                             <Link aria-label="호스팅 시작하기" data-testid="lys-intro-video-cta" to="/" className="_108mstlv">
                                 <span className="tjxdvlu dir dir-ltr">
-                                    <span className="t12u7nq4 dir dir-ltr" style={{backgroundPosition:"calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%)"}}>
+                                    <span className="t12u7nq4 dir dir-ltr" style={{ backgroundPosition: "calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%)" }}>
                                     </span>
                                 </span>
                                 <span className="c4wd1yj dir dir-ltr">시작하기</span>
