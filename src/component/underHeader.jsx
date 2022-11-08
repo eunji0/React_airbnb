@@ -10,7 +10,7 @@ import { menudummy } from "../menudummy";
 
 
 export default function UnderHeader() {
-
+    const [prebtn, setprebtn] =useState(false);//가로스크롤 이전버튼
     const [filterOpen, setFilterOpen] = useState(false);//필터모달
     const outSection = useRef(null);
 
@@ -19,27 +19,31 @@ export default function UnderHeader() {
     }
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 5,
         prevArrow: (
-            <div className="scd_header_scroll">
+            <div>
+            <div className="scd_header_scroll" style={{display: prebtn ? "block":"none"}}>
                 <button type="button" className="scd_header_btn">
                     <span className="scd_header_btn_span">
                         <Previous />
                     </span>
                 </button>
             </div>
+            </div>
         ),
         nextArrow: (
-            <div className="scd_header_scroll_next2">
+            <div>
+            <div className="scd_header_scroll_next2" onClick={()=>setprebtn(true)}>
                 <button aria-label="다음" data-shared-element-id="next-button" type="button" class="scd_header_scroll_next_btn">
                     <span className="scd_header_scroll_next_span">
                         <Next />
                     </span>
                 </button>
+            </div>
             </div>
         ),
     };

@@ -1,12 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as HostLogo } from '../images/HostLogo.svg';
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef} from "react";
 import styled from "styled-components";
 
 export default function HostHeader() {
     const [scrollPosition, setScrollPosition] = useState(0);
+    const [signOpen, setSignOpen] = useState(false); //모달로그인
+    const outSection = useRef(null);
 
+     //모달
+     const openSign = () => {
+        setSignOpen(true);
+    }
+
+    const closeSign = () => {
+        setSignOpen(false);
+    }
+
+    useEffect(() => {
+        function handleClickOutside(e) {
+            if (outSection.current && !outSection.current.contains(e.target)) {
+       
+                setSignOpen(false);
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [outSection]);
+
+    //스크롤
     const updateScroll = () => {
         setScrollPosition(window.scrollY || document.documentElement.scrollTop);
     }

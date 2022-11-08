@@ -45,6 +45,7 @@ export default function Header() {
 
 
 
+
     //달력
     const [state, setState] = useState([
         {
@@ -429,7 +430,6 @@ export default function Header() {
                                                                                             <Google />
                                                                                         </div>
                                                                                         <div className="lm4div2">구글로 로그인하기
-                                                                                     
                                                                                         </div>
                                                                                         <div className="lm4div3"></div>
                                                                                     </div>
