@@ -1,12 +1,19 @@
 import React from "react";
 import { ReactComponent as Closelogin } from '../images/Closelogin.svg';
- import { useState, useEffect, useRef } from "react";
-
+import { useState, useEffect, useRef } from "react";
+import { ReactComponent as Check } from '../images/Check.svg';
 
 const ModalFilter = (props) => {
     // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
     const { open, close } = props;
-    
+    //호버
+    const [isboxHovering, setIsboxHovering] = useState(0);
+    const [isboxHovering2, setIsboxHovering2] = useState(0);
+    const [isboxHovering3, setIsboxHovering3] = useState(0);
+    const [isboxChecking, setIsboxChecking] = useState(false);
+    const [isboxChecking2, setIsboxChecking2] = useState(false);
+    const [isboxChecking3, setIsboxChecking3] = useState(false);
+
     const [countbtn, setcountbtn] = useState(false);
     const [countbtn1, setcountbtn1] = useState(false);
     const [countbtn2, setcountbtn2] = useState(false);
@@ -17,9 +24,11 @@ const ModalFilter = (props) => {
     const [countbtn7, setcountbtn7] = useState(false);
     const [countbtn8, setcountbtn8] = useState(false);
 
-    function ctbtn(){
+    console.log(isboxChecking);
+
+    function ctbtn() {
         setcountbtn(!countbtn);
-        if(countbtn===true){
+        if (countbtn === true) {
             setcountbtn1(false);
             setcountbtn2(false);
             setcountbtn3(false);
@@ -32,9 +41,9 @@ const ModalFilter = (props) => {
         }
     }
 
-    function ctbtn1(){
+    function ctbtn1() {
         setcountbtn1(!countbtn1);
-        if(countbtn1===false){
+        if (countbtn1 === false) {
             setcountbtn(true);
             setcountbtn2(false);
             setcountbtn3(false);
@@ -47,9 +56,9 @@ const ModalFilter = (props) => {
         }
     }
 
-    function ctbtn2(){
+    function ctbtn2() {
         setcountbtn2(!countbtn2);
-        if(countbtn2===false){
+        if (countbtn2 === false) {
             setcountbtn(true);
             setcountbtn1(false);
             setcountbtn3(false);
@@ -62,9 +71,9 @@ const ModalFilter = (props) => {
         }
     }
 
-    function ctbtn3(){
+    function ctbtn3() {
         setcountbtn3(!countbtn3);
-        if(countbtn3===false){
+        if (countbtn3 === false) {
             setcountbtn(true);
             setcountbtn1(false);
             setcountbtn2(false);
@@ -76,9 +85,9 @@ const ModalFilter = (props) => {
             return
         }
     }
-    function ctbtn4(){
+    function ctbtn4() {
         setcountbtn4(!countbtn4);
-        if(countbtn4===false){
+        if (countbtn4 === false) {
             setcountbtn(true);
             setcountbtn1(false);
             setcountbtn3(false);
@@ -90,9 +99,9 @@ const ModalFilter = (props) => {
             return
         }
     }
-    function ctbtn5(){
+    function ctbtn5() {
         setcountbtn5(!countbtn5);
-        if(countbtn5===false){
+        if (countbtn5 === false) {
             setcountbtn(true);
             setcountbtn1(false);
             setcountbtn3(false);
@@ -104,9 +113,9 @@ const ModalFilter = (props) => {
             return
         }
     }
-    function ctbtn6(){
+    function ctbtn6() {
         setcountbtn6(!countbtn6);
-        if(countbtn6===false){
+        if (countbtn6 === false) {
             setcountbtn(true);
             setcountbtn1(false);
             setcountbtn3(false);
@@ -118,9 +127,9 @@ const ModalFilter = (props) => {
             return
         }
     }
-    function ctbtn7(){
+    function ctbtn7() {
         setcountbtn7(!countbtn7);
-        if(countbtn7===false){
+        if (countbtn7 === false) {
             setcountbtn(true);
             setcountbtn1(false);
             setcountbtn3(false);
@@ -132,9 +141,9 @@ const ModalFilter = (props) => {
             return
         }
     }
-    function ctbtn8(){
+    function ctbtn8() {
         setcountbtn8(!countbtn8);
-        if(countbtn8===false){
+        if (countbtn8 === false) {
             setcountbtn(true);
             setcountbtn1(false);
             setcountbtn3(false);
@@ -241,61 +250,107 @@ const ModalFilter = (props) => {
                                                 </div>
                                                 <div className="dfsfdf">
                                                     <div>
-                                                        <div className="_q4izx9" >
+                                                        <div className="_q4izx9">
                                                             <div style={{ paddingTop: "0px", paddingBottom: "0px", borderRadius: "1px" }}>
-                                                                <label style={{ cursor: "pointer" }}>
-                                                                    <div className="_jro6t01">
-                                                                        <div className="_7ytxmo">
-                                                                            <span className="_10ndlvp">
-                                                                                <input name="집 전체" aria-describedby="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-checkbox" className="_1yf4i4f" type="checkbox" />
-                                                                                <span className="_41yoza" data-checkbox="true"></span>
-                                                                            </span>
-                                                                        </div>
-                                                                        <div className="_gfomxi">
+                                                                <label style={{ cursor: "pointer" }} >
+                                                                    <div className="_jro6t01" onMouseOver={() => setIsboxHovering(1)}
+                                                                        onMouseOut={() => setIsboxHovering(0)} >
+                                                                        {isboxHovering == true ? (
+                                                                            <div className="_7ytxmo" onClick={() => setIsboxChecking(!isboxChecking)}>
+                                                                                <span className="_10ndlvp">
+                                                                                    <input name="집 전체" aria-describedby="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className={isboxChecking ? "ermsdf" : "_41yoza1"} data-checkbox="true">
+                                                                                        <span className="_1oj8hra" style={{ display: isboxChecking ? "block" : "none" }}><Check /></span>
+                                                                                    </span>
+                                                                                </span>
+                                                                            </div>
+                                                                        ) : (
+                                                                            <div className="_7ytxmo">
+                                                                                <span className="_10ndlvp">
+                                                                                    <input name="집 전체" aria-describedby="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className={isboxChecking ? "ermsdf" : "_41yoza"} data-checkbox="true">
+                                                                                        <span className="_1oj8hra" style={{ display: isboxChecking ? "block" : "none" }}><Check /></span>
+                                                                                    </span>
+                                                                                </span>
+                                                                            </div>
+                                                                        )}
+
+                                                                        <div className="_gfomxi" onMouseOver={() => setIsboxHovering(1)}
+                                                                            onMouseOut={() => setIsboxHovering(0)}>
                                                                             <div id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-title" className="_gw4xx4">집 전체</div>
                                                                             <div id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" className="_hi9sy">단독으로 사용하는 공간 전체</div>
                                                                         </div>
                                                                     </div>
                                                                 </label>
-
                                                             </div>
-
                                                         </div>
+
                                                     </div>
                                                     <div>
                                                         <div className="_q4izx9">
                                                             <div style={{ paddingTop: "0px", paddingBottom: "0px", borderRadius: "1px" }}>
                                                                 <label style={{ cursor: "pointer" }}>
-                                                                    <div className="_jro6t01">
-                                                                        <div className="_7ytxmo">
-                                                                            <span className="_10ndlvp">
-                                                                                <input name="집 전체" aria-describedby="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-checkbox" className="_1yf4i4f" type="checkbox" />
-                                                                                <span className="_41yoza" data-checkbox="true"></span>
-                                                                            </span>
-                                                                        </div>
-                                                                        <div className="_gfomxi">
+                                                                    <div className="_jro6t01" onMouseOver={() => setIsboxHovering(1)}
+                                                                        onMouseOut={() => setIsboxHovering(0)} >
+                                                                        {isboxHovering2 == true ? (
+                                                                            <div className="_7ytxmo" onClick={() => setIsboxChecking2(!isboxChecking2)}>
+                                                                                <span className="_10ndlvp">
+                                                                                    <input name="집 전체" aria-describedby="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className={isboxChecking2 ? "ermsdf" : "_41yoza1"} data-checkbox="true">
+                                                                                        <span className="_1oj8hra" style={{ display: isboxChecking2 ? "block" : "none" }}><Check /></span>
+                                                                                    </span>
+                                                                                </span>
+                                                                            </div>
+                                                                        ) : (
+                                                                            <div className="_7ytxmo">
+                                                                                <span className="_10ndlvp">
+                                                                                    <input name="집 전체" aria-describedby="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className={isboxChecking2 ? "ermsdf" : "_41yoza"} data-checkbox="true">
+                                                                                        <span className="_1oj8hra" style={{ display: isboxChecking2 ? "block" : "none" }}><Check /></span>
+                                                                                    </span>
+                                                                                </span>
+                                                                            </div>
+                                                                        )}
+
+                                                                        <div className="_gfomxi" onMouseOver={() => setIsboxHovering2(1)}
+                                                                            onMouseOut={() => setIsboxHovering2(0)}>
                                                                             <div id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-title" className="_gw4xx4">개인실</div>
                                                                             <div id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" className="_hi9sy">집 또는 호텔의 개인실과 일부 공용 공간</div>
                                                                         </div>
                                                                     </div>
                                                                 </label>
-
                                                             </div>
-
                                                         </div>
                                                     </div>
                                                     <div>
                                                         <div className="_q4izx9">
                                                             <div style={{ paddingTop: "0px", paddingBottom: "0px", borderRadius: "1px" }}>
                                                                 <label style={{ cursor: "pointer" }}>
-                                                                    <div className="_jro6t01">
-                                                                        <div className="_7ytxmo">
-                                                                            <span className="_10ndlvp">
-                                                                                <input name="집 전체" aria-describedby="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-checkbox" className="_1yf4i4f" type="checkbox" />
-                                                                                <span className="_41yoza" data-checkbox="true"></span>
-                                                                            </span>
-                                                                        </div>
-                                                                        <div className="_gfomxi">
+                                                                    <div className="_jro6t01" onMouseOver={() => setIsboxHovering(1)}
+                                                                        onMouseOut={() => setIsboxHovering(0)}>
+                                                                        {isboxHovering3 == true ? (
+                                                                            <div className="_7ytxmo" onClick={() => setIsboxChecking3(!isboxChecking3)}>
+                                                                                <span className="_10ndlvp">
+                                                                                    <input name="집 전체" aria-describedby="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-checkbox" className="_1yf4i4f" type="checkbox" />
+
+                                                                                    <span className={isboxChecking3 ? "ermsdf" : "_41yoza1"} data-checkbox="true">
+                                                                                        <span className="_1oj8hra" style={{ display: isboxChecking3 ? "block" : "none" }}><Check /></span>
+                                                                                    </span>
+                                                                                </span>
+                                                                            </div>
+                                                                        ) : (
+                                                                            <div className="_7ytxmo">
+                                                                                <span className="_10ndlvp">
+                                                                                    <input name="집 전체" aria-describedby="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className={isboxChecking3 ? "ermsdf" : "_41yoza"} data-checkbox="true">
+                                                                                        <span className="_1oj8hra" style={{ display: isboxChecking3 ? "block" : "none" }}><Check /></span>
+                                                                                    </span>
+                                                                                </span>
+                                                                            </div>
+                                                                        )}
+
+                                                                        <div className="_gfomxi" onMouseOver={() => setIsboxHovering3(1)}
+                                                                            onMouseOut={() => setIsboxHovering3(0)}>
                                                                             <div id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-title" className="_gw4xx4">다인실</div>
                                                                             <div id="filterItem--6773250026204794377-checkbox-room_types-Entire_home_apt-row-subtitle" className="_hi9sy">다른 사람들과 함께 사용하는 다인실 및 공용 공간</div>
                                                                         </div>
@@ -336,7 +391,7 @@ const ModalFilter = (props) => {
                                                                     <div className="vcljsd">
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <button className="_11yc859a" aria-pressed="true" type="button" onClick={ctbtn} style={{ color: countbtn===false ? "rgb(255, 255, 255)" : "rgb(34, 34, 34)", backgroundColor: countbtn===false ? "rgb(34, 34, 34)" : "rgb(255, 255, 255)" }}>
+                                                                                <button className="_11yc859a" aria-pressed="true" type="button" onClick={ctbtn} style={{ color: countbtn === false ? "rgb(255, 255, 255)" : "rgb(34, 34, 34)", backgroundColor: countbtn === false ? "rgb(34, 34, 34)" : "rgb(255, 255, 255)" }}>
                                                                                     <span className="_gjz3kfc" aria-label="상관없음">상관없음</span>
                                                                                 </button>
                                                                             </div>
@@ -414,14 +469,14 @@ const ModalFilter = (props) => {
                                                                     <div className="vcljsd">
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <button className="_11yc859a" aria-pressed="true" type="button" style={{color:"#fff", backgroundColor:"#222"}}>
+                                                                                <button className="_11yc859a" aria-pressed="true" type="button" style={{ color: "#fff", backgroundColor: "#222" }}>
                                                                                     <span className="_gjz3kfc" aria-label="상관없음">상관없음</span>
                                                                                 </button>
                                                                             </div>
                                                                         </div>
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <div className="_1710jwy">
+                                                                                <div className="_1710jwy" >
                                                                                     <span className="_v56eio" aria-label="1">1</span>
                                                                                 </div>
                                                                             </div>
@@ -492,7 +547,7 @@ const ModalFilter = (props) => {
                                                                     <div className="vcljsd">
                                                                         <div>
                                                                             <div id="menuItemButton-상관없음" data-testid="menuItemButton-상관없음" className="_1d9tdvw">
-                                                                                <button className="_11yc859a" aria-pressed="true" type="button" style={{color:"#fff", backgroundColor:"#222"}}>
+                                                                                <button className="_11yc859a" aria-pressed="true" type="button" style={{ color: "#fff", backgroundColor: "#222" }}>
                                                                                     <span className="_gjz3kfc" aria-label="상관없음">상관없음</span>
                                                                                 </button>
                                                                             </div>
@@ -662,10 +717,11 @@ const ModalFilter = (props) => {
                                                                     <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
                                                                         <div className="_jro6t0">
                                                                             <div className="_7ytxmo">
-                                                                                <span className="_10ndlvp">
-                                                                                    <input name="무선 인터넷" id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
-                                                                                    <span className="_41yoza" data-checkbox="true"></span>
-                                                                                </span>
+                                                                            <span className="_10ndlvp">
+                                                                                        <input name="무선 인터넷" id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                        <span className="_41yoza" data-checkbox="true"></span>
+                                                                                    </span>
+
                                                                             </div>
                                                                             <div className="_gfomxi">
                                                                                 <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">무선 인터넷</div>
@@ -989,7 +1045,7 @@ const ModalFilter = (props) => {
                                 </div>
                             </div>
                             <div>
-                            <div className="filter_inner">
+                                <div className="filter_inner">
                                     <div className="ft-inner">
                                         <div className="_16sjn7m8">
                                             <div class="_11tsb6x"></div>
@@ -999,93 +1055,93 @@ const ModalFilter = (props) => {
                                                 </div>
                                                 <div>
                                                     <div className="bndviu3">
-                                                            <div>
-                                                                <div className="_q4izx9">
-                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
-                                                                        <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
-                                                                            <div className="_jro6t0">
-                                                                                <div className="_7ytxmo">
-                                                                                    <span className="_10ndlvp">
-                                                                                        <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
-                                                                                        <span className="_41yoza" data-checkbox="true"></span>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div className="_gfomxi">
-                                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">영어</div>
-                                                                                </div>
+                                                        <div>
+                                                            <div className="_q4izx9">
+                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                    <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                        <div className="_jro6t0">
+                                                                            <div className="_7ytxmo">
+                                                                                <span className="_10ndlvp">
+                                                                                    <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className="_41yoza" data-checkbox="true"></span>
+                                                                                </span>
                                                                             </div>
-                                                                        </label>
-                                                                    </div>
+                                                                            <div className="_gfomxi">
+                                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">영어</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
                                                                 </div>
                                                             </div>
-                                                            <div>
-                                                                <div className="_q4izx9">
-                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
-                                                                        <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
-                                                                            <div className="_jro6t0">
-                                                                                <div className="_7ytxmo">
-                                                                                    <span className="_10ndlvp">
-                                                                                        <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
-                                                                                        <span className="_41yoza" data-checkbox="true"></span>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div className="_gfomxi">
-                                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">프랑스어</div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div>
-                                                                <div className="_q4izx9">
-                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
-                                                                        <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
-                                                                            <div className="_jro6t0">
-                                                                                <div className="_7ytxmo">
-                                                                                    <span className="_10ndlvp">
-                                                                                        <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
-                                                                                        <span className="_41yoza" data-checkbox="true"></span>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div className="_gfomxi">
-                                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">독일어</div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div>
-                                                                <div className="_q4izx9">
-                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
-                                                                        <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
-                                                                            <div className="_jro6t0">
-                                                                                <div className="_7ytxmo">
-                                                                                    <span className="_10ndlvp">
-                                                                                        <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
-                                                                                        <span className="_41yoza" data-checkbox="true"></span>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div className="_gfomxi">
-                                                                                    <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">일본어</div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            
                                                         </div>
-                                                        
-                                                    </div>
-                                                    <div className="_cfvh61">
-                                                        <div className="l1rjzj3m dir dir-ltr">
-                                                            <button type="button" className="_edqkt1v">
-                                                                <span className="lnq7699 dir dir-ltr">더 표시</span>
-                                                            </button>
+                                                        <div>
+                                                            <div className="_q4izx9">
+                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                    <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                        <div className="_jro6t0">
+                                                                            <div className="_7ytxmo">
+                                                                                <span className="_10ndlvp">
+                                                                                    <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className="_41yoza" data-checkbox="true"></span>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div className="_gfomxi">
+                                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">프랑스어</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
                                                         </div>
+                                                        <div>
+                                                            <div className="_q4izx9">
+                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                    <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                        <div className="_jro6t0">
+                                                                            <div className="_7ytxmo">
+                                                                                <span className="_10ndlvp">
+                                                                                    <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className="_41yoza" data-checkbox="true"></span>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div className="_gfomxi">
+                                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">독일어</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div className="_q4izx9">
+                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4" aria-disabled="false" className="rcem0st u6fux4d dir dir-ltr">
+                                                                    <label for="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_13xlah4">
+                                                                        <div className="_jro6t0">
+                                                                            <div className="_7ytxmo">
+                                                                                <span className="_10ndlvp">
+                                                                                    <input id="filterItem-7783811326556694790-checkbox-amenities-4-row-checkbox" className="_1yf4i4f" type="checkbox" />
+                                                                                    <span className="_41yoza" data-checkbox="true"></span>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div className="_gfomxi">
+                                                                                <div id="filterItem-7783811326556694790-checkbox-amenities-4-row-title" className="_gw4xx4">일본어</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
+
+                                                </div>
+                                                <div className="_cfvh61">
+                                                    <div className="l1rjzj3m dir dir-ltr">
+                                                        <button type="button" className="_edqkt1v">
+                                                            <span className="lnq7699 dir dir-ltr">더 표시</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </section>
                                         </div>
                                     </div>

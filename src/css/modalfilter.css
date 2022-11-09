@@ -513,6 +513,11 @@
     width: 100% !important;
 }
 
+._1h52lk5:focus {
+    border: 1px solid #222222 !important;
+    background-color: #F7F7F7 !important;
+}
+
 ._1h52lk5:hover {
     border: 1px solid #222222 !important;
 }

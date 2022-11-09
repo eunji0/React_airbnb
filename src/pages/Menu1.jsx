@@ -14,6 +14,8 @@ export default function Menu1({ place, img_path, km, day, price, star }) {
     //호버
     const [isHovering, setIsHovering] = useState(0);
 
+
+//슬라이드
     const [style, setStyle] = useState({
         marginLeft: `-${current}00%`
     });
