@@ -16,6 +16,7 @@ import moment from "moment/moment";
 import { DateRangePicker } from 'react-date-range';
 import { addDays } from "date-fns"
 import ko from 'date-fns/locale/ko';
+import { ReactComponent as Previous } from '../images/Previous.svg';
 
 
 //모달사인
@@ -45,13 +46,13 @@ export default function Header() {
 
 
 
-
     //달력
     const [state, setState] = useState([
         {
           startDate: new Date(),
           endDate: addDays(new Date(), 7),
-          key: 'selection'
+          key: 'selection',
+          
         }
       ]);
 
@@ -830,7 +831,7 @@ export default function Header() {
                                                     <div className="mncdr-cdr">
                                                         <div className="mncdr-cdrl">
                                                             <div className="_ytfarf" data-visible="true" style={{padding: "0px 27px"}} onClick={()=>setddd(true)}>
-                                                                
+                                                            
                                                                 <DateRangePicker
                                                                     editableDateInputs={true}
                                                                     onChange={(item) => setState([item.selection])}

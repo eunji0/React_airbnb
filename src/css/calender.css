@@ -44,6 +44,13 @@
     height: 20px;
 }
 
+.rdrPprevButton i {
+    border-width: 4px 6px 4px 4px;
+    border-color: transparent rgb(52, 73, 94) transparent transparent;
+    transform: translate(-3px, 0px);
+    background-color: yellow;
+}
+
 .rdrMonthsHorizontal {
     display: flex;
     flex-direction: row;

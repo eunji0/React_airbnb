@@ -586,6 +586,8 @@ export default function HostMain() {
                                     hostdummy.results.map(item => (
                                         <div><img className="htdummyimg" src={item.imgpath} />
                                             <div className="htdmytxt">{item.text}</div>
+                                            <img className="htdmysign" src={item.sign}/>
+                                            <div className="htdmymini">{item.minitext}</div>
                                         </div>
                                     ))
                                 }

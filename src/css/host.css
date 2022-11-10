@@ -1068,7 +1068,7 @@
 
 .hmmain2-img .slick-initialized .slick-prev{
   position: relative;
-  left: 950px;
+  left: 910px;
   margin-bottom: 20px;
 }
 
@@ -1090,6 +1090,7 @@
 .hmmain2-img .slick-initialized .slick-list .slick-track {
   /* width: 1471.2px !important; */
   width: 8347px !important;
+  height: 100%;
 }
 
 .hmmain2-img .slick-initialized .slick-list .slick-track .slick-slide {
@@ -1107,11 +1108,25 @@
 .htdmytxt {
   z-index: 3;
   color: #222222 !important;
-  font-size: 26px !important;
+  font-size: 23px !important;
   line-height: 30px !important;
   margin-bottom: 34px !important;
-
+  padding-top: 50px;
 }
+
+.htdmysign{
+  height: 32px;
+  margin-top: 20px;
+}
+
+.htdmymini {
+  font-size: 16px;
+  line-height: 20px;
+  color: #717171;
+  margin-top: 10px;
+}
+
+
 ._17atahn {
   cursor: pointer !important;
   display: inline-block !important;

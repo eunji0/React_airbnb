@@ -655,6 +655,10 @@ body {
   overflow: hidden;
 }
 
+.hmmain2-img .slick-initialized .slick-list{
+  height: 100%!important;
+}
+
 .slick-slide {
   margin-left: 10px;
   margin-right: 10px;
