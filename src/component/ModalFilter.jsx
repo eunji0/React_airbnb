@@ -24,7 +24,6 @@ const ModalFilter = (props) => {
     const [countbtn7, setcountbtn7] = useState(false);
     const [countbtn8, setcountbtn8] = useState(false);
 
-    console.log(isboxChecking);
 
     function ctbtn() {
         setcountbtn(!countbtn);
